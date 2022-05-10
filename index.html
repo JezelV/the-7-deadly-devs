@@ -1,28 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <!--
-        *Referencias a las hojas de estilos:
-        *(Bootstrap siempre va primero)
-    -->
-    <link rel="stylesheet" href="./assets/css/mainCss.css">
-    <!--
-        !Aquí estará una etiqueta de estilos de bootstrap
-    -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Sobre Nosotros</title>
+	<link rel="stylesheet" href="/assets/css/estilos.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text">Ésta será la página principal, e igual que todas las demás páginas, tendrá el mismo header y footer que las demás, y el body contendrá toda la info.</h1>
 
-    <!--
-        *Referencias a los Scripts:
-    -->
-    <script src="./assets/js/mainScript.js"></script>
-    <!--
-        !Aquí estarán las etiquetas <pyscript> haciendo referencia a los archivos dentro de la carpeta pyscripts, para poder añadir código en python al HTML para cuando sea necesario (validaciones de datos en el front-end, etc.)
-    -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<img src="./assets/img/7devsRecortada.png" class="logo">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Pricing</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+				Dropdown link
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			  </div>
+			</li>
+		  </ul>
+		  <nav class="navbar navbar-light bg-light">
+			<form class="form-inline">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		  </nav>
+		</div>
+	  </nav>
+
+
+	  <!--PERFILES-->
+	<div class="contenedor">
+		<div class="contenedor_tarjeta">
+			<br>
+			<br>
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="./assets/img/1.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">EDGAR ALANIS</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<br>
+			<br>
+			<a href="https://github.com/ArgemiroH">
+				<figure id="tarjeta">
+					<img src="/assets/img/argemiro.jpeg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">ARGEMIRO HARO</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<br>
+			<br>
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="/assets/img/gera.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">GERARDO</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="./assets/img/Fer.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">FERNANDO</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="./assets/img/1.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">JUAN CARLOS</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="./assets/img/1.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">RICARDO</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="contenedor_tarjeta">
+			<a href="http://www.falconmasters.com">
+				<figure id="tarjeta">
+					<img src="./assets/img/1.jpg" class="frontal" alt="">
+					<figcaption class="trasera">
+						<h2 class="titulo">FERNANDO CASTELAN</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate voluptates ipsum suscipit, aspernatur eum, amet nemo architecto nihil corrupti.</p>
+					</figcaption>
+				</figure>
+			</a>
+			<br>
+			<br>
+		</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
+
+  <!-- FOOTER-->
+  <footer class="site-footer">
+	<div class="container">
+	  <div class="row">
+		<div class="col-sm-12 col-md-6">
+		  <h6>About us</h6>
+		  <p class="text-justify">Somos un grupo de personas que esta dispuesto a hacer todo</p>
+		</div>
+
+		<div class="col-xs-6 col-md-3">
+			<h6>Contact</h6>
+			<ul class="footer-links">
+			  <li><a href="http://scanfcode.com/about/">About Us</a></li>
+			  <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+			  <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+			  <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+			  <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+			</ul>
+		  </div>
+
+		<div class="col-xs-6 col-md-3">
+		  <h6>social networks</h6>
+		  <ul class="footer-links">
+			<li><a href="http://scanfcode.com/about/">About Us</a></li>
+			<li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+			<li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+			<li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+			<li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+		  </ul>
+		</div>
+
+	  </div>
+	  <hr>
+	</div>
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-8 col-sm-6 col-xs-12">
+		  <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+	   <a href="#">Scanfcode</a>.
+		  </p>
+		</div>
+
+		<div class="col-md-4 col-sm-6 col-xs-12">
+		  <ul class="social-icons">
+			<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+			<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+		  </ul>
+		</div>
+	  </div>
+	</div>
+</footer>
+
 </html>
