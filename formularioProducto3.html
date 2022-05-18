@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de producto</title>
+    <link rel="stylesheet" href="/assets/css/formularioProducto3.css">
+</head>
+<body>
+    
+<div class="contenedor">
+    <form class="my-form">
+        <div class="container">
+          <h1>¡Suba su producto!</h1>
+          <ul>
+            <li>
+              <div class="grid grid-2">
+                <input type="text" placeholder="Nombre del producto" required>  
+                <input type="text" placeholder="Precio" required>
+              </div>
+            </li>
+            <li>
+              <div class="grid grid-2">
+                <input type="text" placeholder="Cantidad" required>  
+                <input type="file" placeholder="Imagen del producto" required>
+              </div>
+            </li>
+            <li>
+                <select required>
+                  <option selected disabled>-- Categoria --</option>
+                  <option>Categoria 1</option>
+                  <option>Categoria 2</option>
+                  <option>Categoria 3</option>      
+                </select>
+              </li>    
+            <li>
+              <textarea placeholder="Descripcion" required></textarea>
+            </li>   
+            <li>
+              <input type="checkbox" id="terms">
+              <label for="terms">He leido y estoy de acuerdo con<a href=""> los terminos y condiciones.</a></label>
+            </li>  
+            <li>
+              <div class="grid grid-3">
+                <div class="required-msg">Campos Requeridos</div>
+                <button class="btn-grid" type="submit" disabled>
+                  <span class="back">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                  </span>
+                  <span class="front">SUBMIT</span>
+                </button>
+                <button class="btn-grid" type="reset" disabled>
+                  <span class="back">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                  </span>
+                  <span class="front">RESET</span>
+                </button> 
+              </div>
+            </li>    
+          </ul>
+        </div>
+      </form>
+    </div>
+
+    <script src="/assets/js/formularioProducto3.js"></script>
+</body>
+</html>
