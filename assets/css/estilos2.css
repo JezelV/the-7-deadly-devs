@@ -85,8 +85,23 @@ body {
 }
 
 /*Comienza Categorias*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 .categorias {
-  width: 150px;
+  object-fit: contain;
+  width: 200px;
   height: 150px;
   background: rgb(255, 255, 255);
   border-radius: 0.4em;
@@ -95,7 +110,6 @@ body {
   border: rgb(250, 250, 250) 0.2em solid;
   padding: 10px;
   margin: 10px;
-  column-gap: 10px;
 }
 
 .categorias:hover {
@@ -167,6 +181,11 @@ h1 {
   transition: .3s ease;
 }
 
+#imgOferta{
+  height: 100%;
+  width: 100%;
+}
+
 .card-info {
   padding-top: 10%;
 }
@@ -194,7 +213,7 @@ svg {
 
 .text-body {
   font-size: .9em;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 /*Fin Text Cartas de Ofertas y Novedades*/
 
