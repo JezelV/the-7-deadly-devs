@@ -98,6 +98,77 @@ function addItem2(item){
   const itemsContainer2 = document.getElementById("track2");
   itemsContainer2.innerHTML += itemHTML;
 }
+
+//Funcionalidad en Ofertas para que de una tarjeta se replica las veces que un producto se agregue.
+function addItem3(item){
+  const itemHTML = '<div class="slick">\n' +
+  '<div class="item1">\n'+
+  '<button class="categorias">\n'+item.name+
+  '<br>\n'+
+  '<img class="iconC" src="'+item.img+'" alt="">\n'+
+  '</button>\n'+
+  '</div>\n';
+//Mando la tarjeta por defecto al HTML en el div con el id track
+  const itemsContainer3 = document.getElementById("track3");
+  itemsContainer3.innerHTML += itemHTML; 
+}
+
+//Funcionalidad en Novedades para que de una tarjeta se replica las veces que un producto se agregue.
+function addItem4(item){
+const itemHTML = '<div class="slick">\n' +
+'<div class="item1">\n'+
+'<button class="categorias">\n'+item.name+
+'<br>\n'+
+'<img class="iconC" src="'+item.img+'" alt="">\n'+
+'</button>\n'+
+'</div>\n';
+//Mando la tarjeta por defecto al HTML en el div con el id track2
+const itemsContainer4 = document.getElementById("track4");
+itemsContainer4.innerHTML += itemHTML;
+}
+// Listado de productos de Categorias 1
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Controles',
+  'img':'https://th.bing.com/th/id/R.8f89387e93d774b32c3e5e13c9b73046?rik=o6SyEqZWqKIicw&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f5%2fGame-Controller-Transparent.png&ehk=zhJh9ppZDnbFwUwQc4PKam0rPuV%2fSo203zhR%2foj9%2bPo%3d&risl=&pid=ImgRaw&r=0'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+  // Listado de productos de Categorias 2
+addItem4({'name':'Salud',
+  'img':'https://th.bing.com/th/id/R.039da1833f6d0c52c6e1ee593be729b7?rik=nmDtEn34YUMKaw&pid=ImgRaw&r=0'});
+addItem4({'name':'Salud',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Salud',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Salud',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Tecnologia',
+  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+
 // Listado de productos de Ofertas
 addItem({'name':'juice',
     'img':'https://www.gs1india.org/media/Juice_pack.jpg',
