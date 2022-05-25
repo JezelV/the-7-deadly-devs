@@ -1,0 +1,8 @@
+Aqua: 0AF3D7
+Azul: 025DAA
+Negro: 181818
+Blanco: FFFFFF
+Gris claro: D9D9D9
+Gris oscuro: AFACAC
+
+Figma link: https://www.figma.com/file/EMyvgAeC4FCkWzFfYURV5o/Untitled?node-id=0%3A1
