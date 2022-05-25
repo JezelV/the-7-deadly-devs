@@ -1,0 +1,34 @@
+﻿Change Log
+==============================================
+v.1.4 
+	1. Update 3 Home Mobile
+    2. Remove Preloading Screen
+    3. Page category Click quickview not working
+    4. Home 7 : scroll not working
+
+==============================================
+		
+v.1.3 
+	1. Fix home 3, in left sidebar menu all category, when i click “open categories” hide menus can not show
+	2. Fix In tablet and mobile device menu element “a” is white color
+        3. Fix Error load ajax cpanel và header
+
+==============================================
+
+v.1.2 
+	1. Fix error show bootstrap notify on home page2->8
+	2. Fix Hiển thị Dropdown Shopping Cart trên thiết bị
+	
+===============================================
+
+v.1.1 
+	1. Update New Home layout 5,6,7,8
+	2. Change icon loading website
+	3. use Jquery Ajax to module Listing tabs
+	4. Leave menu bar fixed on top when scrolled
+	5. Update Fade Image On Scroll Effect
+===============================================
+
+V.1.0
+
+	10.12.2016 - *First release!
