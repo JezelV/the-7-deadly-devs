@@ -8,12 +8,15 @@
 
 /*Comienza el Header*/
 
+header{
+  background-color:#D9D9D9 ;
+}
+
 /*Comienza NavBar*/
 
-/*Comienza LOGO*/
+/*LOGO */
 .logo {
-  width: 65px;
-  left: 65px;
+	width: 120px;
 }
 /*Fin LOGO*/
 
@@ -79,10 +82,10 @@
 /*Fin Header*/
 
 /*Comienza Body*/
-body {
-  background: #F0F2F1;
-  font-family: 'Open Sans', sans-serif;
-}
+body { 
+  max-width: 100%; 
+  max-height: 100%;
+} 
 
 /*Comienza Categorias*/
 .categorias {
@@ -98,7 +101,7 @@ body {
   margin: 10px;
   display:inline-block
 }
-
+/*Efecto de sombreado*/
 .categorias:hover {
   border: #006fff 0.2em solid;
 }
@@ -168,6 +171,7 @@ h1 {
   transition: .3s ease;
 }
 
+/*Imagen del producto*/
 #imgOferta{
   height: 100%;
   width: 100%;
@@ -191,7 +195,7 @@ svg {
   border-top: 1px solid #ddd;
 }
 
-/*Text Cartas de Ofertas y Novedades*/
+/*Text0 Cartas de Ofertas y Novedades*/
 .text-title {
   font-weight: 900;
   font-size: 1.2em;
@@ -206,9 +210,9 @@ svg {
   width: auto;
   height: 74px;
 }
-/*Fin Text Cartas de Ofertas y Novedades*/
+/*Fin Text0 Cartas de Ofertas y Novedades*/
 
-/*Button Cartas de Ofertas y Novedades*/
+/*Botones de Cartas de Ofertas y Novedades*/
 .card-button {
   border: 1px solid #252525;
   display: flex;
@@ -217,7 +221,7 @@ svg {
   border-radius: 50px;
   transition: .3s ease-in-out;
 }
-/*Fin Button Cartas de Ofertas y Novedades*/
+/*Fin Botones de Cartas de Ofertas y Novedades*/
 
 /*Hover Cartas de Ofertas y Novedades*/
 .card-img:hover {
@@ -234,8 +238,9 @@ svg {
 /*Fin Body*/
 
 /*Comienza FOOTER*/
+
 .site-footer {
-  background-color: #26272b;
+  background-color: #181818;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 20px;
