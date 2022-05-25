@@ -7,3 +7,7 @@ checkbox.addEventListener("change", function() {
     checked ? (btn.disabled = false) : (btn.disabled = true);
   }
 });
+
+$('input[type=number]').on('mousewheel', function(e) {
+  $(e.target).blur();
+});

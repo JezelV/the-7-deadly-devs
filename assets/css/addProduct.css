@@ -1,3 +1,7 @@
+header{
+  background-color: #D9D9D9;
+}
+
 /*LOGO */
 .logo {
 	width: 120px;
@@ -268,9 +272,17 @@ body {
 }
 
 .contenedor{
-    width: 800px;
+    width: auto;
     margin: auto;
 }
+
+/* Eliminar scroll */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*-----------------*/
 
 /* FOOTER*/
 
