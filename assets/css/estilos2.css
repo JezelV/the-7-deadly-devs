@@ -9,7 +9,7 @@
 /*Comienza el Header*/
 
 header{
-  background-color:#D9D9D9 ;
+  background-color:#181818 ;
 }
 
 /*Comienza NavBar*/
@@ -20,62 +20,18 @@ header{
 }
 /*Fin LOGO*/
 
+/*Comienza color de letra de los link de páginas */
+.navbar-brand{
+  color: aqua!important;
+}
+
+.nav-link{
+  color: aqua!important;
+}
+/*Fin color de letra de los link de páginas */
+
+
 /*Comienza Botones de login y Sign up*/
-.cta {
-  position: relative;
-  margin: auto;
-  padding: 19px 22px;
-  transition: all 0.2s ease;
-}
-
-.cta:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 28px;
-  background: rgba(255, 171, 157, 0.5);
-  width: 56px;
-  height: 56px;
-  transition: all 0.3s ease;
-}
-
-.cta span {
-  position: relative;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 900;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.cta svg {
-  position: relative;
-  top: 0;
-  margin-left: 10px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: #111;
-  stroke-width: 2;
-  transform: translateX(-5px);
-  transition: all 0.3s ease;
-}
-
-.cta:hover:before {
-  width: 100%;
-  background: #ffab9d;
-}
-
-.cta:hover svg {
-  transform: translateX(0);
-}
-
-.cta:active {
-  transform: scale(0.96);
-}
 
 /*Fin Navbar*/
 
@@ -99,7 +55,9 @@ body {
   border: rgb(250, 250, 250) 0.2em solid;
   padding: 10px;
   margin: 10px;
-  display:inline-block
+  display:inline-block;
+  white-space: normal;
+  word-wrap: break-word;
 }
 /*Efecto de sombreado*/
 .categorias:hover {
