@@ -6,7 +6,7 @@
 =============================================*/
 function preloader() {
 	$('#ctn-preloader').addClass('loaded');
-	$("#loading").fadeOut(500);
+	$("#loading").fadeOut(700);
 	// Una vez haya terminado el preloader aparezca el scroll
 
 	if ($('#ctn-preloader').hasClass('loaded')) {
@@ -534,7 +534,7 @@ $('.popup-video').magnificPopup({
 /*=============================================
 	=    		Isotope	Active  	      =
 =============================================*/
-$('.exclusive-active').imagesLoaded(function () {
+/*$('.exclusive-active').imagesLoaded(function () {
 	// init Isotope
 	var $grid = $('.exclusive-active').isotope({
 		itemSelector: '.grid-item',
@@ -547,9 +547,9 @@ $('.exclusive-active').imagesLoaded(function () {
 	$('.product-menu').on('click', 'button', function () {
 		var filterValue = $(this).attr('data-filter');
 		$grid.isotope({ filter: filterValue });
-	});
+	})
 
-});
+});*/
 //for menu active class
 $('.product-menu button').on('click', function (event) {
 	$(this).siblings('.active').removeClass('active');
@@ -666,6 +666,7 @@ $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#sli
 /*=============================================
 	=    		 Aos Active  	         =
 =============================================*/
+
 function aosAnimation() {
 	AOS.init({
 		duration: 1000,
@@ -697,6 +698,5 @@ function wowAnimation() {
 	});
 	wow.init();
 }
-
 
 })(jQuery);
