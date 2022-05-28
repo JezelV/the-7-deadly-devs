@@ -10,7 +10,17 @@
   color: black;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); /* Formato de palabras
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); 
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Formato de palabras
+
+
 
 /* RESET RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
