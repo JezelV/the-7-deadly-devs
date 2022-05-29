@@ -126,33 +126,34 @@ const itemHTML = '<div class="slick">\n' +
 const itemsContainer4 = document.getElementById("track4");
 itemsContainer4.innerHTML += itemHTML;
 }
+
 // Listado de productos de Categorias 1
 addItem3({'name':'Electrodomesticos',
-  'img':'https://cdn-icons-png.flaticon.com/512/1554/1554170.png'});
+  'img':'assets/icons/electrodomesticos.png'});
 addItem3({'name':'Tecnología',
-  'img':'https://cdn-icons.flaticon.com/png/512/4588/premium/4588213.png?token=exp=1653443642~hmac=0d5d353778521fff7d7fb574c74a49be'});
+  'img':'assets/icons/tecnologia.png'});
 addItem3({'name':'Hogar y Muebles',
-  'img':'https://cdn-icons.flaticon.com/png/512/3456/premium/3456955.png?token=exp=1653443713~hmac=8d55af8a6d9387cf67ccb84906c0d2fa'});
+  'img':'assets/icons/muebles.png'});
 addItem3({'name':'Moda',
-  'img':'https://cdn-icons-png.flaticon.com/512/668/668262.png'});
+  'img':'assets/icons/moda.png'});
 addItem3({'name':'Deportes y Fitness',
-  'img':'https://cdn-icons.flaticon.com/png/512/5564/premium/5564932.png?token=exp=1653443844~hmac=7550afb6304e1a5a83933ad01aa59cf8'});
+  'img':'assets/icons/deportes.png'});
 addItem3({'name':'Herramientas',
-  'img':'https://cdn-icons.flaticon.com/png/512/2716/premium/2716800.png?token=exp=1653443878~hmac=4181145e9a3015a969a56787abef9450'});
+  'img':'assets/icons/herramientas.png'});
 
   // Listado de productos de Categorias 2
 addItem4({'name':'Belleza y Cuidado personal',
-  'img':'https://cdn-icons-png.flaticon.com/512/1940/1940924.png'});
+  'img':'assets/icons/belleza.png'});
 addItem4({'name':'Inmuebles',
-  'img':'https://cdn-icons.flaticon.com/png/512/3211/premium/3211615.png?token=exp=1653444302~hmac=03cd41551bf91c4337d7e73aa6abc18c'});
+  'img':'assets/icons/inmuebles.png'});
 addItem4({'name':'Construcción',
-  'img':'https://cdn-icons-png.flaticon.com/512/2942/2942441.png'});
+  'img':'assets/icons/construccion.png'});
 addItem4({'name':'Oficinas',
-  'img':'https://cdn-icons.flaticon.com/png/512/1411/premium/1411980.png?token=exp=1653444051~hmac=10a450090d6a75dc59bd6a611779ff41'});
+  'img':'assets/icons/oficina.png'});
 addItem4({'name':'Juegos y juguetes',
-  'img':'https://cdn-icons-png.flaticon.com/512/1606/1606789.png'});
+  'img':'assets/icons/juguetes.png'});
 addItem4({'name':'Bebes',
-  'img':'https://cdn-icons-png.flaticon.com/512/2176/2176706.png'});
+  'img':'assets/icons/bebe.png'});
 
 // Listado de productos de Ofertas
 addItem({'name':'juice',
