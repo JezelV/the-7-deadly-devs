@@ -90,8 +90,31 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 
 	const terminos = document.getElementById('terminos');// Aqui se obtiene el campo terminos
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){// Aqui se valida que todos los campos esten correctos
-		formulario.reset();// Aqui se resetea el formulario
+		
+		//Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
+        localStorage.clear();//Aqui se limpia el localStorage
+        localStorage.usuario = document.getElementById("usuario").value;
+        localStorage.nombre = document.getElementById("nombre").value;
+        localStorage.password = document.getElementById("password").value;
+        localStorage.correo = document.getElementById("correo").value;
+        localStorage.telefono = document.getElementById("telefono").value;
 
+
+
+        //Aqui se arma el .json
+        const pArray = {
+            "usuario": localStorage.usuario,
+            "nombre": localStorage.nombre,
+            "password": localStorage.password,
+            "correo": localStorage.correo,
+            "telefono": localStorage.telefono
+        }
+
+        const RJson = JSON.stringify(pArray);
+
+        console.log(RJson);
+		formulario.reset();// Aqui se resetea el formulario
+		
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {// Aqui se agrega un tiempo de espera para que el mensaje desaparezca
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
