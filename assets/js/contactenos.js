@@ -31,21 +31,21 @@ btnSubmit.addEventListener('click',()=>{
       }
     }
     if(inputs[i].type =='email'){
-      //Validacion de las img
+      //Validacion de email
       if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(inputs[i].value))){
         alert ('Por favor ingrese un correo valido.');
         formValid=false;
       }
     }
     if(inputs[i].type =='tel'){
-      //Validacion de las img
+      //Validacion de tel
       if (!(/^\d{7,14}$/.test(inputs[i].value))){
         alert ('Por favor ingrese un telefono valido (este debe contener solo numeros de 7 a 14 digitos).');
         formValid=false;
       }
     }
     if(inputs[i].type =='textarea'){
-      //Validacion de las img
+      //Validacion del textarea
       if (/^\s*$/.test(inputs[i].value)){
         alert ('Por favor ingrese un mensaje valido (este no debe estar vacio o contener solo espacios).');
         formValid=false;
