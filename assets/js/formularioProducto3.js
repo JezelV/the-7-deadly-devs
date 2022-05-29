@@ -19,7 +19,6 @@ Codigo para validar campos del formulario y poder enviar el JSON
 
 const inputs = document.querySelectorAll(".inputP");
 const btnSubmit = document.getElementById("btnSubmit");
-const formulario = document.formP;
 
 
 btnSubmit.addEventListener('click',()=>{
