@@ -1,6 +1,4 @@
-header{
-  background-color: #D9D9D9;
-}
+
 /*LOGO */
 .logo {
 	width: 120px;
@@ -8,8 +6,15 @@ header{
 
 /* COLOR DEL BOTON DE BUSCAR*/
 .grey{
-  background-color: grey;
-  color: black;
+  background-color: #181818;
+}
+
+.nav-link{
+  color: aqua!important;
+}
+
+.navbar-toggler-icon{
+  background-color: aqua!important;
 }
 
 /* TEXTO H y P*/
