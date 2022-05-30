@@ -11,15 +11,21 @@
     <link rel="icon" href="./assets/img/icon.png">
 
 </head>
+<!--Comienza la barra de navegacion con los siguientes estilos-->
+
 <header class="header">
-	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light grey">
 		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
+        <!--
+            El siguiente div es para que el menu se expanda
+        -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Esta es la lista que se va mostrar cuando el menu se expande-->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
@@ -46,19 +52,20 @@
 		</div>
 	</nav>
 </header>
-      <!-- AQUI TERMINA EL HEADER-->
+<!-- AQUI TERMINA EL HEADER-->
+
 <body>
-<!--PERFILES-->
+<!--Aqui comienza los perfiles de los miembros del proyecto-->
 <section class="container">
     <div class="page-header">
         <h1>About Us<br>
             <small>See the source code of our project at <a href="https://github.com/JezelV/the-7-deadly-devs" target="_blank">GitHub</a></small></h1>
     </div>
 
-	<!--PERFIL DE EDGAR-->
+	<!--AQUI COMIENZA EL PERFIL DE EDGAR-->
     <div class="row active-with-click">
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Indigo">
+            <article class="material-card Purple">
                 <h2>
                     <span>Edgar Jezel</span>
                     <strong>
@@ -86,8 +93,9 @@
                 </div>
             </article>
         </div>
+        <!--AUI TERMINA EL PERFIL DE EDGAR-->
 
-		<!--PERFIL DE ARGEMIRO-->
+		<!--AQUI COMIENZA EL PERFIL DE ARGEMIRO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Cyan">
                 <h2>
@@ -118,8 +126,9 @@
                 </div>
             </article>
         </div>
+        <!--AQUI TERMINA EL PERFIL DE ARGEMIRO-->
 
-		<!--PERFIL DE JUAN CARLOS-->
+		<!--AQUI COMIENZA EL PERFIL DE JUAN CARLOS-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Teal">
                 <h2>
@@ -152,8 +161,9 @@
                 </div>
             </article>
         </div>
+        <!--AQUI TERMINA EL PERFIL DE JUAN CARLOS-->
 
-		<!--PERFIL DE GERARDO-->
+		<!--AQUI COMIENZA EL PERFIL DE GERARDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Pink">
                 <h2>
@@ -184,7 +194,9 @@
                 </div>
             </article>
         </div>
-		<!--PERFIL DE FERNANDO-->
+        <!--AQUI TERMINA EL PERFIL DE GERARDO-->
+
+		<!--AQUI COMIENZA EL PERFIL DE FERNANDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Orange">
                 <h2>
@@ -214,8 +226,9 @@
                 </div>
             </article>
         </div>
+        <!--AQUI TERMINA EL PERFIL DE FERNANDO-->
 
-		<!--PERFIL DE RICARDO-->
+		<!--AQUI COMIENZA EL PERFIL DE RICARDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Light-Blue">
                 <h2>
@@ -245,25 +258,37 @@
                 </div>
             </article>
         </div>
+        <!--AQUI TERMINA EL PERFIL DE RICARDO-->
 </section>
+<!--Aqui termina la sesion de los perfiles-->
 
-<!-- partial -->
+<!-- SCRIPTS -->
+<!--Este script sirve para importar el funcionamiento de las tarjetas-->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./assets/js/aboutUs.js"></script>
 
+  <!--Este script sirve para importar el codigo de aboutUs.js -->
+  <script  src="./assets/js/aboutUs.js"></script> 
+
+  <!--Los siguientes Scripts son para importar el codigo de Bootstrap 4.6-->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<!--Aqui termina los scripts-->
+
 </body>
 
-  <!-- FOOTER-->
+  <!--COMIENZA EL FOOTER-->
+  <!--Este Footer fue tomado de Codepen y utiliza los estilos de Bootstrap 4.6 -->
   <footer class="site-footer">
-	<div class="container">
+    <div class="container">
 	  <div class="row">
+        <!--Este es el pirmer apartado de footer que incluye informacion sobre nosotros-->
 		<div class="col-sm-12 col-md-6">
 		  <h6>About us</h6>
 		  <p class="text-justify">We are a team of 7 Full Stack Jr developers, graduates of the Generation Mx bootcamp.</p>
 		</div>
+    
 
+        <!--Este es el segundo apartado de footer que incluye los contactos-->
 		<div class="col-xs-6 col-md-3">
 			<h6>Contact</h6>
 			<ul class="footer-links">
@@ -272,13 +297,19 @@
 			  <li><a href="./privacyPolicy.html">Privacy Policy</a></li>
 			</ul>
 		  </div>
-
+        
+        <!--Este es el tercer apartado de footer que incluye la direccion y links de la pagina-->
 		<div class="col-xs-6 col-md-3">
 		  <h6>social networks</h6>
 		  <ul class="footer-links">
 
               <!--ICONO DE GITHUB-->
+              <!--Los siguientes estilos sirven para darle formato, color y diseño a los iconos del footer-->
 			<svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                <!--
+                    El Path sirve permite dibujar cualquier tipo de curva
+                    El fill="currentColor" permite darle un color al icono en base al CSS de Bootstrap
+                -->
                 <a href="..." target="_blank"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></a>
               </svg>
 
@@ -301,5 +332,5 @@
 	  </div>
 	</div>
 </footer>
-
+<!-- TERMINA EL FOOTER-->
 </html>

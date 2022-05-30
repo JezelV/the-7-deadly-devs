@@ -4,6 +4,7 @@
 	width: 120px;
 }
 
+/*Se centra el titulo de acerca de nosotros*/
 .page-header{
   text-align: center;
 }
@@ -13,10 +14,12 @@
   background-color: #181818;
 }
 
+/* Cambia el color de la letra en el HavBar*/
 .nav-link{
   color: aqua!important;
 }
 
+/*Barra de hamburguesa*/
 .navbar-toggler-icon{
   background-color: aqua!important;
 }
@@ -300,6 +303,8 @@
 .material-card.mc-active .mc-footer h4 {
   top: -32px;
 }
+
+/*AQUI COMIENZA LOS TIPOS DE COLORES QUE SE PUEDEN USAR EN LAS TARJETAS*/
 .material-card.Red h2 {
   background-color: #F44336;
 }
@@ -1260,6 +1265,8 @@
 .material-card.Blue-Grey.mc-active .mc-btn-action {
   border-color: #ECEFF1;
 }
+/*AQUI TERMINA LOS TIPOS DE COLORES QUE SE PUEDEN USAR EN LAS TARJETAS*/
+
 body {
   background-color: #ECEFF1;
   color: #37474F;
@@ -1267,18 +1274,20 @@ body {
   font-weight: 300;
   font-size: 16px;
 }
+
 h1,
 h2,
 h3 {
   font-weight: 200;
 }
+
 /* LOGOTIPOS DE REDES*/
 .git{
   background-image: url("../img/github-54.png");
   
 }
 
-/* FOOTER*/
+/* AQUI INICIA ELFOOTER*/
 
 .site-footer
 {
