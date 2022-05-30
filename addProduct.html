@@ -47,26 +47,27 @@
 </header>
       <!-- AQUI TERMINA EL HEADER-->
 <body>
-    <div class="contenedor">
-        <form class="my-form">
-            <div class="container">
-              <h1>¡Suba su producto!</h1>
-              <ul>
-                <li>
-                  <div class="grid grid-2">
-                    <input type="text" placeholder="Nombre del producto" required>  
-                    <input type="number" placeholder="Precio" required>
-                  </div>
-                </li>
-                <li>
-                  <div class="grid grid-2">
-                    <input type="number" placeholder="Cantidad" required>  
-                    <input type="file" multiple='true' placeholder="Imagen del producto" required>
-                  </div>
-                </li>
-                <li>
-                    <select required>
-                      <option selected disabled>-- Categoria --</option>
+  <div class="contenedor">
+    <!--Se le hicieron cambios al html: se añaderieron ids, clases y names a todos los inputs para hacer referencia al js y poder hacer la validacion-->
+      <form class="my-form" name="formP">
+          <div class="container">
+            <h1>¡Suba su producto!</h1>
+            <ul>
+              <li>
+                <div class="grid grid-2">
+                  <input type="text" placeholder="Nombre del producto" class="inputP" id="nameP" name="Nombre del Producto" required>  
+                  <input type="number" placeholder="Precio" name="Precio del Producto" class="inputP" id="priceP" required>
+                </div>
+              </li>
+              <li>
+                <div class="grid grid-2">
+                  <input type="number" placeholder="Cantidad" name="Cantidad del Producto" class="inputP" id="quantityP" required>  
+                  <input type="file" placeholder="Imagen del producto" multiple="true" name="Imagen(es) del Producto" class="inputP" id="filesP" required>
+                </div>
+              </li>
+              <li>
+                  <select id="categoryP" name="Categoria del Producto" class="inputP"required>
+                    <option selected disabled>-- Categoria --</option>
                       <option>Electrodomesticos</option>
                       <option>Tecnologia</option>
                       <option>Hogares y Muebles</option>
@@ -82,26 +83,26 @@
                     </select>
                   </li>    
                 <li>
-                  <textarea placeholder="Descripcion" required></textarea>
+                  <textarea placeholder="Descripcion" name="Descripcion del Producto" class="inputP" id="descriptionP" required></textarea>
                 </li>   
                 <li>
                   <input type="checkbox" id="terms">
-                  <label for="terms">He leido y estoy de acuerdo con<a href=""> los terminos y condiciones.</a></label>
+                  <label for="terms">He leído y estoy de acuerdo con<a href=""> los términos y condiciones.</a></label>
                 </li>  
                 <li>
                   <div class="grid grid-3">
                     <div class="required-msg">Campos Requeridos</div>
-                    <button class="btn-grid" type="submit" disabled>
+                    <button class="btn-grid" type="button" id="btnSubmit" disabled>
                       <span class="back">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
                       </span>
-                      <span class="front">SUBMIT</span>
+                      <span class="front">Enviar</span>
                     </button>
                     <button class="btn-grid" type="reset" disabled>
                       <span class="back">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
                       </span>
-                      <span class="front">RESET</span>
+                      <span class="front">Resetear</span>
                     </button> 
                   </div>
                 </li>    
