@@ -19,7 +19,6 @@ Codigo para validar campos del formulario y poder enviar el JSON
 const inputs = document.querySelectorAll(".inputC");
 const btnSubmit = document.getElementById("btnSubmit");
 
-//^(?!.* $)[A-Z][a-z ]+$
 btnSubmit.addEventListener('click',()=>{
   //Validacion de campo por campo
   let formValid = true;
@@ -86,3 +85,5 @@ btnSubmit.addEventListener('click',()=>{
   }
 });
 /*----------------------------------Fin de codigo----------------------------------*/
+
+
