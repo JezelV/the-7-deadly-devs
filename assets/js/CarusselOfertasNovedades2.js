@@ -126,48 +126,34 @@ const itemHTML = '<div class="slick">\n' +
 const itemsContainer4 = document.getElementById("track4");
 itemsContainer4.innerHTML += itemHTML;
 }
+
 // Listado de productos de Categorias 1
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Controles',
-  'img':'https://th.bing.com/th/id/R.8f89387e93d774b32c3e5e13c9b73046?rik=o6SyEqZWqKIicw&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f5%2fGame-Controller-Transparent.png&ehk=zhJh9ppZDnbFwUwQc4PKam0rPuV%2fSo203zhR%2foj9%2bPo%3d&risl=&pid=ImgRaw&r=0'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem3({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem3({'name':'Electrodomesticos',
+  'img':'assets/icons/electrodomesticos.png'});
+addItem3({'name':'Tecnología',
+  'img':'assets/icons/tecnologia.png'});
+addItem3({'name':'Hogar y Muebles',
+  'img':'assets/icons/muebles.png'});
+addItem3({'name':'Moda',
+  'img':'assets/icons/moda.png'});
+addItem3({'name':'Deportes y Fitness',
+  'img':'assets/icons/deportes.png'});
+addItem3({'name':'Herramientas',
+  'img':'assets/icons/herramientas.png'});
+
   // Listado de productos de Categorias 2
-addItem4({'name':'Salud',
-  'img':'https://th.bing.com/th/id/R.039da1833f6d0c52c6e1ee593be729b7?rik=nmDtEn34YUMKaw&pid=ImgRaw&r=0'});
-addItem4({'name':'Salud',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Salud',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Salud',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
-addItem4({'name':'Tecnologia',
-  'img':'https://www.gs1india.org/media/Juice_pack.jpg'});
+addItem4({'name':'Belleza y Cuidado personal',
+  'img':'assets/icons/belleza.png'});
+addItem4({'name':'Inmuebles',
+  'img':'assets/icons/inmuebles.png'});
+addItem4({'name':'Construcción',
+  'img':'assets/icons/construccion.png'});
+addItem4({'name':'Oficinas',
+  'img':'assets/icons/oficina.png'});
+addItem4({'name':'Juegos y juguetes',
+  'img':'assets/icons/juguetes.png'});
+addItem4({'name':'Bebes',
+  'img':'assets/icons/bebe.png'});
 
 // Listado de productos de Ofertas
 addItem({'name':'juice',

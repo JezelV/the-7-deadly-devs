@@ -1,6 +1,6 @@
 .Carousel{
     width: 100%;
-    margin: 0px 20px;
+    margin: auto;
 }
 .Carousel h2{
     font-size: 26px;
@@ -21,8 +21,8 @@
     width: fit-content;
     height: auto;
     padding: 20px 0px;
-    margin: 0px;
-    max-width: 94vw;
+    margin: auto;
+    max-width: 98vw;
     overflow: hidden;
 }
 .slick-track{
