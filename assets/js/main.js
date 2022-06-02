@@ -15,7 +15,7 @@ btnSubmit1.addEventListener('click',(e)=>{
         formValid=false;
     }
 	if(formValid==true){
-		localStorage.clear();
+		//localStorage.clear();
 		localStorage.password1 = document.getElementById("password1").value;
 		localStorage.correo1 = document.getElementById("correo1").value;
 		
@@ -27,8 +27,25 @@ btnSubmit1.addEventListener('click',(e)=>{
 		}
 		  
 		const LJson = JSON.stringify(pArray);
-		  
+		
+		validarUsuairo(localStorage.correo1,localStorage.password1);
+
 		console.log(LJson);
 		form1.reset();  
 	}
 });
+
+
+
+function validarUsuairo(correo,password){
+	if(localStorage.correo){
+		if(localStorage.correo===correo && localStorage.password===password){
+			alert("Bienvenido " + localStorage.usuairo + ".");
+			window.location.href = "./index.html";
+		}else{
+			alert("Usuario o contraseña incorrectos, intente nuevamente.");
+		}
+	}else{
+		alert("Usuario no registrado.");
+	}
+};

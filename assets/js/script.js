@@ -92,7 +92,7 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){// Aqui se valida que todos los campos esten correctos
 		
 		//Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
-        localStorage.clear();//Aqui se limpia el localStorage
+        //localStorage.clear();//Aqui se limpia el localStorage
         localStorage.usuario = document.getElementById("usuario").value;
         localStorage.nombre = document.getElementById("nombre").value;
         localStorage.password = document.getElementById("password").value;
