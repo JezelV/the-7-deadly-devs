@@ -40,7 +40,7 @@ btnSubmit1.addEventListener('click',(e)=>{
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
-			alert("Bienvenido " + localStorage.usuairo + ".");
+			alert("Bienvenido " + localStorage.usuario + ".");
 			window.location.href = "./index.html";
 		}else{
 			alert("Usuario o contraseña incorrectos, intente nuevamente.");
