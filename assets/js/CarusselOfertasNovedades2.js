@@ -45,7 +45,7 @@ function addItem(item){
             '<p class="text-body">' + item.description + '</p>\n' +
         '</div>\n' +
         '<div class="card-footer">\n' +
-            '<span class="text-title">$499.49</span>\n'+
+            '<span class="text-title">'+ item.price+'</span>\n'+
             '<div class="card-button">\n'+
                 '<svg class="svg-icon" viewBox="0 0 20 20">\n'+
                     '<path\n' +
@@ -77,7 +77,7 @@ function addItem2(item){
           '<p class="text-body">' + item.description + '</p>\n' +
       '</div>\n' +
       '<div class="card-footer">\n' +
-          '<span class="text-title">$499.49</span>\n'+
+          '<span class="text-title" id="precioP">'+ item.price+'</span>\n'+
           '<div class="card-button">\n'+
               '<svg class="svg-icon" viewBox="0 0 20 20">\n'+
                   '<path\n' +
@@ -128,7 +128,7 @@ itemsContainer4.innerHTML += itemHTML;
 }
 
 // Listado de productos de Categorias 1
-addItem3({'name':'Electrodomesticos',
+addItem3({'name':'Electrodomésticos',
   'img':'assets/icons/electrodomesticos.png'});
 addItem3({'name':'Tecnología',
   'img':'assets/icons/tecnologia.png'});
@@ -156,38 +156,46 @@ addItem4({'name':'Bebes',
   'img':'assets/icons/bebe.png'});
 
 // Listado de productos de Ofertas
-addItem({'name':'juice',
-    'img':'https://www.gs1india.org/media/Juice_pack.jpg',
-    'description':'Orange and Apple juice fresh and delicious'});
+addItem({'name':'Jugo Del Valle néctar mango 237 ml',
+    'img':'https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750105535689L.jpg',
+    'description':'Elaborado con jugo o pulpa con la mejor calidad. Sin conservadores',
+    'price':'$6.50',
+  });
 
-addItem({'name':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
-    'description':'Cheese & Onion Chips'});
+addItem({'name':'Papas Sabritas Original original 160 g',
+    'img':'https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750101113388L.jpg',
+    'description':'Sólo 3 ingredientes: papa, aceite y sal. Tamaño familiar, Snack crujiente',
+    'price':'$42.00',  
+  });
 
     addItem({
-        name: "Lavadora LG",
-        img: "https://www.lg.com/cac/images/lavadoras-y-secadoras/md05898276/2_Gallery/N01_medium01.jpg",
+        name: "Lavasecadora LG 12 Kg Silver",
+        img: "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/1p/images/product-images/img_large/00880609847672l.jpg",
         description:
-          "14/10kg Lavadora Doble Tina, Filtro de Pelusa, Rejilla Anti-Readores, Color Blanco",
+          "Recomendable para 2 personas. 11 Ciclos de lavado y 4 ciclos de secado.",
+        price: "$13,999"
       });
       addItem({
-        name: "Refrigerador Samsung",
-        img: "https://www.costco.com.mx/medias/sys_master/products/h94/h23/79611664564254.webp",
-        description: "22 French Door",
+        'name': "Balón Voit No5 S200 Cl21 81909",
+        'img': "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/1p/images/product-images/img_large/00750638506123l.jpg",
+        'description': "32 Paneles. Cosido a maquina. Material PVC. 2 Capas",
+        'price': "$219.00"
       });
       addItem({
-        name: "Refrigerador Samsung",
-        img: "https://images.samsung.com/is/image/samsung/mx-side-by-side-rs27t5561s9-rs27t5561s9-em-frontgray-207487013?$PD_GALLERY_L_JPG$",
-        description:
-          "Side by Side 27 cu.ft con Family Hub y despachador de agua y hielo",
+        'name': "Refrigerador Samsung 22 Pies",
+        'img': "https://images.samsung.com/is/image/samsung/mx-side-by-side-rs27t5561s9-rs27t5561s9-em-frontgray-207487013?$PD_GALLERY_L_JPG$",
+        'description':
+          "Digital inverter. Parrillas de cristal templado",
+        'price': "$20,691"
       });
       addItem({
-        name: "Banca para Jardín",
-        img: "https://cdn1.coppel.com/images/catalog/pm/3665443-1.jpg",
-        description: "Banca para Jardín Congo Delia",
+        name: "Sofá cama Hobbs 165 Bossa Hobbs",
+        img: "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/3pp/asr/ae8269ba-b553-41e6-839a-18562f4efda3.42c94f429f95e22e3c5d1300ff4d35f8.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff",
+        description: "Sofá cama individual, ideal para las visitas inesperadas o para un cuarto pequeño o estudio.",
+        price: "$4,999"
       });
       addItem({
-        name: "Juego de jardin",
+        name: "Juego de jardín",
         img: "https://cdn1.coppel.com/images/catalog/pm/3487413-1.jpg",
         description: "Juego de Jardín Apollo con 2 Sillas",
       });
@@ -253,7 +261,7 @@ addItem2({'name':'Tayto',
         description: "Banca para Jardín Congo Delia",
       });
       addItem2({
-        name: "Juego de jardin",
+        name: "Juego de jardín",
         img: "https://cdn1.coppel.com/images/catalog/pm/3487413-1.jpg",
         description: "Juego de Jardín Apollo con 2 Sillas",
       });
