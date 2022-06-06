@@ -1,6 +1,8 @@
 (function ($) {
 	"use strict";
 
+
+});
 /*=============================================
 	=    		 Preloader			      =
 =============================================*/
@@ -21,7 +23,7 @@ $(window).on('load', function () {
 	mainSlider();
 	aosAnimation();
 	popupModal();
-	wowAnimation();
+	
 });
 
 
@@ -195,295 +197,8 @@ $('.top-selling-active').owlCarousel({
 })
 
 
-/*=============================================
-	=    		Popular Active		      =
-=============================================*/
-$('.popular-active').slick({
-	dots: false,
-	infinite: true,
-	speed: 1000,
-	autoplay: true,
-	arrows: true,
-	prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
-	nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-	]
-});
 
 
-/*=============================================
-	=    		Deal Day Active		      =
-=============================================*/
-$('.deal-day-active').slick({
-	dots: false,
-	infinite: true,
-	speed: 1000,
-	autoplay: true,
-	arrows: false,
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-	]
-});
-
-
-/*=============================================
-	=    		Brand Active		      =
-=============================================*/
-$('.brand-active').slick({
-	dots: false,
-	infinite: true,
-	speed: 1000,
-	autoplay: true,
-	arrows: false,
-	slidesToShow: 6,
-	slidesToScroll: 2,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 5,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-	]
-});
-
-
-/*=============================================
-	=    	   Testimonial Active		    =
-=============================================*/
-$('.testimonial-active').slick({
-	dots: true,
-	infinite: true,
-	speed: 1000,
-	autoplay: false,
-	centerMode: true,
-	centerPadding: '0px',
-	arrows: false,
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-	]
-});
-
-
-/*=============================================
-	=         Sidebar Product Active        =
-=============================================*/
-$('.sidebar-product-active').slick({
-	dots: false,
-	infinite: true,
-	speed: 1000,
-	autoplay: false,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	prevArrow: '<span class="slick-prev"><i class="fas fa-angle-left"></i></span>',
-	nextArrow: '<span class="slick-next"><i class="fas fa-angle-right"></i></span>',
-	appendArrows: ".slider-nav",
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			}
-		},
-	]
-});
-
-
-/*=============================================
-	=         Related Product Active        =
-=============================================*/
-$('.related-product-active').slick({
-	dots: false,
-	infinite: true,
-	speed: 1000,
-	autoplay: false,
-	arrows: true,
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	prevArrow: '<span class="slick-prev"><i class="fas fa-angle-left"></i></span>',
-	nextArrow: '<span class="slick-next"><i class="fas fa-angle-right"></i></span>',
-	appendArrows: ".slider-nav",
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 1,
-			}
-		},
-		{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-			}
-		},
-	]
-});
 
 
 /*=============================================
@@ -572,7 +287,8 @@ $('[data-countdown]').each(function () {
 /*=============================================
 	=    	Shop Details Active  	       =
 =============================================*/
-$('.shop-details-active').slick({
+  
+  $('.shop-details-active').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,
@@ -580,6 +296,7 @@ $('.shop-details-active').slick({
 	fade: true,
 	asNavFor: '.shop-details-nav'
 });
+
 $('.shop-details-nav').slick({
 	slidesToShow: 4,
 	slidesToScroll: 1,
@@ -685,18 +402,3 @@ function popupModal() {
 	}, 5000);
 }
 
-/*=============================================
-	=    		 Wow Active  	         =
-=============================================*/
-function wowAnimation() {
-	var wow = new WOW({
-		boxClass: 'wow',
-		animateClass: 'animated',
-		offset: 0,
-		mobile: false,
-		live: true
-	});
-	wow.init();
-}
-
-})(jQuery);
