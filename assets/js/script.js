@@ -14,7 +14,7 @@ const campos = {// Aqui guardamos los campos que son validos
 	nombre: false,
 	password: false,
 	correo: false,
-	telefono: false
+	telefono: false	
 }
 
 const validarFormulario = (e) => {// Funcion que valida el formulario
