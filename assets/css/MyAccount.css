@@ -1397,17 +1397,6 @@ textarea:-ms-input-placeholder {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-input {
-  background: #eceff8;
-  border: 2px solid #eceff8;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #333;
-  width: 100%;
-}
-
 select {
   width: 100%;
   background: transparent;
@@ -7472,40 +7461,6 @@ a.default-btn {
   visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-.modal-dialog {
-  margin: 8% auto;
-  max-width: 960px;
-  width: 960px;
-  padding: 35px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .modal-dialog {
-    width: 720px;
-    max-width: 720px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .modal-dialog {
-    width: 100%;
-    max-width: 100%;
-    padding: 35px 0;
-  }
-}
-.modal-dialog .modal-header .close {
-  color: #333;
-  cursor: pointer;
-  opacity: 1;
-}
-.modal-dialog .modal-header .close:hover {
-  color: #a749ff;
-}
-.modal-dialog .modal-body {
-  padding: 35px 15px;
-}
-.modal-dialog .quickview-big-img img {
-  width: 100%;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -15555,7 +15510,7 @@ h3.cart-page-title {
 }
 .single-my-account .myaccount-info-wrapper .billing-info input {
   background: transparent none repeat scroll 0 0;
-  border: 1px solid #ebebeb;
+  border: 1px solid gainsboro;
   color: #000;
   height: 40px;
   padding: 0 15px;
