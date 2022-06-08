@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>LISTA DE ITEMS</title>
+        <title>Resultados</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,7 @@
 <header class="header">
 	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light">
-		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
 
 		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -33,18 +33,23 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Contáctanos <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Cuenta <span class="sr-only">(current)</span></a>
-				</li>
-				<form class="form-inline my-2 my-lg-0">
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Información de la empresa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+          </div>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="./MyAccount.html">Mi cuenta <span class="sr-only">(current)</span></a>
+      </li>
+				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
 					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 				</form>
@@ -266,7 +271,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO01</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -285,7 +289,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO02</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                           
@@ -304,7 +307,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO03</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -323,7 +325,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO04</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                             
@@ -342,7 +343,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO05</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                           
@@ -361,7 +361,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO06</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                           
@@ -380,7 +379,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO07</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                             
@@ -399,7 +397,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO08</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -418,7 +415,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO09</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -437,7 +433,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO10</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -456,7 +451,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO11</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                             
@@ -475,7 +469,6 @@
                                         <div class="exclusive-item-content">
                                             <h5><a href="shop-details.html">PRODUCTO12</a></h5>
                                             <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
                                                 <span class="new-price">$58.00</span>
                                             </div>
                                            
@@ -485,14 +478,14 @@
                             </div>
                             <div class="pagination-wrap">
                                 <ul>
-                                    <li class="prev"><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Prev</a></li>
+                                    <li class="prev"><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Anterior</a></li>
                                     <li class="active"><a href="shop-left-sidebar.html">1</a></li>
                                     <li class="active"><a href="shop-left-sidebar -1.html">2</a></li>
                                     <li><a href="#">3</a></li>
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">...</a></li>
                                     <li><a href="#">10</a></li>
-                                    <li class="next"><a href="#">Next <i class="fas fa-long-arrow-alt-right"></i></a></li>
+                                    <li class="next"><a href="#">Siguiente<i class="fas fa-long-arrow-alt-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>

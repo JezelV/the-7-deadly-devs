@@ -287,3 +287,11 @@ addItem2({'name':'Tayto',
         img: "https://www.chedraui.com.mx/medias/7501020550986-00-CH515Wx515H?context=bWFzdGVyfHJvb3R8Mzk0MjB8aW1hZ2UvanBlZ3xoMTYvaDk5LzEyMDI3MDc2NzcxODcwLmpwZ3xmMjEwZDU0NWZiNmQ0ZmM1NmFlNjA3ZDA3MzdmNmY4ZjdhZTJmNjQ4ZjI2MjFkZWRhNzM1YmViOWM4ZjAyZjBh",
         description: "100 Sin Lactosa Proteína 1 L",
       });
+
+      $(document).ready(function(){
+        $('.card').hover(function() {
+            $(this).addClass('transition');
+        }, function() {
+            $(this).removeClass('transition');
+        });
+    });

@@ -20,7 +20,7 @@
 <header class="header">
 	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light">
-		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
 
 		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,18 +30,23 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Contáctanos <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Cuenta <span class="sr-only">(current)</span></a>
-				</li>
-				<form class="form-inline my-2 my-lg-0">
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Información de la empresa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+          </div>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="./MyAccount.html">Mi cuenta <span class="sr-only">(current)</span></a>
+      </li>
+				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
 					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 				</form>
@@ -720,7 +725,7 @@
                                             </div>
                                             <div class="billing-back-btn">
                                                 <div class="billing-btn">
-                                                    <button type="submit">Añadir producto</button>
+                                                    <a href="./addProduct.html"><button type="submit">Añadir producto</button></a>
                                                 </div>
                                             </div>
                                         </div>

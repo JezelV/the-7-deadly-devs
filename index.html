@@ -19,7 +19,7 @@
 <header class="header">
 	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light">
-		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
 
 		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -29,22 +29,24 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Contactanos <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Vendedor <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Comprador <span class="sr-only">(current)</span></a>
-				</li>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Información de la empresa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+          </div>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="./MyAccount.html">Mi cuenta <span class="sr-only">(current)</span></a>
+      </li>
+				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 				</form>
 			</ul>
@@ -61,7 +63,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+							<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -103,7 +105,7 @@
 						</div>
 						<div class="modal-footer">
 							<!--Boton de Cerrar-->
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						</div>
 					</div>
 				</div>
@@ -120,7 +122,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="staticBackdrop2Label">Sign up</h5>
+							<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -210,7 +212,7 @@
 						</div>
 						<div class="modal-footer">
 							<!-- Boton de cerrar -->
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						</div>
 					</div>
 				</div>
@@ -235,30 +237,30 @@
 		<!--Imagenes del Carrusel-->
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/img/quienSomos.jpg" class="d-block w-100" alt="...">
+				<img src="./assets/img/quienSomos.jpg" class="d-block w-100" alt="..." id="imgCarrusel">
 				<div class="carousel-caption d-none d-md-block">
 					<!--Titulo del Carrusel-->
-					<h2>¿Quien somos?</h2>
+					<h2>¿Quienes somos?</h2>
 					<!--Descripcion del Carrusel-->
-					<p class="textC">Somos un grupo de personas que nos apoyamos entre sí.</p>
+					<p class="textC">Somos Meet & Buy un grupo de personas que nos apoyamos entre sí. En donde puedes promocionarte tu negocio y publicar tus productos</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="/assets/img/AumentaVentas.png" class="d-block w-100" alt="...">
+				<img src="/assets/img/AumentaVentas.jpg" class="d-block w-100" alt="..." id="imgCarrusel">
 				<div class="carousel-caption d-none d-md-block">
 					<!--Titulo del Carrusel-->
 					<h2>¿Porque nos necesitas?</h2>
 					<!--Descripcion del Carrusel-->
-					<p class="textC">¿Quieres aumentar tus ventas? Estas en el lugar indicado.</p>
+					<p class="textC">¿Quieres aumentar tus ventas? Estas en el lugar indicado. Ofrecemos un espacios online para darte a conocer a tus clientes mas fácil.</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/img/UneteANosotros.png" class="d-block w-100" alt="...">
+				<img src="./assets/img/UneteANosotros.jpg" class="d-block w-100" alt="..." id="imgCarrusel">
 				<div class="carousel-caption d-none d-md-block">
 					<!--Titulo del Carrusel-->
 					<h2>¡Unete a nosotros!</h2>
 					<!--Descripcion del Carrusel-->
-					<p class="textC">Se parte de nuestra comunidad y que el cielo sea el limite.</p>
+					<p class="textC">Se parte de nuestra comunidad, en donde te encuentran con un solo click y que el cielo sea el límite.</p>
 				</div>
 			</div>
 			<!--Termina las imagenes del Carrusel-->
@@ -351,6 +353,8 @@
 	<br>
 	<!--Ofertas-->
 	<h1>Ofertas</h1>
+	<br>
+	<h2>Los mejores productos que están en oferta</h2>
 	<div class="Carousel">
 		<div class="slick-list" id="slick-list">
 			<!--boton de izquierda-->
@@ -389,6 +393,8 @@
 	<br>
 	<!--Novedades-->
 	<h1>Novedades</h1>
+	<br>
+	<h2>Los nuevos productos de esta temporada</h2>
 	<div class="Carousel">
 		<div class="slick-list" id="slick-list">
 			<!--boton de izquierda-->
@@ -432,11 +438,10 @@
         *Referencias a los Scripts:
     -->
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src="./assets/js/script.js"></script>
-
-	<script src="./assets/js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="./assets/js/CarusselOfertasNovedades2.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
@@ -447,26 +452,26 @@
 		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
 		crossorigin="anonymous"></script>
 </body>
-<!-- FOOTER-->
-<footer class="site-footer">
+ <!-- FOOTER-->
+ <footer class="site-footer">
 	<div class="container">
 	  <div class="row">
 		<div class="col-sm-12 col-md-6">
-		  <h6>About us</h6>
-		  <p class="text-justify">We are a team of 7 Full Stack Jr developers, graduates of the Generation Mx bootcamp.</p>
+		  <h6>Acerca de nosotros</h6>
+		  <p class="text-justify">Somos un equipo de 7 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
 		</div>
 
 		<div class="col-xs-6 col-md-3">
-			<h6>Contact</h6>
+			<h6>Contacto</h6>
 			<ul class="footer-links">
-			  <li><a href="./aboutUs.html">About Us</a></li>
-			  <li><a href="./contactUs.html">Contact Us</a></li>
-			  <li><a href="./privacyPolicy.html">Privacy Policy</a></li>
+			  <li><a href="./aboutUs.html">Acerca de nosotros</a></li>
+			  <li><a href="./contactUs.html">Contáctanos</a></li>
+			  <li><a href="./privacyPolicy.html">Políticas de privacidad</a></li>
 			</ul>
 		  </div>
 
 		<div class="col-xs-6 col-md-3">
-		  <h6>social networks</h6>
+		  <h6>Redes sociales</h6>
 		  <ul class="footer-links">
 
               <!--ICONO DE GITHUB-->

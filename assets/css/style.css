@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Roboto', sans-serif;*/
 	background: #E5E5E5;
 }
 
@@ -130,7 +130,7 @@ main {
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
-	opacity: 1;
+	/*opacity: 1;*/
 }
 
 .formulario__grupo-incorrecto .formulario__label {
@@ -139,7 +139,7 @@ main {
 
 .formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #bb2929;
-	opacity: 1;
+	/*opacity: 1;*/
 }
 
 .formulario__grupo-incorrecto .formulario__input {

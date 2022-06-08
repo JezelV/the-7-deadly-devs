@@ -94,3 +94,7 @@
 .slick-next{
     right: 0px;
 }
+
+#imgCarrusel{
+    opacity: 0.5;
+}

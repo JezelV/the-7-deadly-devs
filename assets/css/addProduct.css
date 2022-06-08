@@ -1,22 +1,3 @@
-
-/*LOGO */
-.logo {
-	width: 120px;
-}
-
-/* COLOR DEL BOTON DE BUSCAR*/
-.grey{
-  background-color: #181818;
-}
-
-.nav-link{
-  color: aqua!important;
-}
-
-.navbar-toggler-icon{
-  background-color: aqua!important;
-}
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); /* Formato de palabras
 /* RESET RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -232,7 +213,7 @@ body {
   top: 6px;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--white);
+  border: 2px solid black;
 }
 
 .my-form input[type="checkbox"]:checked + label::before {
@@ -275,11 +256,6 @@ body {
   }
 }
 
-.contenedor{
-    width: auto;
-    margin: auto;
-}
-
 /* Eliminar scroll */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -288,41 +264,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /*-----------------*/
 
-/* FOOTER*/
-
-.site-footer
-{
-  background-color:#26272b;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:20px;
-  color:#737373;
-}
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-
-.site-footer h6
-{
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
-}
-.site-footer a
-{
-  color:#737373;
-}
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links
-{
-  padding-left:0;
-  list-style:none
+.contenedor{
+  width:800px;
+  margin: auto;
 }
