@@ -3,33 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>About Us</title>
+	<title>Acerca de nosotros</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
 	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
-	<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'><link rel="stylesheet" href="./assets/css/aboutUs.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/aboutUs.css">
+    <link rel="stylesheet" href="./assets/css/estilos2.css">
     <link rel="icon" href="./assets/img/icon.png">
 
 </head>
-<!--Comienza la barra de navegacion con los siguientes estilos-->
-
+<!--Comienza Header-->
 <header class="header">
 	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light">
+<<<<<<< HEAD
 		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+=======
+		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+
+		
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+<<<<<<< HEAD
 
         <!--
             El siguiente div es para que el menu se expanda
         -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+=======
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
 				</li>
+<<<<<<< HEAD
 				<li class="nav-item active">
 					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
 				</li>
@@ -49,36 +60,230 @@
 			</ul>
 			<br>			
             
+=======
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Información de la empresa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+          </div>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="#" id="btnM">Mi cuenta <span class="sr-only">(current)</span></a>
+      </li>
+				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+			</ul>
+			<br>
+			<!--Botones de Login y Sign up-->
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
+				Login
+			</button>
+			<!-- Modal de Login-->
+			<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							
+							<!--Formulario de login-->
+							<form action="" class="formulario" id="formulario1">
+								
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo" id="grupo__correo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo" id="grupo__password">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password1" id="password1">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" id="btnSubmit1" class="formulario__btn">Enviar</button>
+								</div>
+							</form>
+
+							<div class="dropdown-divider"></div>
+							<!--boton para mandar a registrarse en el modal Sign up y cerrar el modal de login-->
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#staticBackdrop2">
+								¿Eres nuevo?, ¡Registrate!
+							</button>
+						</div>
+						<div class="modal-footer">
+							<!--Boton de Cerrar-->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Boton de Registro-->
+		<div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
+				Sign up
+			</button>
+			<!-- Modal de Sign up-->
+			<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!--Formulario de Registro-->
+							<form action="" class="formulario" id="formulario">
+								<!-- Grupo: Usuario -->
+								<div class="formulario__grupo" id="grupo__usuario">
+									<label for="usuario" class="formulario__label">Usuario</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Nombre -->
+								<div class="formulario__grupo" id="grupo__nombre">
+									<label for="nombre" class="formulario__label">Nombre</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo" id="grupo__password">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password" id="password">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña 2 -->
+								<div class="formulario__grupo" id="grupo__password2">
+									<label for="password2" class="formulario__label">Repetir Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password2" id="password2">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+								</div>
+					
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo" id="grupo__correo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Teléfono -->
+								<div class="formulario__grupo" id="grupo__telefono">
+									<label for="telefono" class="formulario__label">Teléfono</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Terminos y Condiciones -->
+								<div class="formulario__grupo" id="grupo__terminos">
+									<label class="formulario__label">
+										<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+										Acepto los Terminos y Condiciones
+									</label>
+								</div>
+								
+								<div class="formulario__mensaje" id="formulario__mensaje">
+									<!-- Mensaje de llenado incorrecto -->
+									<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" class="formulario__btn">Enviar</button>
+									<!--Mensaje de llenado correcto-->
+									<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<!-- Boton de cerrar -->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--Termina Botones de Login y Sign up-->
+			<br>
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
 		</div>
 	</nav>
+	<!--Termina el NavBar-->
 </header>
-<!-- AQUI TERMINA EL HEADER-->
+<!--Termina Header-->
 
 <body>
 <!--Aqui comienza los perfiles de los miembros del proyecto-->
 <section class="container">
     <div class="page-header">
-        <h1>About Us<br>
-            <small>See the source code of our project at <a href="https://github.com/JezelV/the-7-deadly-devs" target="_blank">GitHub</a></small></h1>
+        <br>
+        <h1>Acerca de nosotros.<br>
+            <small>Vea el código fuente de nuestro proyecto en <a href="https://github.com/JezelV/the-7-deadly-devs" target="_blank">GitHub</a></small></h1>
+            <br>
+            <br>
     </div>
 
 	<!--AQUI COMIENZA EL PERFIL DE EDGAR-->
     <div class="row active-with-click">
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Purple">
+            <article class="material-card Teal">
                 <h2>
                     <span>Edgar Jezel</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Back-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="/assets/img/edgar.jpg">
+                        <img class="img-responsive" src="./assets/avatares/edgar.png">
                     </div>
                     <div class="mc-description">
-                        An average Red Team Ethical Hacker, who is attracted by sensitive information
+                        Un hacker ético del equipo rojo promedio, que se siente atraído por la información confidencial.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -102,15 +307,15 @@
                     <span>Argemiro Haro</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Front-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="/assets/img/argemiro.jpeg">
+                        <img class="img-responsive" src="./assets/avatares/Argemiro.png">
                     </div>
                     <div class="mc-description">
-                        My name is Heber Argemiro, my hobbies are playing video games and designing web pages.
+                        Mi nombre es Heber Argemiro, mis pasatiempos son jugar videojuegos y diseñar páginas web.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -132,20 +337,19 @@
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Teal">
                 <h2>
-                    <span>Juan Carlos</span>
+                    <span>Juan Carlos Flores</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Back-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="/assets/img/JuanCarlos.jpeg">
+                        <img class="img-responsive" src="./assets/avatares/fer.png">
                     </div>
                     <div class="mc-description">
-                        My name is Juan Carlos and I am a graduate of Mechatronics Engineering.
-                        I love programming and my favorite hobbies are playing video games and practicing basketball.
-
+                        Mi nombre es Juan Carlos y soy egresado de Ingeniería Mecatrónica.
+                        Me encanta programar y mis hobbies favoritos son los videojuegos y practicar basketball.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -165,20 +369,20 @@
 
 		<!--AQUI COMIENZA EL PERFIL DE GERARDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Pink">
+            <article class="material-card Cyan">
                 <h2>
-                    <span>Guadalupe Gerardo</span>
+                    <span>Gerardo Cortes</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Front-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="/assets/img/gera.jpg">
+                        <img class="img-responsive" src="./assets/avatares/gera.png">
                     </div>
                     <div class="mc-description">
-                        Never give up and always improve. Creative engineer always adapting to changes.
+                        Nunca te rindas y siempre mejora. Ingeniero creativo siempre adaptándose a los cambios.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -198,20 +402,20 @@
 
 		<!--AQUI COMIENZA EL PERFIL DE FERNANDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Orange">
+            <article class="material-card Teal">
                 <h2>
                     <span>Fernando Aranda</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Front-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="/assets/img/Fer.jpg">
+                        <img class="img-responsive" src="./assets/avatares/fer.png">
                     </div>
                     <div class="mc-description">
-                        English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
+                        Actor y autor inglés. Reconocido por su distintivo acento cockney de clase trabajadora, Fernando ha aparecido en más de 115 películas y es considerado como un británico.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -230,20 +434,20 @@
 
 		<!--AQUI COMIENZA EL PERFIL DE RICARDO-->
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Light-Blue">
+            <article class="material-card Cyan">
                 <h2>
-                    <span>Ricardo Martinez</span>
+                    <span>Ricardo Martínez</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Designer and Development
+                        Desarrollador Front-End
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/img/Ricardo.png">
+                        <img class="img-responsive" src="./assets/avatares/edgar.png">
                     </div>
                     <div class="mc-description">
-                        Illustrator, programming amateur, and technology enthusiast. UI and illustration skills for Web Developing, Character Design and Digital Illustration.
+                        Ilustrador, aficionado a la programación y entusiasta de la tecnología. Habilidades de UI e ilustración para desarrollo web, diseño de personajes e ilustración digital.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -270,46 +474,45 @@
   <script  src="./assets/js/aboutUs.js"></script> 
 
   <!--Los siguientes Scripts son para importar el codigo de Bootstrap 4.6-->
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+		crossorigin="anonymous"></script>
 <!--Aqui termina los scripts-->
 
 </body>
 
-  <!--COMIENZA EL FOOTER-->
-  <!--Este Footer fue tomado de Codepen y utiliza los estilos de Bootstrap 4.6 -->
-  <footer class="site-footer">
-    <div class="container">
+   <!-- FOOTER-->
+<footer class="site-footer">
+	<div class="container">
 	  <div class="row">
-        <!--Este es el pirmer apartado de footer que incluye informacion sobre nosotros-->
 		<div class="col-sm-12 col-md-6">
-		  <h6>About us</h6>
-		  <p class="text-justify">We are a team of 7 Full Stack Jr developers, graduates of the Generation Mx bootcamp.</p>
+		  <h6>Acerca de nosotros</h6>
+		  <p class="text-justify">Somos un equipo de 7 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
 		</div>
-    
 
-        <!--Este es el segundo apartado de footer que incluye los contactos-->
 		<div class="col-xs-6 col-md-3">
-			<h6>Contact</h6>
+			<h6>Contacto</h6>
 			<ul class="footer-links">
-			  <li><a href="./aboutUs.html">About Us</a></li>
-			  <li><a href="./contactUs.html">Contact Us</a></li>
-			  <li><a href="./privacyPolicy.html">Privacy Policy</a></li>
+			  <li><a href="./aboutUs.html">Acerca de nosotros</a></li>
+			  <li><a href="./contactUs.html">Contáctanos</a></li>
+			  <li><a href="./privacyPolicy.html">Políticas de privacidad</a></li>
 			</ul>
 		  </div>
-        
-        <!--Este es el tercer apartado de footer que incluye la direccion y links de la pagina-->
+
 		<div class="col-xs-6 col-md-3">
-		  <h6>social networks</h6>
+		  <h6>Redes sociales</h6>
 		  <ul class="footer-links">
 
               <!--ICONO DE GITHUB-->
-              <!--Los siguientes estilos sirven para darle formato, color y diseño a los iconos del footer-->
 			<svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                <!--
-                    El Path sirve permite dibujar cualquier tipo de curva
-                    El fill="currentColor" permite darle un color al icono en base al CSS de Bootstrap
-                -->
                 <a href="..." target="_blank"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></a>
               </svg>
 
