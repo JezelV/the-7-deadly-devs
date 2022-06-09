@@ -103,6 +103,7 @@ var infoFooter = `
 function addHeader() {
 	console.log(document.getElementById("site-header").innerHTML);
 	document.getElementById("site-header").innerHTML = infoHeader;
+	
 }
 
 function addFooter() {
