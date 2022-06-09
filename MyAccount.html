@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+
+    <!--Links CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/estilos2.css">
+    <link rel="icon" href="./assets/img/MB_Logo.png">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/MyAccount.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+
+<!--Comienza Header-->
+<header class="header">
+	<!--Comienza NavBar-->
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Contáctanos <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Cuenta <span class="sr-only">(current)</span></a>
+				</li>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+			</ul>
+			<br>
+			<!--Botones de Login y Sign up-->
+			<!-- Button trigger modal -->
+			<div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
+				Login
+			</button>
+			<!-- Modal de Login-->
+			<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							
+							<!--Formulario de login-->
+							<form action="" class="formulario" id="formulario1">
+								
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo" id="grupo__correo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo" id="grupo__password">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password1" id="password1">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" id="btnSubmit1" class="formulario__btn">Enviar</button>
+								</div>
+							</form>
+
+							<div class="dropdown-divider"></div>
+							<!--boton para mandar a registrarse en el modal Sign up y cerrar el modal de login-->
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#staticBackdrop2">
+								¿Eres nuevo?, ¡Registrate!
+							</button>
+						</div>
+						<div class="modal-footer">
+							<!--Boton de Cerrar-->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Boton de Registro-->
+		<div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
+				Sign up
+			</button>
+			<!-- Modal de Sign up-->
+			<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!--Formulario de Registro-->
+							<form action="" class="formulario" id="formulario">
+								<!-- Grupo: Usuario -->
+								<div class="formulario__grupo" id="grupo__usuario">
+									<label for="usuario" class="formulario__label">Usuario</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Nombre -->
+								<div class="formulario__grupo" id="grupo__nombre">
+									<label for="nombre" class="formulario__label">Nombre</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo" id="grupo__password">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password" id="password">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña 2 -->
+								<div class="formulario__grupo" id="grupo__password2">
+									<label for="password2" class="formulario__label">Repetir Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password2" id="password2">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+								</div>
+					
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo" id="grupo__correo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Teléfono -->
+								<div class="formulario__grupo" id="grupo__telefono">
+									<label for="telefono" class="formulario__label">Teléfono</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Terminos y Condiciones -->
+								<div class="formulario__grupo" id="grupo__terminos">
+									<label class="formulario__label">
+										<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+										Acepto los Terminos y Condiciones
+									</label>
+								</div>
+								
+								<div class="formulario__mensaje" id="formulario__mensaje">
+									<!-- Mensaje de llenado incorrecto -->
+									<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" class="formulario__btn">Enviar</button>
+									<!--Mensaje de llenado correcto-->
+									<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<!-- Boton de cerrar -->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--Termina Botones de Login y Sign up-->
+			<br>
+		</div>
+	</nav>
+	<!--Termina el NavBar-->
+</header>
+<!--Termina Header-->
+
+<body>
+    
+<!--Aqui empieza la lista desplegable-->
+<div class="checkout-area pb-80 pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="ms-auto me-auto col-lg-9">
+                <div class="checkout-wrapper">
+                    <div id="faq" class="panel-group">
+                        <!--Opcion de editar datos personales-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>1 .</span> <a data-bs-toggle="collapse" href="#my-account-1">Configurar mi cuenta.</a></h3>
+                            </div>
+                            <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
+                                <div class="panel-body">
+                                    <div class="myaccount-info-wrapper">
+                                        <div class="account-info-wrapper">
+                                            <h4>Información de mi cuenta. </h4>
+                                            <h5>Mi información personal.</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="billing-info">
+                                                    <label>Nombre</label>
+                                                    <input type="text" name="Nombre" class="inputsP" id="nombreInfo" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="billing-info">
+                                                    <label>Usuario</label>
+                                                    <input type="text" name="Usuario" class="inputsP" id="usuarioInfo" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="billing-info">
+                                                    <label>Correo</label>
+                                                    <input type="email" name="Correo" class="inputsP" id="correoInfo" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="billing-info">
+                                                    <label>Telefono</label>
+                                                    <input type="tel" name="Telefono" class="inputsP" id="telefonoInfo" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="billing-back-btn">
+                                            <div class="billing-btn">
+                                                <button type="submit" id="btn_personal_mod">Modificar</button>
+                                            </div>
+                                            <div class="billing-btn">
+                                                <button type="submit" id="btn_perosnal_env">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Termina Opcion de editar datos personales-->
+
+                        <!--Opcion de cambiar contraseña-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>2 .</span> <a data-bs-toggle="collapse" href="#my-account-2">Cambiar contraseña </a></h3>
+                            </div>
+                            <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
+                                <div class="panel-body">
+                                    <div class="myaccount-info-wrapper">
+                                        <div class="account-info-wrapper">    
+                                            <h5>Tu contraseña</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="billing-info">
+                                                    <label>Contraseña actual:</label>
+                                                    <input type="password" name="Contraseña original" id="contraOriginal">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="billing-info">
+                                                    <label>Nueva contraseña:</label>
+                                                    <input type="password" name="Nueva contraseña" id="contraNueva">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="billing-info">
+                                                    <label>Confirmar nueva contraseña:</label>
+                                                    <input type="password" name="Confirmar nueva contraseña" id="contraRepetir">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="billing-back-btn">
+                                            <div class="billing-btn">
+                                             <!--Dejar este espacio para que se acomode el boton de abajo-->
+                                            </div>
+                                            <div class="billing-btn">
+                                                <button type="submit" id="btn_contraseña_env">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina Opcion de cambiar contraseña-->
+
+                        <!--Opcion de editar direcciones-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>3 .</span> <a data-bs-toggle="collapse" href="#my-account-3">Modificar mis direcciones de entrega</a></h3>
+                            </div>
+                            <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
+                                <div class="panel-body">
+                                    <div class="myaccount-info-wrapper">
+                                        <div class="account-info-wrapper">
+                                            <h4>Mis direcciones</h4>
+                                        </div>
+                                        <div class="entries-wrapper">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                    <div class="entries-info text-center">
+                                                        <p>Aqui va mi direccion</p>
+                                                        <p>Hola :P</p>
+                                                        <p>Chale xdx</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                    <div class="entries-edit-delete text-center">
+                                                            <!--Boton de modal-->
+                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" id="btn_direccion_edi">Editar</button>
+                                                            <button type="button" class="btn btn-dark" id="btn_direccion_eli">Eliminar</button>
+                                                    </div>
+                                                    <!--Empieza modal-->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Dirección</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>   
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <!--Formulario-->
+                                                                    <form>
+                                                                        <div class="form-group">
+                                                                            <label for="direccion1" class="col-form-label">Dirección:</label>
+                                                                            <input type="text" class="form-control" id="direccion1" placeholder="Calle, número ext e int">
+                                                                            <label for="cp1" class="col-form-label">Código Postal:</label>
+                                                                            <input type="text" class="form-control" id="cp1" placeholder="74000">
+                                                                            <label for="colonia1" class="col-form-label">Colonia:</label>
+                                                                            <input type="text" class="form-control" id="colonia1">
+                                                                            <label for="ciudad1" class="col-form-label">Ciudad:</label>
+                                                                            <input type="text" class="form-control" id="ciudad1">
+                                                                            <label for="municipio1" class="col-form-label">Municipio:</label>
+                                                                            <input type="text" class="form-control" id="municipio1">
+                                                                            <label for="estado1" class="col-form-label">Estado:</label>
+                                                                            <select name="estado" id="estado1">
+                                                                                <option selected disabled>-- Elige un estado --</option>
+                                                                                   <option>Aguascalientes</option>
+                                                                                   <option>Baja California</option>
+                                                                                   <option>Baja California Sur</option> 
+                                                                                   <option>Campeche </option>
+                                                                                   <option>Chiapas </option>
+                                                                                   <option>Chihuahua </option>
+                                                                                   <option>Ciudad de México </option>
+                                                                                   <option>Coahuila </option>
+                                                                                   <option>Colima </option>
+                                                                                   <option>Durango </option>
+                                                                                   <option>Estado de México </option>
+                                                                                   <option>Guanajuato </option>
+                                                                                   <option>Guerrero </option>
+                                                                                   <option>Hidalgo </option>
+                                                                                   <option>Jalisco </option>
+                                                                                   <option>Michoacán </option>
+                                                                                   <option>Morelos </option>
+                                                                                   <option>Nayarit </option>
+                                                                                   <option>Nuevo León </option>
+                                                                                   <option>Oaxaca </option>
+                                                                                   <option>Puebla </option>
+                                                                                   <option>Querétaro </option>
+                                                                                   <option>Quintana Roo </option>
+                                                                                   <option>San Luis Potosí </option>
+                                                                                   <option>Sinaloa </option>
+                                                                                   <option>Sonora </option>
+                                                                                   <option>Tabasco </option>
+                                                                                   <option>Tamaulipas </option>
+                                                                                   <option>Tlaxcala </option>
+                                                                                   <option>Veracruz </option>
+                                                                                   <option>Yucatán </option>
+                                                                                   <option>Zacatecas</option>                    
+                                                                            </select>
+                                                                        </div>
+                                                                    </form>
+                                                                    <!--Fin Formulario-->
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                                    <button type="button" class="btn btn-primary" id="btn_direccion_env">Enviar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Termina modal-->    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="billing-back-btn">
+                                            <div class="billing-btn">
+                                                <button type="submit" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Añadir direccion</button>                              
+                                            </div>
+                                            <!--Empieza modal-->
+                                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Añadir Dirección</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>   
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!--Formulario-->
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="direccion" class="col-form-label">Dirección:</label>
+                                                                    <input type="text" class="form-control" id="direccion" placeholder="Calle, número ext e int">
+                                                                    <label for="cp" class="col-form-label">Código Postal:</label>
+                                                                    <input type="number" class="form-control" id="cp" placeholder="74000">
+                                                                    <label for="colonia" class="col-form-label">Colonia:</label>
+                                                                    <input type="text" class="form-control" id="colonia">
+                                                                    <label for="ciudad" class="col-form-label">Ciudad:</label>
+                                                                    <input type="text" class="form-control" id="ciudad">
+                                                                    <label for="municipio" class="col-form-label">Municipio:</label>
+                                                                    <input type="text" class="form-control" id="municipio">
+                                                                    <label for="estado" class="col-form-label">Estado:</label>
+                                                                    <select name="estado" id="estado">
+                                                                        <option selected disabled>-- Elige un estado --</option>
+                                                                           <option>Aguascalientes</option>
+                                                                           <option>Baja California</option>
+                                                                           <option>Baja California Sur</option> 
+                                                                           <option>Campeche </option>
+                                                                           <option>Chiapas </option>
+                                                                           <option>Chihuahua </option>
+                                                                           <option>Ciudad de México </option>
+                                                                           <option>Coahuila </option>
+                                                                           <option>Colima </option>
+                                                                           <option>Durango </option>
+                                                                           <option>Estado de México </option>
+                                                                           <option>Guanajuato </option>
+                                                                           <option>Guerrero </option>
+                                                                           <option>Hidalgo </option>
+                                                                           <option>Jalisco </option>
+                                                                           <option>Michoacán </option>
+                                                                           <option>Morelos </option>
+                                                                           <option>Nayarit </option>
+                                                                           <option>Nuevo León </option>
+                                                                           <option>Oaxaca </option>
+                                                                           <option>Puebla </option>
+                                                                           <option>Querétaro </option>
+                                                                           <option>Quintana Roo </option>
+                                                                           <option>San Luis Potosí </option>
+                                                                           <option>Sinaloa </option>
+                                                                           <option>Sonora </option>
+                                                                           <option>Tabasco </option>
+                                                                           <option>Tamaulipas </option>
+                                                                           <option>Tlaxcala </option>
+                                                                           <option>Veracruz </option>
+                                                                           <option>Yucatán </option>
+                                                                           <option>Zacatecas</option>                    
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+                                                            <!--Fin Formulario-->
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                            <button type="button" class="btn btn-primary" id="btn_direccion_aña">Enviar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Termina modal-->    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina Opcion de cambiar direcciones-->
+
+                        <!--Opcion de metodos de pagos-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>4 .</span> <a data-bs-toggle="collapse" href="#my-account-4">Mis métodos de pago</a></h3>
+                                <div id="my-account-4" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+                                            <div class="account-info-wrapper">
+                                                <h4>Mis tarjetas</h4>
+                                            </div>
+                                            <div class="entries-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-info text-center">
+                                                            <p>Aqui va mi la info de la tarjeta</p>
+                                                            <p>Hola :P</p>
+                                                            <p>Chale xdx</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-edit-delete text-center">
+                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Editar</button>
+                                                            <button type="button" class="btn btn-dark" id="btn_pago_eliminar">Eliminar</button>
+                                                        </div>
+                                                        <!--Empieza modal-->
+                                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Editar tarjeta</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>   
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!--Formulario-->
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="nombretitular" class="col-form-label">Nombre del titular:</label>
+                                                                    <input type="text" class="form-control" id="nombretitular1" placeholder="Laura Flores">
+                                                                    <label for="numerotarjeta" class="col-form-label">Número de la tarjeta:</label>
+                                                                    <input type="number" class="form-control" id="numerotarjeta1" placeholder="xxxx-xxxx-xxxx-xxxx">
+                                                                </div>
+                                                                    <label class="col-form-label">Fecha de vencimiento:</label>
+                                                                <div class="col-md-6 .ml-auto">
+                                                                    <select name="" id="mesPago1">
+                                                                        <option selected disabled>00</option>
+                                                                        <option>01</option>
+                                                                        <option>02</option>
+                                                                        <option>03</option>
+                                                                        <option>04</option>
+                                                                        <option>05</option>
+                                                                        <option>06</option>
+                                                                        <option>07</option>
+                                                                        <option>08</option>
+                                                                        <option>09</option>
+                                                                        <option>10</option>
+                                                                        <option>11</option>
+                                                                        <option>12</option>
+                                                                    </select>
+                                                                </div>    
+                                                                <div class="col-md-6 .ml-auto">
+                                                                    <select name="" id="añoPago1">
+                                                                        <option selected disabled>0000</option>
+                                                                        <option>2022</option>
+                                                                        <option>2023</option>
+                                                                        <option>2024</option>
+                                                                        <option>2025</option>
+                                                                        <option>2026</option>
+                                                                        <option>2027</option>
+                                                                        <option>2028</option>
+                                                                        <option>2029</option>
+                                                                        <option>2030</option>
+                                                                        <option>2031</option>
+                                                                        <option>2032</option>
+                                                                        <option>2033</option>
+                                                                        <option>2034</option>
+                                                                        <option>2035</option>
+                                                                    </select>
+                                                                </div>
+                                                            </form>
+                                                            <!--Fin Formulario-->
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                            <button type="button" class="btn btn-primary" id="btn_pago_ed">Enviar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Termina modal-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="billing-back-btn">
+                                                <div class="billing-btn" data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo">
+                                                    <button type="submit">Añadir tarjeta</button>
+                                                </div>              
+                                            </div>
+                                            <!--Empieza modal-->
+                                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Añadir tarjeta</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>   
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!--Formulario-->
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="nombretitular" class="col-form-label">Nombre del titular:</label>
+                                                                    <input type="text" class="form-control" id="nombretitular" placeholder="Laura Flores">
+                                                                    <label for="numerotarjeta" class="col-form-label">Número de la tarjeta:</label>
+                                                                    <input type="number" class="form-control" id="numerotarjeta" placeholder="xxxx-xxxx-xxxx-xxxx">
+                                                                </div>
+                                                                
+                                                                    <label class="col-form-label">Fecha de vencimiento:</label>
+                                                                <div class="col-sm-9">
+                                                                <div class="col-md-6 .ml-auto">
+                                                                    <select name="" id="mesPago">
+                                                                        <option selected disabled>00</option>
+                                                                        <option>01</option>
+                                                                        <option>02</option>
+                                                                        <option>03</option>
+                                                                        <option>04</option>
+                                                                        <option>05</option>
+                                                                        <option>06</option>
+                                                                        <option>07</option>
+                                                                        <option>08</option>
+                                                                        <option>09</option>
+                                                                        <option>10</option>
+                                                                        <option>11</option>
+                                                                        <option>12</option>
+                                                                    </select>
+                                                                </div>    
+                                                                <div class="col-md-6 .ml-auto">
+                                                                    <select name="" id="añoPago">
+                                                                        <option selected disabled>0000</option>
+                                                                        <option>2022</option>
+                                                                        <option>2023</option>
+                                                                        <option>2024</option>
+                                                                        <option>2025</option>
+                                                                        <option>2026</option>
+                                                                        <option>2027</option>
+                                                                        <option>2028</option>
+                                                                        <option>2029</option>
+                                                                        <option>2030</option>
+                                                                        <option>2031</option>
+                                                                        <option>2032</option>
+                                                                        <option>2033</option>
+                                                                        <option>2034</option>
+                                                                        <option>2035</option>
+                                                                    </select>
+                                                                </div>
+                                                                </div>
+                                                                
+                                                            </form>
+                                                            <!--Fin Formulario-->
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                            <button type="button" class="btn btn-primary" id="btn_Pago_env">Enviar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Termina modal-->  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina Opcion de metodos de pagos-->
+
+                        <!--Opcion de catalogo-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>5 .</span> <a data-bs-toggle="collapse" href="#my-account-5">Mi Catalogo</a></h3>
+                                <div id="my-account-5" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+                                            <div class="account-info-wrapper">
+                                                <h4>Mis productos</h4>
+                                            </div>
+                                            <div class="entries-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-info text-center">
+                                                            <p>Aqui va la info del prodcuto</p>
+                                                            <p>Hola :P</p>
+                                                            <p>Chale xdx</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-edit-delete text-center">
+                                                            <button type="button" class="btn btn-primary">Editar</button>
+                                                            <button type="button" class="btn btn-dark">Eliminar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="billing-back-btn">
+                                                <div class="billing-btn">
+                                                    <button type="submit">Añadir producto</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina Opcion de catalogo-->
+
+                        <!--Opcion de pedidos-->
+                        <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>6 .</span> <a data-bs-toggle="collapse" href="#my-account-6">Mis pedidos</a></h3>
+                                <div id="my-account-6" class="panel-collapse collapse" data-bs-parent="#faq">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+                                            <div class="account-info-wrapper">
+                                                <h4>Mis pedidos</h4>
+                                            </div>
+                                            <div class="entries-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-info text-center">
+                                                            <p>Aqui va la imagen del producto</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                                                        <div class="entries-info text-center">
+                                                            <p>Aqui va la info del pedido</p>
+                                                            <p>Hola :P</p>
+                                                            <p>Chale xdx</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina Opcion de pedidos->
+
+                         <!--Opcion cerrar sesion-->
+                         <div class="panel panel-default single-my-account">
+                            <div class="panel-heading my-account-title">
+                                <h3 class="panel-title"><span>7 .</span> <a data-bs-toggle="collapse" href="">Cerrar sesión.</a></h3>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <!--Termina cerrar sesion-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!--Aqui termina la lista despñegable-->
+
+
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/MyAccount.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+
+<!-- FOOTER-->
+<footer class="site-footer">
+	<div class="container">
+	  <div class="row">
+		<div class="col-sm-12 col-md-6">
+		  <h6>Acerca de nosotros</h6>
+		  <p class="text-justify">Somos un equipo de 7 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
+		</div>
+
+		<div class="col-xs-6 col-md-3">
+			<h6>Contacto</h6>
+			<ul class="footer-links">
+			  <li><a href="./aboutUs.html">Acerca de nosotros</a></li>
+			  <li><a href="./contactUs.html">Contáctanos</a></li>
+			  <li><a href="./privacyPolicy.html">Políticas de privacidad</a></li>
+			</ul>
+		  </div>
+
+		<div class="col-xs-6 col-md-3">
+		  <h6>Redes sociales</h6>
+		  <ul class="footer-links">
+
+              <!--ICONO DE GITHUB-->
+			<svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                <a href="..." target="_blank"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></a>
+              </svg>
+
+              <!--ICONO DE INSTAGRAM-->
+                  <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                    <a href="..." target="_blank"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></a>
+                  </svg>
+
+              <!--ICONO DE FACEBOOK-->
+                <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                    <a href="..." target="_blank"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></a>
+                  </svg>
+
+            <!--ICONO DE TWITTER-->
+            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                <a href="..." target="_blank"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></a>
+              </svg>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+</footer>
+
+</html>

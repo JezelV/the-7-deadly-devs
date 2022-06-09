@@ -1,0 +1,60 @@
+{
+    "nameEcommerce": "Meet&Buy",
+    "Catalogo": [
+      {
+        "name": "Lavadora LG",
+        "img": "https://www.lg.com/cac/images/lavadoras-y-secadoras/md05898276/2_Gallery/N01_medium01.jpg",
+        "description": "14/10kg Lavadora Doble Tina, Filtro de Pelusa, Rejilla Anti-Readores, Color Blanco"
+      },
+      {
+        "name": "Refrigerador Samsung",
+        "img": "https://www.costco.com.mx/medias/sys_master/products/h94/h23/79611664564254.webp",
+        "description": "22' French Door"
+      },
+      {
+        "name": "Refrigerador Samsung",
+        "img": "https://images.samsung.com/is/image/samsung mx-side-by-side-rs27t5561b1-rs27t5561b1-em-frontjetblack-203713839?$1300_1038_PNG$",
+        "description": "Side by Side 27 cu.ft con Family Hub y despachador de agua y hielo"
+      },
+      {
+        "name": "Banca para Jardín",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/3665443-1.jpg",
+        "description": "Banca para Jardín Congo Delia"
+      },
+      {
+        "name": "Juego de jardin",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/3487413-1.jpg",
+        "description": "Juego de Jardín Apollo con 2 Sillas"
+      },
+      {
+        "name": "Mesa Rectangular",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/3406343-1.jpg",
+        "description": "Mesa Rectangular Congo Ibiza II"
+      },
+      {
+        "name": "Alberca Rectangular",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/5480733-1.jpg",
+        "description": "Intex 2282 L 260 x 160 x 65 cm"
+      },
+      {
+        "name": "AT&T",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/2512073-1.jpg",
+        "description": "Unefon Motorola Edge 20 Pro 256 GB Blanco"
+      },
+      {
+        "name": "Consola",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/2889483-1.jpg",
+        "description": "Consola Xbox Series X 1 TB"
+      },
+      {
+        "name": "Consola",
+        "img": "https://cdn1.coppel.com/images/catalog/pm/2889313-1.jpg",
+        "description": "Consola Xbox Series S 512 GB"
+    },
+    {
+      "name": "Leche Lala",
+      "img": "https://www.chedraui.com.mx/medias/7501020550986-00-CH515Wx515H?context=bWFzdGVyfHJvb3R8Mzk0MjB8aW1hZ2UvanBlZ3xoMTYvaDk5LzEyMDI3MDc2NzcxODcwLmpwZ3xmMjEwZDU0NWZiNmQ0ZmM1NmFlNjA3ZDA3MzdmNmY4ZjdhZTJmNjQ4ZjI2MjFkZWRhNzM1YmViOWM4ZjAyZjBh",
+      "description": "100 Sin Lactosa Proteína 1 L"
+    }
+    ]
+  }
