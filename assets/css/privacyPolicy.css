@@ -1,0 +1,10 @@
+h2{
+  color: black!important;
+  font-size: 30px!important;
+}
+
+/* TEXTO H y P*/
+#alin{
+  text-align: justify;
+  margin: 20px;
+}

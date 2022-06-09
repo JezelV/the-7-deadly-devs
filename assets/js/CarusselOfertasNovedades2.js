@@ -45,6 +45,7 @@ function addItem(item){
             '<p class="text-body">' + item.description + '</p>\n' +
         '</div>\n' +
         '<div class="card-footer">\n' +
+<<<<<<< HEAD
             '<span class="text-title">'+ item.price+'</span>\n'+
             '<div class="card-button">\n'+
                 '<svg class="svg-icon" viewBox="0 0 20 20">\n'+
@@ -59,6 +60,9 @@ function addItem(item){
                     '</path>\n'+
                 '</svg>\n'+
             '</div>\n'+
+=======
+            '<span class="text-title">$499.49</span>\n'+
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
         '</div>\n'+
     '</div>\n'+
 '</div>\n';
@@ -77,6 +81,7 @@ function addItem2(item){
           '<p class="text-body">' + item.description + '</p>\n' +
       '</div>\n' +
       '<div class="card-footer">\n' +
+<<<<<<< HEAD
           '<span class="text-title" id="precioP">'+ item.price+'</span>\n'+
           '<div class="card-button">\n'+
               '<svg class="svg-icon" viewBox="0 0 20 20">\n'+
@@ -91,6 +96,9 @@ function addItem2(item){
                   '</path>\n'+
               '</svg>\n'+
           '</div>\n'+
+=======
+          '<span class="text-title">$499.49</span>\n'+
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
       '</div>\n'+
   '</div>\n'+
 '</div>\n';
@@ -129,31 +137,35 @@ itemsContainer4.innerHTML += itemHTML;
 
 // Listado de productos de Categorias 1
 addItem3({'name':'Electrodomésticos',
+<<<<<<< HEAD
   'img':'assets/icons/electrodomesticos.png'});
+=======
+  'img':'assets/icons/electrodomesticos2.png'});
+>>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
 addItem3({'name':'Tecnología',
-  'img':'assets/icons/tecnologia.png'});
+  'img':'assets/icons/tecnologia2.png'});
 addItem3({'name':'Hogar y Muebles',
-  'img':'assets/icons/muebles.png'});
+  'img':'assets/icons/muebles2.png'});
 addItem3({'name':'Moda',
-  'img':'assets/icons/moda.png'});
+  'img':'assets/icons/moda2.png'});
 addItem3({'name':'Deportes y Fitness',
-  'img':'assets/icons/deportes.png'});
+  'img':'assets/icons/deportes2.png'});
 addItem3({'name':'Herramientas',
-  'img':'assets/icons/herramientas.png'});
+  'img':'assets/icons/herramientas2.png'});
 
   // Listado de productos de Categorias 2
 addItem4({'name':'Belleza y Cuidado personal',
-  'img':'assets/icons/belleza.png'});
+  'img':'assets/icons/belleza2.png'});
 addItem4({'name':'Inmuebles',
-  'img':'assets/icons/inmuebles.png'});
+  'img':'assets/icons/inmuebles2.png'});
 addItem4({'name':'Construcción',
-  'img':'assets/icons/construccion.png'});
+  'img':'assets/icons/construccion2.png'});
 addItem4({'name':'Oficinas',
-  'img':'assets/icons/oficina.png'});
+  'img':'assets/icons/oficina2.png'});
 addItem4({'name':'Juegos y juguetes',
-  'img':'assets/icons/juguetes.png'});
+  'img':'assets/icons/juguetes2.png'});
 addItem4({'name':'Bebes',
-  'img':'assets/icons/bebe.png'});
+  'img':'assets/icons/bebe2.png'});
 
 // Listado de productos de Ofertas
 addItem({'name':'Jugo Del Valle néctar mango 237 ml',
