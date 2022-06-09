@@ -347,3 +347,9 @@ btn_pago_env.addEventListener('click',()=>{
     }
 });
 /************************************************************Fin de codigo*************************************************************/
+
+const btnCS = document.getElementById("btnCS");
+
+btnCS.addEventListener('click', ()=>{
+	localStorage.sesion = 0;
+});

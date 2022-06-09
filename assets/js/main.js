@@ -1,3 +1,4 @@
+
 const correo1 = document.getElementById("correo1");
 const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
@@ -41,6 +42,7 @@ function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
 			alert("Bienvenido " + localStorage.usuario + ".");
+			localStorage.sesion = 1;
 			window.location.href = "./index.html";
 		}else{
 			alert("Usuario o contraseña incorrectos, intente nuevamente.");
@@ -49,3 +51,27 @@ function validarUsuairo(correo,password){
 		alert("Usuario no registrado.");
 	}
 };
+
+function iniciarSesion(){
+	const btnL = document.getElementById("btnL");
+	const btnS = document.getElementById("btnS");
+	if(localStorage.sesion==1){
+		btnL.style.display = "none";
+		btnS.style.display = "none";
+	}else{
+		btnL.style.display = "";
+		btnS.style.display = "";
+	}
+}
+
+iniciarSesion();
+
+const btnM = document.getElementById("btnM");
+
+btnM.addEventListener('click', ()=>{
+	if(localStorage.sesion==0){
+		$('#staticBackdrop').modal('show');
+	}else{
+		window.location.href = "./MyAccount.html";
+	}
+});

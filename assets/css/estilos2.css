@@ -226,7 +226,7 @@ svg {
 .card-footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-top: 10px;
   background-color: white!important;
@@ -236,8 +236,9 @@ svg {
 /*Texto Cartas de Ofertas y Novedades*/
 .text-title {
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 15px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .text-body {
