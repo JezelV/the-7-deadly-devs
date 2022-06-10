@@ -69,9 +69,13 @@ iniciarSesion();
 const btnM = document.getElementById("btnM");
 
 btnM.addEventListener('click', ()=>{
-	if(localStorage.sesion==0){
-		$('#staticBackdrop').modal('show');
+	if(!(localStorage.sesion == undefined)){
+		if(localStorage.sesion==0){
+			$('#staticBackdrop').modal('show');
+		}else{
+			window.location.href = "./MyAccount.html";
+		}
 	}else{
-		window.location.href = "./MyAccount.html";
+		$('#staticBackdrop').modal('show');
 	}
 });
