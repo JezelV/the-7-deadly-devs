@@ -15,17 +15,10 @@ btnSubmit1.addEventListener('click',(e)=>{//evento click
         alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');//alerta de password invalido
         formValid=false;
     }
-<<<<<<< HEAD
-	if(formValid==true){//si el formulario es valido
-		localStorage.clear();//limpiar localStorage
-		localStorage.password1 = document.getElementById("password1").value;//guardar password en localStorage
-		localStorage.correo1 = document.getElementById("correo1").value;//guardar correo en localStorage
-=======
 	if(formValid==true){
 		//localStorage.clear();
 		localStorage.password1 = document.getElementById("password1").value;
 		localStorage.correo1 = document.getElementById("correo1").value;
->>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
 		
 		
 		//Aqui se arma el .json
@@ -34,15 +27,6 @@ btnSubmit1.addEventListener('click',(e)=>{//evento click
 			"correo": localStorage.correo1,
 		}
 		  
-<<<<<<< HEAD
-		const LJson = JSON.stringify(pArray);//convertir el objeto a json
-		  
-		console.log(LJson);//imprimir el json
-		form1.reset();  //limpiar el formulario
-	}
-});
-
-=======
 		const LJson = JSON.stringify(pArray);
 		
 		validarUsuairo(localStorage.correo1,localStorage.password1);
@@ -91,4 +75,3 @@ btnM.addEventListener('click', ()=>{
 		window.location.href = "./MyAccount.html";
 	}
 });
->>>>>>> b49c2ba866349a5a1295119142082ccd4fc90a75
