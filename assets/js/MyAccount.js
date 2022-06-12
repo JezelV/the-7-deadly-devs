@@ -127,7 +127,6 @@ btn_direccion_aña.addEventListener('click',()=>{
     const numero = document.getElementById("numero");
     const codigoPostal = document.getElementById("cp");
     const colonia = document.getElementById("colonia");
-    const ciudad = document.getElementById("ciudad");
     const municipio = document.getElementById("municipio");
     const estado = document.getElementById("estado");
 
@@ -147,10 +146,6 @@ btn_direccion_aña.addEventListener('click',()=>{
         alert ("Por favor ingrese su colonia.");
         formValid=false;
     }
-    if(/^\s*$/.test(ciudad.value)){
-        alert ("Por favor ingrese su ciudad.");
-        formValid=false;
-    }
     if(/^\s*$/.test(municipio.value)){
         alert ("Por favor ingrese su municipio.");
         formValid=false;
@@ -161,26 +156,34 @@ btn_direccion_aña.addEventListener('click',()=>{
     }
 
     if(formValid==true){
-        localStorage.calle = calle.value;
-        localStorage.numero = numero.value;
-        localStorage.cp = codigoPostal.value;
-        localStorage.colonia = colonia.value;
-        localStorage.ciudad = ciudad.value;
-        localStorage.municipio = municipio.value;
-        localStorage.estado = estado.value;
 
         //Aqui se arma el .json
         const pArray = {
-            "calle": localStorage.calle,
-            "numero": localStorage.numero,
-            "codigoPostal": localStorage.cp,
-            "colonia": localStorage.colonia,
-            "ciudad": localStorage.ciudad,
-            "municipio": localStorage.municipio,
-            "estado": localStorage.estado
+            calle: calle.value,
+            numeroInt: numero.value,
+            codigoPostal: codigoPostal.value,
+            colonia: colonia.value,
+            municipio: municipio.value,
+            estado: estado.value
         }
 
         const pJson = JSON.stringify(pArray);
+
+        //*************************************************Metodo POST********************************************************** */
+		const url = "http://localhost:8080/Meet&Buy/direccion/";
+		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
+
+		fetch(url,{
+			method: 'POST',
+			body: pJson,
+            headers: {
+                'Content-Type': 'application/json'
+              }
+		}).then(res => res.json())
+		.catch(error => console.log('Error: ', error))
+		.then(response => console.log('Sucess: ', response));
+
+		//************************************************Fin Metodo************************************************************ */
 
         console.log(pJson);
         alert("Direccion añadida correctamente.");
@@ -222,23 +225,33 @@ btn_pago_env.addEventListener('click',()=>{
 
 
     if(formValid==true){
-        localStorage.nombretitular = nombreTitular.value;
-        localStorage.numerotarjeta = numeroTarjeta.value;
-        localStorage.cvv = cvv.value;
-        localStorage.mesPago = mesPago.value;
-        localStorage.añoPago = anioPago.value;
-        
-        
+            
         //Aqui se arma el .json
         const pArray = {
-            "nombreTitular": localStorage.nombretitular,
-            "numeroTarjeta": localStorage.numerotarjeta,
-            "CVV": localStorage.cvv,
-            "mesPago": localStorage.mesPago,
-            "añoPago": localStorage.añoPago
+            nombreCompletoTitular: nombreTitular.value,
+            numeroTarjeta: numeroTarjeta.value,
+            cvv: cvv.value,
+            mesVencimiento: mesPago.value,
+            anoVencimiento: anioPago.value
         }
 
         const pJson = JSON.stringify(pArray);
+
+        //*************************************************Metodo POST********************************************************** */
+		const url = "http://localhost:8080/Meet&Buy/tarjeta/";
+		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
+
+		fetch(url,{
+			method: 'POST',
+			body: pJson,
+            headers: {
+                'Content-Type': 'application/json'
+              }
+		}).then(res => res.json())
+		.catch(error => console.log('Error: ', error))
+		.then(response => console.log('Sucess: ', response));
+
+		//************************************************Fin Metodo************************************************************ */
 
         console.log(pJson);
         alert("Tarjeta añadida satisfactoriamente.");
