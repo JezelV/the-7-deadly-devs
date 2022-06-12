@@ -1,4 +1,4 @@
-
+//************************************************Codigo de validacion de campos*************************************************** */
 const correo1 = document.getElementById("correo1");
 const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
@@ -35,9 +35,9 @@ btnSubmit1.addEventListener('click',(e)=>{
 		form1.reset();  
 	}
 });
+//**************************************************Fin de codigo****************************************************************** */
 
-
-
+//*********************************************Codigo de validacion de usuario***************************************************** */
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
@@ -69,9 +69,15 @@ iniciarSesion();
 const btnM = document.getElementById("btnM");
 
 btnM.addEventListener('click', ()=>{
-	if(localStorage.sesion==0){
-		$('#staticBackdrop').modal('show');
+	if(!(localStorage.sesion == undefined)){
+		if(localStorage.sesion==0){
+			$('#staticBackdrop').modal('show');
+		}else{
+			window.location.href = "./MyAccount.html";
+		}
 	}else{
-		window.location.href = "./MyAccount.html";
+		$('#staticBackdrop').modal('show');
 	}
 });
+
+/******************************************************Fin de codigo************************************************************/ 
