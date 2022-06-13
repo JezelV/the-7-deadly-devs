@@ -133,6 +133,21 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 		});
 	} else {
 		//un alert para que el usuario sepa que falta algo completar o que no acepto los terminos.
-		alert('Falta algo por completar o no acepto los terminos');
+		Swal.fire({
+			icon: 'warning',
+			html: 'Falta completar la informacion o no acepto los terminos.',
+			timer: 1500,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => { 
+			  clearInterval(timerInterval)
+			}
+		  });
 	}
 });
