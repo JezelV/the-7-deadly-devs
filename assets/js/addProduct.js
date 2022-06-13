@@ -33,25 +33,34 @@ btnSubmit.addEventListener('click',()=>{
   }
   if(formValid==true){
     //Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
-    localStorage.clear();
-    localStorage.nameP = document.getElementById("nameP").value;
-    localStorage.priceP = document.getElementById("priceP").value;
-    localStorage.quantityP = document.getElementById("quantityP").value;
-    localStorage.filesP = document.getElementById("filesP").value;
-    localStorage.categoryP = document.getElementById("categoryP").value;
-    localStorage.descriptionP = document.getElementById("descriptionP").value;
-
+   
     //Aqui se arma el .json
     const pArray = {
-      "nameP": localStorage.nameP,
-      "priceP": localStorage.priceP,
-      "quantityP": localStorage.quantityP,
-      "filesP": localStorage.filesP,
-      "categoryP": localStorage.categoryP,
-      "descriptionP": localStorage.descriptionP,
+      nombreP: document.getElementById("nameP").value,
+      precioP: document.getElementById("priceP").value,
+      cantidadP: document.getElementById("quantityP").value,
+      imgP: document.getElementById("filesP").value,
+      categoriaP: document.getElementById("categoryP").value,
+      descripcionP: document.getElementById("descriptionP").value,
     }
   
     const pJson = JSON.stringify(pArray);
+
+    	//*************************************************Metodo POST********************************************************** */
+		const url = "http://localhost:8080/Meet&Buy/producto/";
+		const data = new URLSearchParams("?nombreP="+pArray.nombreP+"&precioP="+pArray.precioP+"&cantidadP="+pArray.cantidadP+"&imgP="+pArray.imgP+"&categoriaP="+pArray.categoriaP+"&descripcionP="+pArray.descripcionP);
+
+		fetch(url,{
+			method: 'POST',
+			body: data,
+      /*headers: {
+        'Content-Type': 'application/json'
+      }*/
+		}).then(res => res.json())
+		.catch(error => console.log('Error: ', error))
+		.then(response => console.log('Sucess: ', response));
+
+		//************************************************Fin Metodo************************************************************ */
   
     console.log(pJson);
   }

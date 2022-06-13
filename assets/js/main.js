@@ -1,4 +1,4 @@
-
+//************************************************Codigo de validacion de campos*************************************************** */
 const correo1 = document.getElementById("correo1");
 const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
@@ -35,9 +35,9 @@ btnSubmit1.addEventListener('click',(e)=>{//evento click
 		form1.reset();  
 	}
 });
+//**************************************************Fin de codigo****************************************************************** */
 
-
-
+//*********************************************Codigo de validacion de usuario***************************************************** */
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
@@ -79,3 +79,8 @@ btnM.addEventListener('click', ()=>{
 		$('#staticBackdrop').modal('show');
 	}
 });
+<<<<<<< HEAD
+=======
+
+/******************************************************Fin de codigo************************************************************/ 
+>>>>>>> 66676313cacb9360c2618bf60dda06a9cec01aa4

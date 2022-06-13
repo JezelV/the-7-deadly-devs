@@ -338,7 +338,7 @@
                         <!--Opcion de editar direcciones-->
                         <div class="panel panel-default single-my-account">
                             <div class="panel-heading my-account-title">
-                                <h3 class="panel-title"><span>3 .</span> <a data-bs-toggle="collapse" href="#my-account-3">Modificar mis direcciones de entrega</a></h3>
+                                <h3 class="panel-title"><span>3 .</span> <a data-bs-toggle="collapse" href="#my-account-3">Mis direcciones de entrega</a></h3>
                             </div>
                             <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
                                 <div class="panel-body">
@@ -358,81 +358,8 @@
                                                 <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                                                     <div class="entries-edit-delete text-center">
                                                             <!--Boton de modal-->
-                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" id="btn_direccion_edi">Editar</button>
                                                             <button type="button" class="btn btn-dark" id="btn_direccion_eli">Eliminar</button>
-                                                    </div>
-                                                    <!--Empieza modal-->
-                                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Dirección</h5>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>   
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <!--Formulario-->
-                                                                    <form>
-                                                                        <div class="form-group">
-                                                                            <label for="direccion1" class="col-form-label">Dirección:</label>
-                                                                            <input type="text" class="form-control" id="direccion1" placeholder="Calle, número ext e int">
-                                                                            <label for="cp1" class="col-form-label">Código Postal:</label>
-                                                                            <input type="text" class="form-control" id="cp1" placeholder="74000">
-                                                                            <label for="colonia1" class="col-form-label">Colonia:</label>
-                                                                            <input type="text" class="form-control" id="colonia1">
-                                                                            <label for="ciudad1" class="col-form-label">Ciudad:</label>
-                                                                            <input type="text" class="form-control" id="ciudad1">
-                                                                            <label for="municipio1" class="col-form-label">Municipio:</label>
-                                                                            <input type="text" class="form-control" id="municipio1">
-                                                                            <label for="estado1" class="col-form-label">Estado:</label>
-                                                                            <select name="estado" id="estado1">
-                                                                                <option selected disabled>-- Elige un estado --</option>
-                                                                                   <option>Aguascalientes</option>
-                                                                                   <option>Baja California</option>
-                                                                                   <option>Baja California Sur</option> 
-                                                                                   <option>Campeche </option>
-                                                                                   <option>Chiapas </option>
-                                                                                   <option>Chihuahua </option>
-                                                                                   <option>Ciudad de México </option>
-                                                                                   <option>Coahuila </option>
-                                                                                   <option>Colima </option>
-                                                                                   <option>Durango </option>
-                                                                                   <option>Estado de México </option>
-                                                                                   <option>Guanajuato </option>
-                                                                                   <option>Guerrero </option>
-                                                                                   <option>Hidalgo </option>
-                                                                                   <option>Jalisco </option>
-                                                                                   <option>Michoacán </option>
-                                                                                   <option>Morelos </option>
-                                                                                   <option>Nayarit </option>
-                                                                                   <option>Nuevo León </option>
-                                                                                   <option>Oaxaca </option>
-                                                                                   <option>Puebla </option>
-                                                                                   <option>Querétaro </option>
-                                                                                   <option>Quintana Roo </option>
-                                                                                   <option>San Luis Potosí </option>
-                                                                                   <option>Sinaloa </option>
-                                                                                   <option>Sonora </option>
-                                                                                   <option>Tabasco </option>
-                                                                                   <option>Tamaulipas </option>
-                                                                                   <option>Tlaxcala </option>
-                                                                                   <option>Veracruz </option>
-                                                                                   <option>Yucatán </option>
-                                                                                   <option>Zacatecas</option>                    
-                                                                            </select>
-                                                                        </div>
-                                                                    </form>
-                                                                    <!--Fin Formulario-->
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                                    <button type="button" class="btn btn-primary" id="btn_direccion_env">Enviar</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--Termina modal-->    
+                                                    </div>    
                                                 </div>
                                             </div>
                                         </div>
@@ -454,14 +381,14 @@
                                                             <!--Formulario-->
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <label for="direccion" class="col-form-label">Dirección:</label>
-                                                                    <input type="text" class="form-control" id="direccion" placeholder="Calle, número ext e int">
+                                                                    <label for="direccion" class="col-form-label">Calle:</label>
+                                                                    <input type="text" class="form-control" id="calle" placeholder="Calle">
+                                                                    <label for="direccion" class="col-form-label">Número:</label>
+                                                                    <input type="text" class="form-control" id="numero" placeholder="Número ext e int">
                                                                     <label for="cp" class="col-form-label">Código Postal:</label>
-                                                                    <input type="number" class="form-control" id="cp" placeholder="74000">
+                                                                    <input type="text" class="form-control" id="cp" placeholder="74000">
                                                                     <label for="colonia" class="col-form-label">Colonia:</label>
                                                                     <input type="text" class="form-control" id="colonia">
-                                                                    <label for="ciudad" class="col-form-label">Ciudad:</label>
-                                                                    <input type="text" class="form-control" id="ciudad">
                                                                     <label for="municipio" class="col-form-label">Municipio:</label>
                                                                     <input type="text" class="form-control" id="municipio">
                                                                     <label for="estado" class="col-form-label">Estado:</label>
@@ -540,76 +467,8 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                                                         <div class="entries-edit-delete text-center">
-                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Editar</button>
                                                             <button type="button" class="btn btn-dark" id="btn_pago_eliminar">Eliminar</button>
                                                         </div>
-                                                        <!--Empieza modal-->
-                                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Editar tarjeta</h5>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>   
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <!--Formulario-->
-                                                            <form>
-                                                                <div class="form-group">
-                                                                    <label for="nombretitular" class="col-form-label">Nombre del titular:</label>
-                                                                    <input type="text" class="form-control" id="nombretitular1" placeholder="Laura Flores">
-                                                                    <label for="numerotarjeta" class="col-form-label">Número de la tarjeta:</label>
-                                                                    <input type="number" class="form-control" id="numerotarjeta1" placeholder="xxxx-xxxx-xxxx-xxxx">
-                                                                </div>
-                                                                    <label class="col-form-label">Fecha de vencimiento:</label>
-                                                                <div class="col-md-6 .ml-auto">
-                                                                    <select name="" id="mesPago1">
-                                                                        <option selected disabled>00</option>
-                                                                        <option>01</option>
-                                                                        <option>02</option>
-                                                                        <option>03</option>
-                                                                        <option>04</option>
-                                                                        <option>05</option>
-                                                                        <option>06</option>
-                                                                        <option>07</option>
-                                                                        <option>08</option>
-                                                                        <option>09</option>
-                                                                        <option>10</option>
-                                                                        <option>11</option>
-                                                                        <option>12</option>
-                                                                    </select>
-                                                                </div>    
-                                                                <div class="col-md-6 .ml-auto">
-                                                                    <select name="" id="añoPago1">
-                                                                        <option selected disabled>0000</option>
-                                                                        <option>2022</option>
-                                                                        <option>2023</option>
-                                                                        <option>2024</option>
-                                                                        <option>2025</option>
-                                                                        <option>2026</option>
-                                                                        <option>2027</option>
-                                                                        <option>2028</option>
-                                                                        <option>2029</option>
-                                                                        <option>2030</option>
-                                                                        <option>2031</option>
-                                                                        <option>2032</option>
-                                                                        <option>2033</option>
-                                                                        <option>2034</option>
-                                                                        <option>2035</option>
-                                                                    </select>
-                                                                </div>
-                                                            </form>
-                                                            <!--Fin Formulario-->
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-primary" id="btn_pago_ed">Enviar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--Termina modal-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -636,6 +495,8 @@
                                                                     <input type="text" class="form-control" id="nombretitular" placeholder="Laura Flores">
                                                                     <label for="numerotarjeta" class="col-form-label">Número de la tarjeta:</label>
                                                                     <input type="number" class="form-control" id="numerotarjeta" placeholder="xxxx-xxxx-xxxx-xxxx">
+                                                                    <label for="cvv" class="col-form-label">CVV:</label>
+                                                                    <input type="number" class="form-control" id="cvv" placeholder="xxx">
                                                                 </div>
                                                                 
                                                                     <label class="col-form-label">Fecha de vencimiento:</label>
