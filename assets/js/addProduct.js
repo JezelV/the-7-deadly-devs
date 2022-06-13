@@ -48,14 +48,14 @@ btnSubmit.addEventListener('click',()=>{
 
     	//*************************************************Metodo POST********************************************************** */
 		const url = "http://localhost:8080/Meet&Buy/producto/";
-		//const data = new URLSearchParams("?nombreP="+pArray.nombreP+"&precioP="+pArray.precioP+"&cantidadP="+pArray.cantidadP+"&imgP="+pArray.imgP+"&categoriaP="+pArray.categoriaP+"&descripcionP="+pArray.descripcionP);
+		const data = new URLSearchParams("?nombreP="+pArray.nombreP+"&precioP="+pArray.precioP+"&cantidadP="+pArray.cantidadP+"&imgP="+pArray.imgP+"&categoriaP="+pArray.categoriaP+"&descripcionP="+pArray.descripcionP);
 
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
-      headers: {
+			body: data,
+      /*headers: {
         'Content-Type': 'application/json'
-      }
+      }*/
 		}).then(res => res.json())
 		.catch(error => console.log('Error: ', error))
 		.then(response => console.log('Sucess: ', response));
