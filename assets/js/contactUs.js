@@ -60,6 +60,7 @@ btnSubmit.addEventListener('click',()=>{
     icon: 'warning',
     title: 'Verifica los terminos y condiciones',
   });
+  formValid=false;
 }
   if(formValid==true){
     //Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
