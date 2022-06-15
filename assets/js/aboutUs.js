@@ -27,3 +27,25 @@ $(function() {
         }
     });
 });
+
+//Efecto de maquina de escribir
+const typeWriter = document.getElementById("typewriter-text");
+const text = "Acerca de nosotros.";
+
+typeWriter.innerHTML = text;
+typeWriter.style.setProperty("--characters", text.length);
+
+//Metodo de descarga para cv
+if ( ! Modernizr.adownload ) {
+    var $link = $('a');
+   
+      $link.each(function() {
+          var $download = $(this).attr('download');
+       
+          if (typeof $download !== typeof undefined && $download !== false) {
+        var $el = $('<div>').addClass('download-instruction').text('Right-click and select "Download Linked File"');
+        $el.insertAfter($(this));
+          }
+   
+      });
+  }
