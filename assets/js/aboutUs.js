@@ -30,7 +30,7 @@ $(function() {
 
 //Efecto de maquina de escribir
 const typeWriter = document.getElementById("typewriter-text");
-const text = "Acerca de nosotros.";
+const text = `Somos &lt;The 7 deadly devs/&gt;`;
 
 typeWriter.innerHTML = text;
 typeWriter.style.setProperty("--characters", text.length);

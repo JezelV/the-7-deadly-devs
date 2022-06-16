@@ -69,6 +69,11 @@
     transform: rotate(359deg);
   }
 }
+
+.cards {
+  margin-bottom: 10%;
+}
+
 .material-card {
   position: relative;
   height: 0;

@@ -112,8 +112,8 @@ function addFooter() {
 	document.getElementById("site-footer").innerHTML = infoFooter;
 }
 
-addHeader();
-addFooter();
+// addHeader();
+// addFooter();
 
 btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
