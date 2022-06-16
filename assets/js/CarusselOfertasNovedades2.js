@@ -279,6 +279,10 @@ addItem2({'name':'Tayto',
     categorias.forEach(c=>{
       c.addEventListener('click',()=>{
         localStorage.categoria = c.name;
+        localStorage.switch = 1;
         window.location.href = './ItemList.html';
       })
     });
+    /****************************************************Fin codigo************************************************** */
+
+    

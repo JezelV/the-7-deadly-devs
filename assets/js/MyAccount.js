@@ -157,6 +157,13 @@ btn_direccion_aña.addEventListener('click',()=>{
 
     if(formValid==true){
 
+        dr(calle.value,numero.value,codigoPostal.value,colonia.value,municipio.value,estado.value);
+
+
+
+
+
+
         //Aqui se arma el .json
         const pArray = {
             calle: calle.value,
@@ -221,7 +228,10 @@ btn_pago_env.addEventListener('click',()=>{
 
 
     if(formValid==true){
-            
+         
+        mr();
+
+
         //Aqui se arma el .json
         const pArray = {
             nombreT: nombreTitular.value,
@@ -257,3 +267,28 @@ const btnCS = document.getElementById("btnCS");
 btnCS.addEventListener('click', ()=>{
 	localStorage.sesion = 0;
 });
+
+
+function dr(calle, numero, codigo, col, mun, edo){
+    document.getElementById("direccionR").innerHTML='<p>'+calle+', '+numero+', '+col+'</p>\n'+
+    '<p>'+codigo+'</p>\n'+
+    '<p>'+mun+', '+edo+'</p>';
+}
+
+const BtnEli = document.getElementById("btn_direccion_eli");
+
+BtnEli.addEventListener('click', ()=>{
+    document.getElementById("direccionR").innerHTML='<p></p>';
+});
+
+const BtnEliM = document.getElementById("btn_pago_eliminar");
+
+BtnEliM.addEventListener('click',()=>{
+    document.getElementById("tarjetaR").innerHTML='<p></p>';
+})
+
+function mr(nombre, tarjeta, mes, anio){
+    document.getElementById("tarjetaR").innerHTML='<p>'+nombre+'</p>\n'+
+    '<p>'+tarjeta+'</p>\n'+
+    '<p>Vencimiento: Mes: '+mes+' Año: '+anio+'</p>';
+}

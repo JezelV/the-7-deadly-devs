@@ -147,3 +147,9 @@ btnM.addEventListener('click', ()=>{
 });
 
 /******************************************************Fin de codigo************************************************************/ 
+
+const BtnBuscar = document.getElementById("BtnBuscar");
+
+BtnBuscar.addEventListener('click',()=>{
+	localStorage.categoria='Resultados';
+});
