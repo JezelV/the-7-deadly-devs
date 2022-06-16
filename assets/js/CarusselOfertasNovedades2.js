@@ -77,7 +77,7 @@ function addItem2(item){
 function addItem3(item){
   const itemHTML = '<div class="slick">\n' +
   '<div class="item1">\n'+
-  '<button class="categorias">\n'+item.name+
+  '<button class="categorias" id ="'+item.name+'" name = "'+item.name+'">\n'+item.name+
   '<br>\n'+
   '<img class="iconC" src="'+item.img+'" alt="">\n'+
   '</button>\n'+
@@ -91,7 +91,7 @@ function addItem3(item){
 function addItem4(item){
 const itemHTML = '<div class="slick">\n' +
 '<div class="item1">\n'+
-'<button class="categorias">\n'+item.name+
+'<button class="categorias" id ="'+item.name+'" name = "'+item.name+'">\n'+item.name+
 '<br>\n'+
 '<img class="iconC" src="'+item.img+'" alt="">\n'+
 '</button>\n'+
@@ -269,3 +269,20 @@ addItem2({'name':'Tayto',
             $(this).removeClass('transition');
         });
     });
+
+    /****************************************************Categorias************************************************** */
+
+    const categorias = document.querySelectorAll(".categorias");
+
+    console.log(categorias);
+
+    categorias.forEach(c=>{
+      c.addEventListener('click',()=>{
+        localStorage.categoria = c.name;
+        localStorage.switch = 1;
+        window.location.href = './ItemList.html';
+      })
+    });
+    /****************************************************Fin codigo************************************************** */
+
+    

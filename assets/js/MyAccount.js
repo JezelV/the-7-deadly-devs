@@ -134,7 +134,7 @@ btn_direccion_aña.addEventListener('click',()=>{
         alert ("Por favor ingrese su calle correctamente.");
         formValid=false;
     }
-    if((/^\d$/.test(numero.value))||(/^\s*$/.test(numero.value))){
+    if((/^\d\s$/.test(numero.value))){
         alert ("Por favor ingrese su número int y/o exterior, este debe ser solo números.");
         formValid=false;
     }
@@ -157,25 +157,30 @@ btn_direccion_aña.addEventListener('click',()=>{
 
     if(formValid==true){
 
+        dr(calle.value,numero.value,codigoPostal.value,colonia.value,municipio.value,estado.value);
+
+
+
+
+
+
         //Aqui se arma el .json
         const pArray = {
             calle: calle.value,
-            numeroInt: numero.value,
-            codigoPostal: codigoPostal.value,
+            numero: numero.value,
+            codigopostal: codigoPostal.value,
             colonia: colonia.value,
             municipio: municipio.value,
             estado: estado.value
         }
-
-        const pJson = JSON.stringify(pArray);
-
+        console.log(JSON.stringify(pArray));
         //*************************************************Metodo POST********************************************************** */
 		const url = "http://localhost:8080/Meet&Buy/direccion/";
 		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
 
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
+			body: JSON.stringify(pArray),
             headers: {
                 'Content-Type': 'application/json'
               }
@@ -184,8 +189,6 @@ btn_direccion_aña.addEventListener('click',()=>{
 		.then(response => console.log('Sucess: ', response));
 
 		//************************************************Fin Metodo************************************************************ */
-
-        console.log(pJson);
         alert("Direccion añadida correctamente.");
     }
 });
@@ -225,25 +228,26 @@ btn_pago_env.addEventListener('click',()=>{
 
 
     if(formValid==true){
-            
+         
+        mr();
+
+
         //Aqui se arma el .json
         const pArray = {
-            nombreCompletoTitular: nombreTitular.value,
-            numeroTarjeta: numeroTarjeta.value,
+            nombreT: nombreTitular.value,
+            numeroT: numeroTarjeta.value,
             cvv: cvv.value,
-            mesVencimiento: mesPago.value,
-            anoVencimiento: anioPago.value
+            mesT: mesPago.value,
+            añoT: anioPago.value
         }
 
-        const pJson = JSON.stringify(pArray);
-
+        console.log(JSON.stringify(pArray));
         //*************************************************Metodo POST********************************************************** */
-		const url = "http://localhost:8080/Meet&Buy/tarjeta/";
+		const url = "http://localhost:8080/Meet&Buy/metodopago/";
 		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
-
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
+			body: JSON.stringify(pArray),
             headers: {
                 'Content-Type': 'application/json'
               }
@@ -253,7 +257,6 @@ btn_pago_env.addEventListener('click',()=>{
 
 		//************************************************Fin Metodo************************************************************ */
 
-        console.log(pJson);
         alert("Tarjeta añadida satisfactoriamente.");
     }
 });
@@ -264,3 +267,28 @@ const btnCS = document.getElementById("btnCS");
 btnCS.addEventListener('click', ()=>{
 	localStorage.sesion = 0;
 });
+
+
+function dr(calle, numero, codigo, col, mun, edo){
+    document.getElementById("direccionR").innerHTML='<p>'+calle+', '+numero+', '+col+'</p>\n'+
+    '<p>'+codigo+'</p>\n'+
+    '<p>'+mun+', '+edo+'</p>';
+}
+
+const BtnEli = document.getElementById("btn_direccion_eli");
+
+BtnEli.addEventListener('click', ()=>{
+    document.getElementById("direccionR").innerHTML='<p></p>';
+});
+
+const BtnEliM = document.getElementById("btn_pago_eliminar");
+
+BtnEliM.addEventListener('click',()=>{
+    document.getElementById("tarjetaR").innerHTML='<p></p>';
+})
+
+function mr(nombre, tarjeta, mes, anio){
+    document.getElementById("tarjetaR").innerHTML='<p>'+nombre+'</p>\n'+
+    '<p>'+tarjeta+'</p>\n'+
+    '<p>Vencimiento: Mes: '+mes+' Año: '+anio+'</p>';
+}
