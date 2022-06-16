@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //************************************************Codigo de validacion de campos*************************************************** */
+=======
+>>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 const correo1 = document.getElementById("correo1");
 const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
@@ -8,6 +11,7 @@ btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
 	let formValid = true;
 	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){
+<<<<<<< HEAD
 		Swal.fire({
 			icon: 'warning',
 			title: 'Mmmm...',
@@ -44,6 +48,13 @@ btnSubmit1.addEventListener('click',(e)=>{
 			  clearInterval(timerInterval)
 			}
 		  });
+=======
+        alert ('Por favor ingrese un correo valido.');
+        formValid=false;
+    }
+	if (!(/^.{4,12}$/.test(password1.value))){
+        alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');
+>>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
         formValid=false;
     }
 	if(formValid==true){
@@ -66,6 +77,7 @@ btnSubmit1.addEventListener('click',(e)=>{
 		form1.reset();  
 	}
 });
+<<<<<<< HEAD
 //**************************************************Fin de codigo****************************************************************** */
 
 //*********************************************Codigo de validacion de usuario***************************************************** */
@@ -146,3 +158,20 @@ btnM.addEventListener('click', ()=>{
 });
 
 /******************************************************Fin de codigo************************************************************/ 
+=======
+
+
+
+function validarUsuairo(correo,password){
+	if(localStorage.correo){
+		if(localStorage.correo===correo && localStorage.password===password){
+			alert("Bienvenido " + localStorage.usuario + ".");
+			window.location.href = "./index.html";
+		}else{
+			alert("Usuario o contraseña incorrectos, intente nuevamente.");
+		}
+	}else{
+		alert("Usuario no registrado.");
+	}
+};
+>>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8

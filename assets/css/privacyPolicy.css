@@ -1,6 +1,26 @@
+<<<<<<< HEAD
 h2{
   color: black!important;
   font-size: 30px!important;
+=======
+
+/*LOGO */
+.logo {
+	width: 120px;
+}
+
+/* COLOR DEL BOTON DE BUSCAR*/
+.grey{
+  background-color: #181818;
+}
+
+.nav-link{
+  color: aqua!important;
+}
+
+.navbar-toggler-icon{
+  background-color: aqua!important;
+>>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 }
 
 /* TEXTO H y P*/
@@ -8,3 +28,44 @@ h2{
   text-align: justify;
   margin: 20px;
 }
+<<<<<<< HEAD
+=======
+/* FOOTER*/
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:20px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+>>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
