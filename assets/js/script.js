@@ -107,20 +107,21 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 
 		//*************************************************Metodo POST********************************************************** */
 		const url = "http://localhost:8080/Meet&Buy/usuario/";
-		const data = new URLSearchParams("?usuario="+pArray.usuario+"&nombre="+pArray.nombre+"&contrasenia="+pArray.contrasenia+"&correo="+pArray.correo+"&telefono="+pArray.telefono);
+		//const data = new URLSearchParams("?usuario="+pArray.usuario+"&nombre="+pArray.nombre+"&contrasenia="+pArray.contrasenia+"&correo="+pArray.correo+"&telefono="+pArray.telefono);
 		
 		fetch(url,{
 			method: 'POST',
-			body: data,
+			body: JSON.stringify(pArray),
+			headers: {
+                'Content-Type': 'application/json'
+              }
 		}).then(res => res.json())
 		.catch(error => console.log('Error: ', error))
 		.then(response => console.log('Sucess: ', response));
 
 		//************************************************Fin Metodo************************************************************ */
 
-        const RJson = JSON.stringify(pArray);
-
-        console.log(RJson);
+        console.log(JSON.stringify(pArray));
 		formulario.reset();// Aqui se resetea el formulario
 		
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');

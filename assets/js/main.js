@@ -7,7 +7,7 @@ const form1 = document.getElementById("formulario1");
 btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
 	let formValid = true;
-	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){
+	if (!(/^[a-zA-Z0-9\_\-]{4,16}$/.test(correo1.value))){
 		Swal.fire({
 			icon: 'warning',
 			title: 'Mmmm...',
@@ -47,75 +47,76 @@ btnSubmit1.addEventListener('click',(e)=>{
         formValid=false;
     }
 	if(formValid==true){
-		//localStorage.clear();
-		localStorage.password1 = document.getElementById("password1").value;
-		localStorage.correo1 = document.getElementById("correo1").value;
-		
-		
+
 		//Aqui se arma el .json
 		const pArray = {
-			"password": localStorage.password1,
-			"correo": localStorage.correo1,
+			"usuario": correo1.value,
+			"contrasenia": password1.value,
 		}
 		  
-		const LJson = JSON.stringify(pArray);
+		console.log(JSON.stringify(pArray));
 		
-		validarUsuairo(localStorage.correo1,localStorage.password1);
+//*************************************************Metodo POST********************************************************** */
+		const url = "http://localhost:8080/Meet&Buy/login/";
+		//const data = new URLSearchParams("?usuario="+pArray.usuario+"&nombre="+pArray.nombre+"&contrasenia="+pArray.contrasenia+"&correo="+pArray.correo+"&telefono="+pArray.telefono);
 
-		console.log(LJson);
+		fetch(url,{
+			method: 'POST',
+			headers: {
+					'Content-Type': 'application/json'
+	  				 },
+			body: JSON.stringify(pArray)
+		}).then(res => res.text())
+		.then(response => {
+			if(response=='Datos correctos'){
+				Swal.fire({
+					icon: 'success',
+					html: 'Bienvenido a la plataforma.',
+					timer: 2000,
+					timerProgressBar: true,
+					didOpen: () => {
+					  Swal.showLoading()
+					  const b = Swal.getHtmlContainer().querySelector('b')
+					  timerInterval = setInterval(() => {
+						b.textContent = Swal.getTimerLeft()
+					  }, 100)
+					},
+					willClose: () => {
+					  clearInterval(timerInterval)
+					}
+				  });
+				localStorage.sesion = 1;
+				setTimeout(function(){
+					window.location.href = "./index.html"
+				},2000);
+			}else{
+				Swal.fire({
+					icon: 'error',
+					html: 'Usuario o contraseña incorrectos, intente nuevamente.',
+					timer: 2000,
+					timerProgressBar: true,
+					didOpen: () => {
+					  Swal.showLoading()
+					  const b = Swal.getHtmlContainer().querySelector('b')
+					  timerInterval = setInterval(() => {
+						b.textContent = Swal.getTimerLeft()
+					  }, 100)
+					},
+					willClose: () => {
+					  clearInterval(timerInterval)
+					}
+				  });
+			}
+		}).catch(error => console.log('Error: ', error));
+
+//************************************************Fin Metodo************************************************************ */		
+
 		form1.reset();  
 	}
 });
 //**************************************************Fin de codigo****************************************************************** */
 
 //*********************************************Codigo de validacion de usuario***************************************************** */
-function validarUsuairo(correo,password){
-	if(localStorage.correo){
-		if(localStorage.correo===correo && localStorage.password===password){
-			Swal.fire({
-				icon: 'success',
-				title: localStorage.usuario,
-				text: 'Bienvenido a la plataforma.',
-			  });
-			localStorage.sesion = 1;
-			window.location.href = "./index.html";
-		}else{
-			Swal.fire({
-				icon: 'error',
-				html: 'Usuario o contraseña incorrectos, intente nuevamente.',
-				timer: 2000,
-				timerProgressBar: true,
-				didOpen: () => {
-				  Swal.showLoading()
-				  const b = Swal.getHtmlContainer().querySelector('b')
-				  timerInterval = setInterval(() => {
-					b.textContent = Swal.getTimerLeft()
-				  }, 100)
-				},
-				willClose: () => {
-				  clearInterval(timerInterval)
-				}
-			  });
-		}
-	}else{
-		Swal.fire({
-			icon: 'error',
-			html: 'Usuario no registrado',
-			timer: 2000,
-			timerProgressBar: true,
-			didOpen: () => {
-			  Swal.showLoading()
-			  const b = Swal.getHtmlContainer().querySelector('b')
-			  timerInterval = setInterval(() => {
-				b.textContent = Swal.getTimerLeft()
-			  }, 100)
-			},
-			willClose: () => {
-			  clearInterval(timerInterval)
-			}
-		  });
-	}
-};
 
 function iniciarSesion(){
 	const btnL = document.getElementById("btnL");
