@@ -4,6 +4,7 @@ const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
 const form1 = document.getElementById("formulario1");
 
+<<<<<<< HEAD
 btnSubmit1.addEventListener('click',(e)=>{//evento click
 	e.preventDefault();//prevenir el comportamiento por defecto del formulario
 	let formValid = true;//variable para validar el formulario
@@ -13,6 +14,48 @@ btnSubmit1.addEventListener('click',(e)=>{//evento click
     }
 	if (!(/^.{4,12}$/.test(password1.value))){//validar password
         alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');//alerta de password invalido
+=======
+btnSubmit1.addEventListener('click',(e)=>{
+	e.preventDefault();
+	let formValid = true;
+	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 1500,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
+        formValid=false;
+    } else if (!(/^.{4,12}$/.test(password1.value))){
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
+>>>>>>> 22da6060cbea47bdbd2a218e29d04c301b52a9b7
         formValid=false;
     }
 	if(formValid==true){
@@ -41,14 +84,48 @@ btnSubmit1.addEventListener('click',(e)=>{//evento click
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
-			alert("Bienvenido " + localStorage.usuario + ".");
+			Swal.fire({
+				icon: 'success',
+				title: localStorage.usuario,
+				text: 'Bienvenido a la plataforma.',
+			  });
 			localStorage.sesion = 1;
 			window.location.href = "./index.html";
 		}else{
-			alert("Usuario o contraseña incorrectos, intente nuevamente.");
+			Swal.fire({
+				icon: 'error',
+				html: 'Usuario o contraseña incorrectos, intente nuevamente.',
+				timer: 2000,
+				timerProgressBar: true,
+				didOpen: () => {
+				  Swal.showLoading()
+				  const b = Swal.getHtmlContainer().querySelector('b')
+				  timerInterval = setInterval(() => {
+					b.textContent = Swal.getTimerLeft()
+				  }, 100)
+				},
+				willClose: () => {
+				  clearInterval(timerInterval)
+				}
+			  });
 		}
 	}else{
-		alert("Usuario no registrado.");
+		Swal.fire({
+			icon: 'error',
+			html: 'Usuario no registrado',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
 	}
 };
 

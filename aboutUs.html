@@ -16,18 +16,21 @@
 <header class="header">
 	<!--Comienza NavBar-->
 	<nav class="navbar navbar-expand-lg navbar-light">
+
 		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
 
-		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
 				</li>
+
 				<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-expanded="false">
@@ -51,7 +54,7 @@
 			<!--Botones de Login y Sign up-->
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
-				Login
+				Iniciar sesión
 			</button>
 			<!-- Modal de Login-->
 			<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -70,7 +73,7 @@
 							<form action="" class="formulario" id="formulario1">
 								
 								<!-- Grupo: Correo Electronico -->
-								<div class="formulario__grupo" id="grupo__correo">
+								<div class="formulario__grupo">
 									<label for="correo" class="formulario__label">Correo Electrónico</label>
 									<div class="formulario__grupo-input">
 										<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
@@ -79,7 +82,7 @@
 								</div>
 
 								<!-- Grupo: Contraseña -->
-								<div class="formulario__grupo" id="grupo__password">
+								<div class="formulario__grupo">
 									<label for="password" class="formulario__label">Contraseña</label>
 									<div class="formulario__grupo-input">
 										<input type="password" class="formulario__input" name="password1" id="password1">
@@ -110,7 +113,7 @@
 		<!-- Boton de Registro-->
 		<div>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
-				Sign up
+				Registrarse
 			</button>
 			<!-- Modal de Sign up-->
 			<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -216,6 +219,7 @@
 		</div>
 			<!--Termina Botones de Login y Sign up-->
 			<br>
+
 		</div>
 	</nav>
 	<!--Termina el NavBar-->
@@ -227,8 +231,14 @@
 <section class="container">
     <div class="page-header">
         <br>
-        <h1>Acerca de nosotros.<br>
-            <small>Vea el código fuente de nuestro proyecto en <a href="https://github.com/JezelV/the-7-deadly-devs" target="_blank">GitHub</a></small></h1>
+                <!--Efecto de maquina de escribir-->
+                <div class="typewriter-effect" id="nosotros">
+                    <div class="text" id="typewriter-text"></div>
+                  </div>
+                <!--Fin del efecto de maquina de escribir-->
+            <div id="nosotros">
+                <small>Vea el código fuente de nuestro proyecto en <a href="https://github.com/JezelV/the-7-deadly-devs" target="_blank">GitHub</a></small></h1>
+            </div>
             <br>
             <br>
     </div>
@@ -246,9 +256,9 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/edgar.png">
+                        <img class="img-responsive" src="./assets/avatares/edgar.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
+                    <div class="mc-description" align="center">
                         Un hacker ético del equipo rojo promedio, que se siente atraído por la información confidencial.
                     </div>
                 </div>
@@ -259,8 +269,10 @@
                     <h4>
                         Social
                     </h4>
+
+                    <a href="https://drive.google.com/uc?id=1wMvz_KBtVACo0fiYitonULVA363TtAy1&export=download" class="fa fa-fw fa-file-pdf-o" download="CV_Edgar_Elanís.pdf"></a>
                     <a href="https://www.linkedin.com/in/jezelv/" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/JezelV" class="git" target="_blank"> </a>
+                    <a href="https://github.com/JezelV" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -278,9 +290,9 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/Argemiro.png">
+                        <img class="img-responsive" src="./assets/avatares/Argemiro.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
+                    <div class="mc-description" align="center">
                         Mi nombre es Heber Argemiro, mis pasatiempos son jugar videojuegos y diseñar páginas web.
                     </div>
                 </div>
@@ -292,8 +304,9 @@
                         Social
                     </h4>
 
+                    <a href="https://drive.google.com/uc?id=1K1xJmHiWr6Lrmnf36gQwJnXCSjK6uy8-&export=download" class="fa fa-fw fa-file-pdf-o" download="CV_Argemiro_Haro.pdf"></a>
                     <a href="https://www.linkedin.com/in/argemiro-hm-87b563235/" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/ArgemiroH" class="git" target="_blank"> </a>
+                    <a href="https://github.com/ArgemiroH" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -311,9 +324,9 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/fer.png">
+                        <img class="img-responsive" src="./assets/avatares/Juan_Carlos.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
+                    <div class="mc-description" align="center">
                         Mi nombre es Juan Carlos y soy egresado de Ingeniería Mecatrónica.
                         Me encanta programar y mis hobbies favoritos son los videojuegos y practicar basketball.
                     </div>
@@ -326,8 +339,9 @@
                         Social
                     </h4>
 
+                    <a href="https://drive.google.com/uc?id=1UXXQDJ37tLLM_QUXws0RBGT_YjkeB2vt&export=download" class="fa fa-fw fa-file-pdf-o" download="CV_Juan_Carlos.pdf"></a>
                     <a href="https://www.linkedin.com/in/juan-carlos-flores-mart%C3%ADnez-264347223/" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/JuanC1195" class="git" target="_blank"> </a>
+                    <a href="https://github.com/JuanC1195" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -340,14 +354,14 @@
                     <span>Gerardo Cortes</span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Desarrollador Front-End
+                        Desarrollador Full Stack
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/gera.png">
+                        <img class="img-responsive" src="./assets/avatares/gera.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
+                    <div class="mc-description" align="center">
                         Nunca te rindas y siempre mejora. Ingeniero creativo siempre adaptándose a los cambios.
                     </div>
                 </div>
@@ -359,8 +373,9 @@
                         Social
                     </h4>
 
+                    <a href="https://drive.google.com/uc?id=1MyC4r_2VHc0E-Ii-nQfdq-s7D5br4BtG&export=download" class="fa fa-fw fa-file-pdf-o" download="CV_Gerardo_Cortes.pdf"></a>
                     <a href="https://www.linkedin.com/in/guadalupe-gerardo-cortes-pérez-806305236" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/GuadalupeGerardoCP" class="git" target="_blank"> </a>
+                    <a href="https://github.com/GuadalupeGerardoCP" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -378,10 +393,10 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/fer.png">
+                        <img class="img-responsive" src="./assets/avatares/fer.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
-                        Actor y autor inglés. Reconocido por su distintivo acento cockney de clase trabajadora, Fernando ha aparecido en más de 115 películas y es considerado como un británico.
+                    <div class="mc-description" align="center">
+                        Mi nombre es Fernando Aranda, egresado de Ingeniería Industrial y de Sistemas, apasionado por la programación y estructuración de soluciones a problemas.
                     </div>
                 </div>
                 <a class="mc-btn-action">
@@ -391,8 +406,10 @@
                     <h4>
                         Social
                     </h4>
+
+                    <a href="https://drive.google.com/uc?id=1ki7FmTPrza3GXjaHdD9z6aen7ars7jM4&export=download" class="fa fa-fw fa-file-pdf-o" download="CV_Fernando_Aranda.pdf"></a>
                     <a href="https://www.linkedin.com/in/fernando-a-1047801bb/" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/Fer31137" class="git" target="_blank"> </a>
+                    <a href="https://github.com/Fer31137" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -410,9 +427,9 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="./assets/avatares/edgar.png">
+                        <img class="img-responsive" src="./assets/avatares/Ricardo.png" alt="Photo" style="width:100%;">
                     </div>
-                    <div class="mc-description">
+                    <div class="mc-description" align="center">
                         Ilustrador, aficionado a la programación y entusiasta de la tecnología. Habilidades de UI e ilustración para desarrollo web, diseño de personajes e ilustración digital.
                     </div>
                 </div>
@@ -423,8 +440,10 @@
                     <h4>
                         Social
                     </h4>
+
+                    <a href="..." class="fa fa-fw fa-file-pdf-o" download="CV_Ricardo_Martínez.pdf"></a>
                     <a href="https://www.linkedin.com/in/rmartinezmorin/" class="fa fa-fw fa-linkedin" target="_blank"></a>
-                    <a href="https://github.com/AleisterL" class="git" target="_blank"> </a>
+                    <a href="https://github.com/AleisterL" class="fa fa-fw fa-github" style="font-size: 37px;" target="_blank"> </a>
                 </div>
             </article>
         </div>
@@ -433,6 +452,8 @@
 <!--Aqui termina la sesion de los perfiles-->
 
 <!-- SCRIPTS -->
+<!--Este script es para el alert-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!--Este script sirve para importar el funcionamiento de las tarjetas-->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
