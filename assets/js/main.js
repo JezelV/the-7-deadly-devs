@@ -8,11 +8,42 @@ btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
 	let formValid = true;
 	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){
-        alert ('Por favor ingrese un correo valido.');
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 1500,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
         formValid=false;
-    }
-	if (!(/^.{4,12}$/.test(password1.value))){
-        alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');
+    } else if (!(/^.{4,12}$/.test(password1.value))){
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
         formValid=false;
     }
 	if(formValid==true){
@@ -41,14 +72,48 @@ btnSubmit1.addEventListener('click',(e)=>{
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 		if(localStorage.correo===correo && localStorage.password===password){
-			alert("Bienvenido " + localStorage.usuario + ".");
+			Swal.fire({
+				icon: 'success',
+				title: localStorage.usuario,
+				text: 'Bienvenido a la plataforma.',
+			  });
 			localStorage.sesion = 1;
 			window.location.href = "./index.html";
 		}else{
-			alert("Usuario o contraseña incorrectos, intente nuevamente.");
+			Swal.fire({
+				icon: 'error',
+				html: 'Usuario o contraseña incorrectos, intente nuevamente.',
+				timer: 2000,
+				timerProgressBar: true,
+				didOpen: () => {
+				  Swal.showLoading()
+				  const b = Swal.getHtmlContainer().querySelector('b')
+				  timerInterval = setInterval(() => {
+					b.textContent = Swal.getTimerLeft()
+				  }, 100)
+				},
+				willClose: () => {
+				  clearInterval(timerInterval)
+				}
+			  });
 		}
 	}else{
-		alert("Usuario no registrado.");
+		Swal.fire({
+			icon: 'error',
+			html: 'Usuario no registrado',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
 	}
 };
 
