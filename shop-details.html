@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>DETAILS</title>
+        <title>Detalles</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,214 +19,227 @@
         <link rel="stylesheet" href="./assets/css/DetailsProdcutdefault.css">
         <link rel="stylesheet" href="./assets/css/DetailsProduct.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="assets/css/meanmenupagitem.css">
+        <link rel="stylesheet" href="assets/css/magnific-popuppagitem.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.minpagitem.css">
+        <link rel="stylesheet" href="assets/css/slickpagitem.css">
+        <link rel="stylesheet" href="assets/css/defaultpagitem.css">
+        <link rel="stylesheet" href="assets/css/responsivepagitem.css">
     </head>
 
     <!--Comienza Header-->
-<header class="header">
-	<!--Comienza NavBar-->
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
-
-		
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Contáctanos <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Cuenta <span class="sr-only">(current)</span></a>
-				</li>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-				</form>
-			</ul>
-			<br>
-			<!--Botones de Login y Sign up-->
-			<!-- Button trigger modal -->
+	<header class="header">
+		<!--Comienza NavBar-->
+		<nav class="navbar navbar-expand-lg navbar-light">
+	
+			<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+	
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
+					</li>
+	
+					<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+				  aria-expanded="false">
+				  Información de la empresa
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+			  </div>
+		  </li>
+		  <li class="nav-item active">
+			  <a class="nav-link" href="#" id="btnM">Mi cuenta <span class="sr-only">(current)</span></a>
+		  </li>
+					<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
+						<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+					</form>
+				</ul>
+				<br>
+				<!--Botones de Login y Sign up-->
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
+					Iniciar sesión
+				</button>
+				<!-- Modal de Login-->
+				<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+					aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								
+								<!--Formulario de login-->
+								<form action="" class="formulario" id="formulario1">
+									
+									<!-- Grupo: Correo Electronico -->
+									<div class="formulario__grupo">
+										<label for="correo" class="formulario__label">Correo Electrónico</label>
+										<div class="formulario__grupo-input">
+											<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+									</div>
+	
+									<!-- Grupo: Contraseña -->
+									<div class="formulario__grupo">
+										<label for="password" class="formulario__label">Contraseña</label>
+										<div class="formulario__grupo-input">
+											<input type="password" class="formulario__input" name="password1" id="password1">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+									</div>
+						
+									<div class="formulario__grupo formulario__grupo-btn-enviar">
+										<button type="submit" id="btnSubmit1" class="formulario__btn">Enviar</button>
+									</div>
+								</form>
+	
+								<div class="dropdown-divider"></div>
+								<!--boton para mandar a registrarse en el modal Sign up y cerrar el modal de login-->
+								<button type="button" class="btn btn-primary" data-toggle="modal"
+									data-target="#staticBackdrop2">
+									¿Eres nuevo?, ¡Registrate!
+								</button>
+							</div>
+							<div class="modal-footer">
+								<!--Boton de Cerrar-->
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<!-- Boton de Registro-->
 			<div>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
-				Login
-			</button>
-			<!-- Modal de Login-->
-			<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-				aria-labelledby="staticBackdropLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							
-							<!--Formulario de login-->
-							<form action="" class="formulario" id="formulario1">
-								
-								<!-- Grupo: Correo Electronico -->
-								<div class="formulario__grupo" id="grupo__correo">
-									<label for="correo" class="formulario__label">Correo Electrónico</label>
-									<div class="formulario__grupo-input">
-										<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
+					Registrarse
+				</button>
+				<!-- Modal de Sign up-->
+				<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+					aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<!--Formulario de Registro-->
+								<form action="" class="formulario" id="formulario">
+									<!-- Grupo: Usuario -->
+									<div class="formulario__grupo" id="grupo__usuario">
+										<label for="usuario" class="formulario__label">Usuario</label>
+										<div class="formulario__grupo-input">
+											<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 									</div>
-								</div>
-
-								<!-- Grupo: Contraseña -->
-								<div class="formulario__grupo" id="grupo__password">
-									<label for="password" class="formulario__label">Contraseña</label>
-									<div class="formulario__grupo-input">
-										<input type="password" class="formulario__input" name="password1" id="password1">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Nombre -->
+									<div class="formulario__grupo" id="grupo__nombre">
+										<label for="nombre" class="formulario__label">Nombre</label>
+										<div class="formulario__grupo-input">
+											<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 									</div>
-								</div>
-					
-								<div class="formulario__grupo formulario__grupo-btn-enviar">
-									<button type="submit" id="btnSubmit1" class="formulario__btn">Enviar</button>
-								</div>
-							</form>
-
-							<div class="dropdown-divider"></div>
-							<!--boton para mandar a registrarse en el modal Sign up y cerrar el modal de login-->
-							<button type="button" class="btn btn-primary" data-toggle="modal"
-								data-target="#staticBackdrop2">
-								¿Eres nuevo?, ¡Registrate!
-							</button>
-						</div>
-						<div class="modal-footer">
-							<!--Boton de Cerrar-->
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Boton de Registro-->
-		<div>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
-				Sign up
-			</button>
-			<!-- Modal de Sign up-->
-			<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
-				aria-labelledby="staticBackdrop2Label" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<!--Formulario de Registro-->
-							<form action="" class="formulario" id="formulario">
-								<!-- Grupo: Usuario -->
-								<div class="formulario__grupo" id="grupo__usuario">
-									<label for="usuario" class="formulario__label">Usuario</label>
-									<div class="formulario__grupo-input">
-										<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Contraseña -->
+									<div class="formulario__grupo" id="grupo__password">
+										<label for="password" class="formulario__label">Contraseña</label>
+										<div class="formulario__grupo-input">
+											<input type="password" class="formulario__input" name="password" id="password">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
 									</div>
-									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-								</div>
-					
-								<!-- Grupo: Nombre -->
-								<div class="formulario__grupo" id="grupo__nombre">
-									<label for="nombre" class="formulario__label">Nombre</label>
-									<div class="formulario__grupo-input">
-										<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Contraseña 2 -->
+									<div class="formulario__grupo" id="grupo__password2">
+										<label for="password2" class="formulario__label">Repetir Contraseña</label>
+										<div class="formulario__grupo-input">
+											<input type="password" class="formulario__input" name="password2" id="password2">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
 									</div>
-									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-								</div>
-					
-								<!-- Grupo: Contraseña -->
-								<div class="formulario__grupo" id="grupo__password">
-									<label for="password" class="formulario__label">Contraseña</label>
-									<div class="formulario__grupo-input">
-										<input type="password" class="formulario__input" name="password" id="password">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Correo Electronico -->
+									<div class="formulario__grupo" id="grupo__correo">
+										<label for="correo" class="formulario__label">Correo Electrónico</label>
+										<div class="formulario__grupo-input">
+											<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 									</div>
-									<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
-								</div>
-					
-								<!-- Grupo: Contraseña 2 -->
-								<div class="formulario__grupo" id="grupo__password2">
-									<label for="password2" class="formulario__label">Repetir Contraseña</label>
-									<div class="formulario__grupo-input">
-										<input type="password" class="formulario__input" name="password2" id="password2">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Teléfono -->
+									<div class="formulario__grupo" id="grupo__telefono">
+										<label for="telefono" class="formulario__label">Teléfono</label>
+										<div class="formulario__grupo-input">
+											<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
 									</div>
-									<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
-								</div>
-					
-								<!-- Grupo: Correo Electronico -->
-								<div class="formulario__grupo" id="grupo__correo">
-									<label for="correo" class="formulario__label">Correo Electrónico</label>
-									<div class="formulario__grupo-input">
-										<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+						
+									<!-- Grupo: Terminos y Condiciones -->
+									<div class="formulario__grupo" id="grupo__terminos">
+										<label class="formulario__label">
+											<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+											Acepto los Terminos y Condiciones
+										</label>
 									</div>
-									<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-								</div>
-					
-								<!-- Grupo: Teléfono -->
-								<div class="formulario__grupo" id="grupo__telefono">
-									<label for="telefono" class="formulario__label">Teléfono</label>
-									<div class="formulario__grupo-input">
-										<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
-										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									
+									<div class="formulario__mensaje" id="formulario__mensaje">
+										<!-- Mensaje de llenado incorrecto -->
+										<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
 									</div>
-									<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
-								</div>
-					
-								<!-- Grupo: Terminos y Condiciones -->
-								<div class="formulario__grupo" id="grupo__terminos">
-									<label class="formulario__label">
-										<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-										Acepto los Terminos y Condiciones
-									</label>
-								</div>
-								
-								<div class="formulario__mensaje" id="formulario__mensaje">
-									<!-- Mensaje de llenado incorrecto -->
-									<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-								</div>
-					
-								<div class="formulario__grupo formulario__grupo-btn-enviar">
-									<button type="submit" class="formulario__btn">Enviar</button>
-									<!--Mensaje de llenado correcto-->
-									<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<!-- Boton de cerrar -->
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						
+									<div class="formulario__grupo formulario__grupo-btn-enviar">
+										<button type="submit" class="formulario__btn">Enviar</button>
+										<!--Mensaje de llenado correcto-->
+										<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<!-- Boton de cerrar -->
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-			<!--Termina Botones de Login y Sign up-->
-			<br>
-		</div>
-	</nav>
-	<!--Termina el NavBar-->
-</header>
-<!--Termina Header-->
+				<!--Termina Botones de Login y Sign up-->
+				<br>
+	
+			</div>
+		</nav>
+		<!--Termina el NavBar-->
+	</header>
+	<!--Termina Header-->
 
     <body>
 
@@ -255,7 +268,7 @@
                             <div class="shop-details-nav-wrap">
                                 <div class="shop-details-nav">
                                     <div class="shop-nav-item">
-                                        <img src="./assets/img/refri2.jpg" alt="">
+                                        <img src="./assets/img/refri.jpg" alt="">
                                     </div>
                                     <div class="shop-nav-item">
                                         <img src="./assets/img/refri3.jpg" alt="">
@@ -263,36 +276,36 @@
                                     <div class="shop-nav-item">
                                         <img src="./assets/img/refri4.jpg" alt="">
                                     </div>
-                                    <div class="shop-nav-item">
-                                        <img src="./assets/img/refri5.jpg" alt="">
-                                    </div>
+                                    <!--<div class="shop-nav-item">
+                                        <img src="./assets/img/refri2.jpg" alt="">
+                                    </div>-->
                                    
                                 </div>
                             </div>
                             <div class="shop-details-img-wrap">
                                 <div class="shop-details-active">
                                     <div class="shop-details-img">
-                                        <a href="/items/img/product/refri.jpg" class="popup-image"><img src="./assets/img/refri.jpg" alt=""></a>
+                                        <a href="./assets/img/refri.jpg" class="popup-image"><img src="./assets/img/refri.jpg" alt=""></a>
                                     </div>
                                     <div class="shop-details-img">
-                                        <a href="img/product/refri2.jpg" class="popup-image"><img src="./assets/img/refri2.jpg" alt=""></a>
+                                        <a href="./assets/img/refri3.jpg" class="popup-image"><img src="./assets/img/refri3.jpg" alt=""></a>
                                     </div>
                                     <div class="shop-details-img">
-                                        <a href="img/product/shop_details_img01.jpg" class="popup-image"><img src="./assets/img/refri3.jpg" alt=""></a>
+                                        <a href="./assets/img/refri4.jpg" class="popup-image"><img src="./assets/img/refri4.jpg" alt=""></a>
+                                    </div>
+                                    <!--<div class="shop-details-img">
+                                        <a href="./assets/img/refri5.jpg" class="popup-image"><img src="./assets/img/refri5.jpg" alt=""></a>
                                     </div>
                                     <div class="shop-details-img">
-                                        <a href="img/product/shop_details_img01.jpg" class="popup-image"><img src="./assets/img/refri5.jpg" alt=""></a>
-                                    </div>
-                                    <div class="shop-details-img">
-                                        <a href="img/product/shop_details_img01.jpg" class="popup-image"><img src="./assets/img/shop_details_img01.jpg" alt=""></a>
-                                    </div>
+                                        <a href="./assets/img/refri4.jpg" class="popup-image"><img src="./assets/img/refri4.jpg" alt=""></a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-6">
                             <div class="shop-details-content">
                                 <span class="stock-info">En Stock</span>
-                                <h2>PRODUCTO01</h2>
+                                <h2>Refrigerador Samsung</h2>
                                 <div class="shop-details-review">
                                    
                                 </div>
@@ -315,19 +328,30 @@
         <!-- main-area-end -->
 
 		<!-- JS here -->
-        <script src="./assets/js/bootstrap.min.js"></script>
-        <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/jquery.appear.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/DetailsProductmain.js"></script>
-		<script src="./assets/js/main.js"></script>
-		<script src="./assets/js/script.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <script> AOS.init({ duration: 2000, }); </script>
+        <script src="assets/js/jquery-3.5.0.minpagitem.js"></script>
+        <script src="assets/js/bootstrap.minpagitem.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.minpagitem.js"></script>
+        <script src="assets/js/jquery.magnific-popup.minpagitem.js"></script>
+        <script src="assets/js/owl.carousel.minpagitem.js"></script>
+        <script src="assets/js/jquery.countdown.minpagitem.js"></script>
+        <script src="assets/js/jquery.appearpagitem.js"></script>
+        <script src="assets/js/slick.minpagitem.js"></script>
+        <script src="assets/js/pluginspagitem.js"></script>
+        <script src="assets/js/mainpagitem.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	    <script src="./assets/js/script.js"></script>
+	    <script src="./assets/js/main.js"></script>
+	    <script src="./assets/js/CarusselOfertasNovedades2.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+		crossorigin="anonymous"></script>
     </body>
 
     <!-- FOOTER-->
@@ -336,7 +360,7 @@
 	  <div class="row">
 		<div class="col-sm-12 col-md-6">
 		  <h6>Acerca de nosotros</h6>
-		  <p class="text-justify">Somos un equipo de 7 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
+		  <p class="text-justify">Somos un equipo de <del>7 desarrolladores</del> 5 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
 		</div>
 
 		<div class="col-xs-6 col-md-3">

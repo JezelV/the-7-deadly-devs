@@ -93,22 +93,30 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 		
 		//Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
         //localStorage.clear();//Aqui se limpia el localStorage
-        localStorage.usuario = document.getElementById("usuario").value;
-        localStorage.nombre = document.getElementById("nombre").value;
-        localStorage.password = document.getElementById("password").value;
-        localStorage.correo = document.getElementById("correo").value;
-        localStorage.telefono = document.getElementById("telefono").value;
-
-
-
+        
+		
         //Aqui se arma el .json
         const pArray = {
-            "usuario": localStorage.usuario,
-            "nombre": localStorage.nombre,
-            "password": localStorage.password,
-            "correo": localStorage.correo,
-            "telefono": localStorage.telefono
+            usuario: document.getElementById("usuario").value,
+            nombre: document.getElementById("nombre").value,
+            contrasenia: document.getElementById("password").value,
+            correo: document.getElementById("correo").value,
+            telefono: document.getElementById("telefono").value
         }
+
+
+		//*************************************************Metodo POST********************************************************** */
+		const url = "http://localhost:8080/Meet&Buy/usuario/";
+		const data = new URLSearchParams("?usuario="+pArray.usuario+"&nombre="+pArray.nombre+"&contrasenia="+pArray.contrasenia+"&correo="+pArray.correo+"&telefono="+pArray.telefono);
+		
+		fetch(url,{
+			method: 'POST',
+			body: data,
+		}).then(res => res.json())
+		.catch(error => console.log('Error: ', error))
+		.then(response => console.log('Sucess: ', response));
+
+		//************************************************Fin Metodo************************************************************ */
 
         const RJson = JSON.stringify(pArray);
 
@@ -125,6 +133,21 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 		});
 	} else {
 		//un alert para que el usuario sepa que falta algo completar o que no acepto los terminos.
-		alert('Falta algo por completar o no acepto los terminos');
+		Swal.fire({
+			icon: 'warning',
+			html: 'Falta completar la informacion o no acepto los terminos.',
+			timer: 1500,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => { 
+			  clearInterval(timerInterval)
+			}
+		  });
 	}
 });

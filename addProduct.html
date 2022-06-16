@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Subir producto</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/addProduct.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/estilos2.css">
     <link rel="icon" href="./assets/img/icon.png">
 
 </head>
+<!--Comienza Header-->
 <header class="header">
 	<!--Comienza NavBar-->
-	<nav class="navbar navbar-expand-lg navbar-light grey">
-		<a href="./index2.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a href="./index.html"><img class="logo" src="./assets/img/MB_Logo.png"></a>
+
+		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -21,31 +27,202 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#" id="btnM">Inicio <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Acerca De Nosotros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Contactanos <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Vendedor <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Comprador <span class="sr-only">(current)</span></a>
-				</li>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Información de la empresa
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./aboutUs.html">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./contactUs.html">Contáctanos</a>
+          </div>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="#" id="btnM">Mi cuenta <span class="sr-only">(current)</span></a>
+      </li>
+				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 				</form>
 			</ul>
-			<br>			
+			<br>
+			<!--Botones de Login y Sign up-->
+			<!-- Button trigger modal -->
+			<div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="btnL">
+				Iniciar sesión
+			</button>
+			<!-- Modal de Login-->
+			<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Iniciar sesión</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							
+							<!--Formulario de login-->
+							<form action="" class="formulario" id="formulario1">
+								
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo1" id="correo1" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password1" id="password1">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" id="btnSubmit1" class="formulario__btn">Enviar</button>
+								</div>
+							</form>
+
+							<div class="dropdown-divider"></div>
+							<!--boton para mandar a registrarse en el modal Sign up y cerrar el modal de login-->
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+								data-target="#staticBackdrop2">
+								¿Eres nuevo?, ¡Registrate!
+							</button>
+						</div>
+						<div class="modal-footer">
+							<!--Boton de Cerrar-->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Boton de Registro-->
+		<div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop2" id="btnS">
+				Registrarse
+			</button>
+			<!-- Modal de Sign up-->
+			<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdrop2Label">Registrarse</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!--Formulario de Registro-->
+							<form action="" class="formulario" id="formulario">
+								<!-- Grupo: Usuario -->
+								<div class="formulario__grupo" id="grupo__usuario">
+									<label for="usuario" class="formulario__label">Usuario</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Nombre -->
+								<div class="formulario__grupo" id="grupo__nombre">
+									<label for="nombre" class="formulario__label">Nombre</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña -->
+								<div class="formulario__grupo" id="grupo__password">
+									<label for="password" class="formulario__label">Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password" id="password">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Contraseña 2 -->
+								<div class="formulario__grupo" id="grupo__password2">
+									<label for="password2" class="formulario__label">Repetir Contraseña</label>
+									<div class="formulario__grupo-input">
+										<input type="password" class="formulario__input" name="password2" id="password2">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+								</div>
+					
+								<!-- Grupo: Correo Electronico -->
+								<div class="formulario__grupo" id="grupo__correo">
+									<label for="correo" class="formulario__label">Correo Electrónico</label>
+									<div class="formulario__grupo-input">
+										<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+								</div>
+					
+								<!-- Grupo: Teléfono -->
+								<div class="formulario__grupo" id="grupo__telefono">
+									<label for="telefono" class="formulario__label">Teléfono</label>
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+								</div>
+					
+								<!-- Grupo: Terminos y Condiciones -->
+								<div class="formulario__grupo" id="grupo__terminos">
+									<label class="formulario__label">
+										<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+										Acepto los Terminos y Condiciones
+									</label>
+								</div>
+								
+								<div class="formulario__mensaje" id="formulario__mensaje">
+									<!-- Mensaje de llenado incorrecto -->
+									<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+								</div>
+					
+								<div class="formulario__grupo formulario__grupo-btn-enviar">
+									<button type="submit" class="formulario__btn">Enviar</button>
+									<!--Mensaje de llenado correcto-->
+									<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<!-- Boton de cerrar -->
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--Termina Botones de Login y Sign up-->
 			<br>
 		</div>
 	</nav>
+	<!--Termina el NavBar-->
 </header>
-      <!-- AQUI TERMINA EL HEADER-->
+<!--Termina Header-->
 <body>
   <div class="contenedor">
     <!--Se le hicieron cambios al html: se añaderieron ids, clases y names a todos los inputs para hacer referencia al js y poder hacer la validacion-->
@@ -96,13 +273,13 @@
                       <span class="back">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
                       </span>
-                      <span class="front">Enviar</span>
+                      <span class="front">ENVIAR</span>
                     </button>
                     <button class="btn-grid" type="reset">
                       <span class="back">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
                       </span>
-                      <span class="front">Resetear</span>
+                      <span class="front">LIMPIAR</span>
                     </button> 
                   </div>
                 </li>    
@@ -112,34 +289,44 @@
         </div>
 
     <script src="./assets/js/addProduct.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/main.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+		integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+		crossorigin="anonymous"></script>
 </body>
-<!-- FOOTER-->
-<footer class="site-footer">
+ <!-- FOOTER-->
+ <footer class="site-footer">
 	<div class="container">
 	  <div class="row">
 		<div class="col-sm-12 col-md-6">
-		  <h6>About us</h6>
-		  <p class="text-justify">We are a team of 7 Full Stack Jr developers, graduates of the Generation Mx bootcamp.</p>
+		  <h6>Acerca de nosotros</h6>
+		  <p class="text-justify">Somos un equipo de 7 desarrolladores Full Stack Jr, egresados ​​del bootcamp Generation Mx.</p>
 		</div>
 
 		<div class="col-xs-6 col-md-3">
-			<h6>Contact</h6>
+			<h6>Contacto</h6>
 			<ul class="footer-links">
-			  <li><a href="./aboutUs.html">About Us</a></li>
-			  <li><a href="./contactUs.html">Contact Us</a></li>
-			  <li><a href="./privacyPolicy.html">Privacy Policy</a></li>
+			  <li><a href="./aboutUs.html">Acerca de nosotros</a></li>
+			  <li><a href="./contactUs.html">Contáctanos</a></li>
+			  <li><a href="./privacyPolicy.html">Políticas de privacidad</a></li>
 			</ul>
 		  </div>
 
 		<div class="col-xs-6 col-md-3">
-		  <h6>social networks</h6>
+		  <h6>Redes sociales</h6>
 		  <ul class="footer-links">
 
               <!--ICONO DE GITHUB-->
-			            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                    <a href="..." target="_blank"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></a>
+			<svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                <a href="..." target="_blank"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></a>
               </svg>
 
               <!--ICONO DE INSTAGRAM-->
@@ -153,8 +340,8 @@
                   </svg>
 
             <!--ICONO DE TWITTER-->
-                <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                    <a href="..." target="_blank"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></a>
+            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                <a href="..." target="_blank"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></a>
               </svg>
 		  </ul>
 		</div>

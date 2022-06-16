@@ -1,4 +1,4 @@
-
+//************************************************Codigo de validacion de campos*************************************************** */
 const correo1 = document.getElementById("correo1");
 const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
@@ -121,13 +121,42 @@ btnSubmit1.addEventListener('click',(e)=>{
 
 
 	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){
-        alert ('Por favor ingrese un correo valido.');
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 1500,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
         formValid=false;
-    }
-
-
-	if (!(/^.{4,12}$/.test(password1.value))){
-        alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');
+    } else if (!(/^.{4,12}$/.test(password1.value))){
+		Swal.fire({
+			icon: 'warning',
+			title: 'Mmmm...',
+			html: 'Verifica tu correo electrónico o contraseña.',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
         formValid=false;
     }
 
@@ -152,23 +181,86 @@ btnSubmit1.addEventListener('click',(e)=>{
 		form1.reset();  
 	}
 });
+//**************************************************Fin de codigo****************************************************************** */
 
-
+//*********************************************Codigo de validacion de usuario***************************************************** */
 function validarUsuairo(correo,password){
 	if(localStorage.correo){
 
 
 		if(localStorage.correo===correo && localStorage.password===password){
-			alert("Bienvenido " + localStorage.usuario + ".");
+			Swal.fire({
+				icon: 'success',
+				title: localStorage.usuario,
+				text: 'Bienvenido a la plataforma.',
+			  });
+			localStorage.sesion = 1;
 			window.location.href = "./index.html";
 
 		}else{
-			alert("Usuario o contraseña incorrectos, intente nuevamente.");
-
-		} // fin if
-
+			Swal.fire({
+				icon: 'error',
+				html: 'Usuario o contraseña incorrectos, intente nuevamente.',
+				timer: 2000,
+				timerProgressBar: true,
+				didOpen: () => {
+				  Swal.showLoading()
+				  const b = Swal.getHtmlContainer().querySelector('b')
+				  timerInterval = setInterval(() => {
+					b.textContent = Swal.getTimerLeft()
+				  }, 100)
+				},
+				willClose: () => {
+				  clearInterval(timerInterval)
+				}
+			  });
+		}
 	}else{
-		alert("Usuario no registrado.");
-
-	} // fin if
+		Swal.fire({
+			icon: 'error',
+			html: 'Usuario no registrado',
+			timer: 2000,
+			timerProgressBar: true,
+			didOpen: () => {
+			  Swal.showLoading()
+			  const b = Swal.getHtmlContainer().querySelector('b')
+			  timerInterval = setInterval(() => {
+				b.textContent = Swal.getTimerLeft()
+			  }, 100)
+			},
+			willClose: () => {
+			  clearInterval(timerInterval)
+			}
+		  });
+	}
 };
+
+function iniciarSesion(){
+	const btnL = document.getElementById("btnL");
+	const btnS = document.getElementById("btnS");
+	if(localStorage.sesion==1){
+		btnL.style.display = "none";
+		btnS.style.display = "none";
+	}else{
+		btnL.style.display = "";
+		btnS.style.display = "";
+	}
+}
+
+iniciarSesion();
+
+const btnM = document.getElementById("btnM");
+
+btnM.addEventListener('click', ()=>{
+	if(!(localStorage.sesion == undefined)){
+		if(localStorage.sesion==0){
+			$('#staticBackdrop').modal('show');
+		}else{
+			window.location.href = "./MyAccount.html";
+		}
+	}else{
+		$('#staticBackdrop').modal('show');
+	}
+});
+
+/******************************************************Fin de codigo************************************************************/ 
