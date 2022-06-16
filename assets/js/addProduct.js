@@ -61,15 +61,13 @@ btnSubmit.addEventListener('click',()=>{
     }
   
     
-
+    console.log(JSON.stringify(pArray));
     	//*************************************************Metodo POST********************************************************** */
 		const url = "http://localhost:8080/Meet&Buy/producto/";
 		//const data = new URLSearchParams("?nombreP="+pArray.nombreP+"&precioP="+pArray.precioP+"&cantidadP="+pArray.cantidadP+"&imgP="+pArray.imgP+"&categoriaP="+pArray.categoriaP+"&descripcionP="+pArray.descripcionP);
-
-    
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
+			body: JSON.stringify(pArray),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -78,9 +76,6 @@ btnSubmit.addEventListener('click',()=>{
 		.then(response => console.log('Sucess: ', response));
 
 		//************************************************Fin Metodo************************************************************ */
-
-    const pJson = JSON.stringify(pArray);
-    console.log(pJson);
   }
 });
 /*----------------------------------Fin de codigo----------------------------------*/

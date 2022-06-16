@@ -134,7 +134,7 @@ btn_direccion_aña.addEventListener('click',()=>{
         alert ("Por favor ingrese su calle correctamente.");
         formValid=false;
     }
-    if((/^\d$/.test(numero.value))||(/^\s*$/.test(numero.value))){
+    if((/^\d\s$/.test(numero.value))){
         alert ("Por favor ingrese su número int y/o exterior, este debe ser solo números.");
         formValid=false;
     }
@@ -160,22 +160,20 @@ btn_direccion_aña.addEventListener('click',()=>{
         //Aqui se arma el .json
         const pArray = {
             calle: calle.value,
-            numeroInt: numero.value,
-            codigoPostal: codigoPostal.value,
+            numero: numero.value,
+            codigopostal: codigoPostal.value,
             colonia: colonia.value,
             municipio: municipio.value,
             estado: estado.value
         }
-
-        const pJson = JSON.stringify(pArray);
-
+        console.log(JSON.stringify(pArray));
         //*************************************************Metodo POST********************************************************** */
 		const url = "http://localhost:8080/Meet&Buy/direccion/";
 		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
 
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
+			body: JSON.stringify(pArray),
             headers: {
                 'Content-Type': 'application/json'
               }
@@ -184,8 +182,6 @@ btn_direccion_aña.addEventListener('click',()=>{
 		.then(response => console.log('Sucess: ', response));
 
 		//************************************************Fin Metodo************************************************************ */
-
-        console.log(pJson);
         alert("Direccion añadida correctamente.");
     }
 });
@@ -228,22 +224,20 @@ btn_pago_env.addEventListener('click',()=>{
             
         //Aqui se arma el .json
         const pArray = {
-            nombreCompletoTitular: nombreTitular.value,
-            numeroTarjeta: numeroTarjeta.value,
+            nombreT: nombreTitular.value,
+            numeroT: numeroTarjeta.value,
             cvv: cvv.value,
-            mesVencimiento: mesPago.value,
-            anoVencimiento: anioPago.value
+            mesT: mesPago.value,
+            añoT: anioPago.value
         }
 
-        const pJson = JSON.stringify(pArray);
-
+        console.log(JSON.stringify(pArray));
         //*************************************************Metodo POST********************************************************** */
-		const url = "http://localhost:8080/Meet&Buy/tarjeta/";
+		const url = "http://localhost:8080/Meet&Buy/metodopago/";
 		//const data = new URLSearchParams("?calle="+pArray.calle+"&numeroInt="+pArray.numeroInt+"&codigoPostal="+pArray.codigoPostal+"&colonia="+pArray.colonia+"&municipio="+pArray.municipio+"&estado="+pArray.estado);
-
 		fetch(url,{
 			method: 'POST',
-			body: pJson,
+			body: JSON.stringify(pArray),
             headers: {
                 'Content-Type': 'application/json'
               }
@@ -253,7 +247,6 @@ btn_pago_env.addEventListener('click',()=>{
 
 		//************************************************Fin Metodo************************************************************ */
 
-        console.log(pJson);
         alert("Tarjeta añadida satisfactoriamente.");
     }
 });
