@@ -746,12 +746,15 @@
 }
 .material-card.Cyan .mc-footer a {
   background-color: #006064;
+  border-radius: 10px;
 }
 .material-card.Cyan.mc-active .mc-content {
   background-color: #E0F7FA;
+  border-radius: 10px;
 }
 .material-card.Cyan.mc-active .mc-footer {
   background-color: #B2EBF2;
+  border-radius: 10px;
 }
 .material-card.Cyan.mc-active .mc-btn-action {
   border-color: #E0F7FA;
@@ -794,12 +797,15 @@
 }
 .material-card.Teal .mc-footer a {
   background-color: #004D40;
+  border-radius: 10px;
 }
 .material-card.Teal.mc-active .mc-content {
   background-color: #E0F2F1;
+  border-radius: 10px;
 }
 .material-card.Teal.mc-active .mc-footer {
   background-color: #B2DFDB;
+  border-radius: 10px;
 }
 .material-card.Teal.mc-active .mc-btn-action {
   border-color: #E0F2F1;
@@ -1300,10 +1306,8 @@ h3 {
   font-weight: 200;
 }
 
-/* LOGOTIPOS DE REDES*/
-.git{
-  background-image: url("/assets/icons/github.png");
-  
+img{
+  border-radius: 10px;
 }
 
 /* AQUI INICIA ELFOOTER*/
