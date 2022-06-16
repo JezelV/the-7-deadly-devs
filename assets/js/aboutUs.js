@@ -26,7 +26,6 @@ $(function() {
             }, 800);
         }
     });
-<<<<<<< HEAD
 });
 
 //Efecto de maquina de escribir
@@ -50,6 +49,3 @@ if ( ! Modernizr.adownload ) {
    
       });
   }
-=======
-});
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8

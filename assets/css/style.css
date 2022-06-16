@@ -3,28 +3,15 @@
 }
 
 body {
-<<<<<<< HEAD
 	/*font-family: 'Roboto', sans-serif;*/
-=======
-	font-family: 'Roboto', sans-serif;
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 	background: #E5E5E5;
 }
 
 main {
-<<<<<<< HEAD
 	max-width: 800px;
 	width: 90%;
 	margin: auto;
 	padding: 40px;
-=======
-	max-width: 200%;
-	width: 100%;
-	margin: 0 auto;
-	padding: 40px;
-	text-align: center;	
-	
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 }
 
 .formulario {
@@ -143,11 +130,7 @@ main {
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
-<<<<<<< HEAD
 	/*opacity: 1;*/
-=======
-	opacity: 1;
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 }
 
 .formulario__grupo-incorrecto .formulario__label {
@@ -156,11 +139,7 @@ main {
 
 .formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #bb2929;
-<<<<<<< HEAD
 	/*opacity: 1;*/
-=======
-	opacity: 1;
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 }
 
 .formulario__grupo-incorrecto .formulario__input {
@@ -183,9 +162,4 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*Efecto de maquina de escribir*/
 .typewriter-effect {
   display: flex;
@@ -43,33 +42,6 @@
   font-size: 30px;
 }
 /* AQUI TERMINA LA MAQUINA DE ESCRIBIR*/
-=======
-
-/*LOGO */
-.logo {
-	width: 120px;
-}
-
-/*Se centra el titulo de acerca de nosotros*/
-.page-header{
-  text-align: center;
-}
-
-/* COLOR DEL BOTON DE BUSCAR*/
-.grey{
-  background-color: #181818;
-}
-
-/* Cambia el color de la letra en el HavBar*/
-.nav-link{
-  color: aqua!important;
-}
-
-/*Barra de hamburguesa*/
-.navbar-toggler-icon{
-  background-color: aqua!important;
-}
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 
 /* PERFILES */
 @import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
@@ -1330,20 +1302,12 @@ h3 {
 
 /* LOGOTIPOS DE REDES*/
 .git{
-<<<<<<< HEAD
   background-image: url("/assets/icons/github.png");
-=======
-  background-image: url("../img/github-54.png");
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
   
 }
 
 /* AQUI INICIA ELFOOTER*/
-<<<<<<< HEAD
 /*
-=======
-
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 .site-footer
 {
   background-color:#26272b;
@@ -1379,8 +1343,4 @@ h3 {
 {
   padding-left:0;
   list-style:none
-<<<<<<< HEAD
 }*/
-=======
-}
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8

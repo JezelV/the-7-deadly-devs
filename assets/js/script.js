@@ -93,7 +93,6 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 		
 		//Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
         //localStorage.clear();//Aqui se limpia el localStorage
-<<<<<<< HEAD
         
 		
         //Aqui se arma el .json
@@ -119,25 +118,6 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 
 		//************************************************Fin Metodo************************************************************ */
 
-=======
-        localStorage.usuario = document.getElementById("usuario").value;
-        localStorage.nombre = document.getElementById("nombre").value;
-        localStorage.password = document.getElementById("password").value;
-        localStorage.correo = document.getElementById("correo").value;
-        localStorage.telefono = document.getElementById("telefono").value;
-
-
-
-        //Aqui se arma el .json
-        const pArray = {
-            "usuario": localStorage.usuario,
-            "nombre": localStorage.nombre,
-            "password": localStorage.password,
-            "correo": localStorage.correo,
-            "telefono": localStorage.telefono
-        }
-
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
         const RJson = JSON.stringify(pArray);
 
         console.log(RJson);
@@ -153,7 +133,6 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 		});
 	} else {
 		//un alert para que el usuario sepa que falta algo completar o que no acepto los terminos.
-<<<<<<< HEAD
 		Swal.fire({
 			icon: 'warning',
 			html: 'Falta completar la informacion o no acepto los terminos.',
@@ -170,8 +149,5 @@ formulario.addEventListener('submit', (e) => {// Aqui se agrega el evento submit
 			  clearInterval(timerInterval)
 			}
 		  });
-=======
-		alert('Falta algo por completar o no acepto los terminos');
->>>>>>> 2e95f04001839c3bc7dbb3dbaf558c7d1549e1d8
 	}
 });
