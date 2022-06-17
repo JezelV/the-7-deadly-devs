@@ -55,7 +55,7 @@
       </li>
 				<form class="form-inline my-2 my-lg-0" action="./ItemList.html">
 					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="BtnBuscar">Buscar</button>
 				</form>
 			</ul>
 			<br>
@@ -244,9 +244,7 @@
                         <div class="col-12">
                             <div class="breadcrumb-content text-center">
                                 <!--Efecto de maquina de escribir-->
-                                    <div class="typewriter-effect" id="nosotros">
-                                        <div class="text" id="typewriter-text"></div>
-                                    </div>
+                                    <div id="resultado"></div>
                                 <!--Fin del efecto de maquina de escribir-->
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
@@ -263,250 +261,13 @@
 
             <!-- SHOP AREA -->
             <div class="shop-area gray-bg pt-100 pb-100">
-                <div class="custom-container-two">
+                <div class="custom-container">
                     <div class="row justify-content-center">
                         <div class="col-xl-9 col-lg-8">
                             <div class="row">
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/refri.jpg" width="327"; height="358" alt="">
-                                                <img class="overlay-product-thumb" src="" alt="">
-                                            </a>
-                                          
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">Refrigerador Samsung</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$17,250</del>
-                                                <span class="new-price">$15,950.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
+                                <div class="col-1">
+                                    <div id="track3"></div>
                                 </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product02.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="" alt="">
-                                            </a>
-                                            
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO02</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product03.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO03</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product05.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO04</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product06.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="" alt="">
-                                            </a>
-                                            
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO05</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product07.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/td_product_img03.jpg" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO06</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product08.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/td_product_img02.jpg" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO07</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product09.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/td_product_img01.jpg" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO08</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product10.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/t_exclusive_product06.jpg" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO09</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product11.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/mg/t_exclusive_product01.jpg" alt="">
-                                            </a>
-                                            
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO10</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product12.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/t_exclusive_product02.jpg" alt="">
-                                            </a>
-                                           
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO11</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                    <div class="exclusive-item exclusive-item-three text-center mb-50">
-                                        <div class="exclusive-item-thumb">
-                                            <a href="shop-details.html">
-                                                <img src="assets/img/t_exclusive_product13.jpg" alt="">
-                                                <img class="overlay-product-thumb" src="assets/img/t_exclusive_product06.jpg" alt="">
-                                            </a>
-                                          
-                                        </div>
-                                        <div class="exclusive-item-content">
-                                            <h5><a href="shop-details.html">PRODUCTO12</a></h5>
-                                            <div class="exclusive--item--price">
-                                                <del class="old-price">$69.00</del>
-                                                <span class="new-price">$58.00</span>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pagination-wrap">
-                                <ul>
-                                    <li class="prev"><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Prev</a></li>
-                                    <li class="active"><a href="shop-left-sidebar.html">1</a></li>
-                                    <li class="#"><a href="">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <li><a href="#">10</a></li>
-                                    <li class="next"><a href="#">Siguiente<i class="fas fa-long-arrow-alt-right"></i></a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -518,10 +279,10 @@
 
 		<!-- JS -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./assets/js/escribir.js"></script>
        <!--<script src="js/popper.min.js"></script>-->
        <script src="./assets/js/main.js"></script>
        <script src="./assets/js/script.js"></script>
+       <script src="./assets/js/ItemList.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
