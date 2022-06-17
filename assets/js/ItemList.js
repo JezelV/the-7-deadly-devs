@@ -291,3 +291,12 @@ prodCategoria.forEach(
     const itemsContainer2 = document.getElementById("track3");
     itemsContainer2.innerHTML += itemHTML;
   });
+
+  prodCategoria.forEach(p=>{
+    p.addEventListener('click',()=>{
+      localStorage.img=p.img;
+      localStorage.name=p.name;
+      localStorage.description=p.description;
+      localStorage.price=p.price;
+    })
+  });
