@@ -4,6 +4,7 @@ const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
 const form1 = document.getElementById("formulario1");
 
+
 btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
 	let formValid = true;
@@ -49,9 +50,15 @@ btnSubmit1.addEventListener('click',(e)=>{
 	if(formValid==true){
 
 		//Aqui se arma el .json
+<<<<<<< HEAD
 		const pArray = {
 			"usuario": correo1.value,
 			"contrasenia": password1.value,
+=======
+		const pArray = {//objeto para guardar los datos del formulario
+			"password": localStorage.password1,
+			"correo": localStorage.correo1,
+>>>>>>> 005d356b08188b29e7a5395ea6c97671baa0236a
 		}
 		  
 		console.log(JSON.stringify(pArray));
@@ -146,6 +153,7 @@ btnM.addEventListener('click', ()=>{
 	}
 });
 
+<<<<<<< HEAD
 /******************************************************Fin de codigo************************************************************/ 
 
 const BtnBuscar = document.getElementById("BtnBuscar");
@@ -153,3 +161,8 @@ const BtnBuscar = document.getElementById("BtnBuscar");
 BtnBuscar.addEventListener('click',()=>{
 	localStorage.categoria='Resultados';
 });
+=======
+
+/******************************************************Fin de codigo************************************************************/ 
+
+>>>>>>> 005d356b08188b29e7a5395ea6c97671baa0236a
