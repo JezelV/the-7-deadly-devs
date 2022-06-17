@@ -43,7 +43,7 @@ function addItem(item){
         '<div class="card-info">\n' + 
             '<p class="text-title">'+ item.name + '</p>\n' +
             '<p class="text-body">' + item.description + '</p>\n' +
-        '</div><br>\n' +
+        '</div>\n' +
         '<div class="card-footer">\n' +
             '<span class="text-title">'+ item.price + '</span>\n'+
         '</div>\n'+
@@ -62,10 +62,11 @@ function addItem2(item){
       '<div class="card-info">\n' + 
           '<p class="text-title">'+ item.name + '</p>\n' +
           '<p class="text-body">' + item.description + '</p>\n' +
-      '</div><br>\n' +
+      '</div>\n'+
       '<div class="card-footer">\n' +
           '<span class="text-title">'+ item.price + '</span>\n'+
       '</div>\n'+
+      
   '</div>\n'+
 '</div>\n';
 //Mando la tarjeta por defecto al HTML en el div con el id track2
@@ -429,7 +430,6 @@ addItem2({
         });
     });
 
-<<<<<<< HEAD
     /****************************************************Categorias************************************************** */
 
     const categorias = document.querySelectorAll(".categorias");
@@ -443,8 +443,5 @@ addItem2({
       })
     });
     /****************************************************Fin codigo************************************************** */
-
     
-=======
     
->>>>>>> 005d356b08188b29e7a5395ea6c97671baa0236a
