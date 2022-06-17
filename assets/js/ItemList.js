@@ -146,7 +146,7 @@ let productos = [
   name: "Vestido Corto Rojo Cklass",
   img: "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/3pp/asr/1ecd26fa-2315-4c5f-b48a-71ba1334ae5f.5b464aaa7c3df647c6383001f4e42874.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff",
   description:
-    "Vestido en color rojo con detalles de botones, elaborado de poliéster/elastano, es una explosión de color y alegría que nos trae esta tendencia, atrévete a lucir dulce, fresca y llena de energía",
+    "Vestido rojo con detalles de botones, elaborado de poliéster/elastano, es una explosión de color y alegría.",
   price: "$330",
 },
 {
@@ -296,6 +296,8 @@ prodCategoria.forEach(
     itemsContainer2.innerHTML += itemHTML;
   });
 
+
+  if(localStorage.categoria!='Resultados'){
   const event1 = document.getElementById("event1");
   event1.addEventListener('click',()=>{
     localStorage.name = prodCategoria[0].name;
@@ -323,3 +325,4 @@ prodCategoria.forEach(
     localStorage.price = prodCategoria[2].price;
     window.location.href="./shop-details.html";
   });
+}
