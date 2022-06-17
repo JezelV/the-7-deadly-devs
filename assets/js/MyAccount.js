@@ -229,7 +229,7 @@ btn_pago_env.addEventListener('click',()=>{
 
     if(formValid==true){
          
-        mr();
+        mr(nombreTitular.value,numeroTarjeta.value,mesPago.value,anioPago.value);
 
 
         //Aqui se arma el .json
