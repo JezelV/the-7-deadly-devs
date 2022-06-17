@@ -33,24 +33,36 @@ btn_perosnal_env.addEventListener('click',()=>{
     const usuarioInfo = document.getElementById("usuarioInfo");
     const correoInfo = document.getElementById("correoInfo");
     const telefonoInfo = document.getElementById("telefonoInfo");
+    var i = 0;
+    var entrada = [];
 
-    if(!(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombreInfo.value))){
-        alert (nombreInfo.name+ ' no puede contener simbolos, estar vacío o contener sólo espacios en blanco');
+    if(!(/^[a-zA-ZÀ-ÿ\s]{3,40}$/.test(nombreInfo.value))){
+        entrada[i]='nombre';
+        i++;
         formValid=false;
     }
     if(!(/^[a-zA-Z0-9\_\-]{4,16}$/.test(usuarioInfo.value))){
-        alert (usuarioInfo.name+ ' debe contener de 4 a 16 caracteres, no puede contener simbolos, estar vacío o contener sólo espacios en blanco.');
+        entrada[i]='usuario';
+        i++;
         formValid=false;
     }
     if(!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(correoInfo.value))){
-        alert (correoInfo.name+ ' no es un correo válido.');
+        entrada[i]='correo';
+        i++;
         formValid=false;
     }
     if(!(/^\d{7,14}$/.test(telefonoInfo.value))){
-        alert ('Por favor ingrese un telefono valido (este debe contener solo numeros de 7 a 14 digitos).');
+        entrada[i]='telefono';
+        i++;
         formValid=false;
     }
-    
+    if(formValid==false){
+        Swal.fire({
+          icon: 'warning',
+          title: 'Verifica los campos:',
+          text: entrada.join(", "),
+        });
+    }
     if(formValid==true){
       //Si todos los campos estan validados correctamemnte se armara el json para poder enviarse
       localStorage.clear();
@@ -83,22 +95,35 @@ btn_contraseña_env.addEventListener('click',()=>{
     const contraOriginal = document.getElementById("contraOriginal");
     const contraNueva = document.getElementById("contraNueva");
     const contraRepetir = document.getElementById("contraRepetir");
+    var m = 0;
+    var entrada2 = [];
 
     if(!(/^.{4,12}$/.test(contraOriginal.value))){
-        alert ("Por favor ingrese su contraseña original de 4 a 12 digitos.");
+        entrada2[m]='Contraseña original';
+        m++;
         formValid=false;
     }
     if(!(/^.{4,12}$/.test(contraNueva.value))){
-        alert ("Por favor ingrese su contraseña nueva de 4 a 12 digitos.");
+        entrada2[m]='Nueva Contraseña';
+        m++;
         formValid=false;
     }
     if(!(/^.{4,12}$/.test(contraRepetir.value))){
-        alert ("Por favor confirme su contraseña nueva de 4 a 12 digitos.");
+        entrada2[m]='Repetir contraseña';
+        m++;
         formValid=false;
     }
     if(contraNueva.value !== contraRepetir.value){
-        alert ("Las contraseñas no coinciden, por favor asegurese de ingresarlas correctamente.");
+        entrada2[m]='Repetir contraseña';
+        m++;
         formValid=false;
+    }
+    if(formValid==false){
+        Swal.fire({
+          icon: 'warning',
+          title: 'Verifica los campos:',
+          text: entrada2.join(", "),
+        });
     }
     if(formValid==true){
         localStorage.clear();
@@ -113,7 +138,10 @@ btn_contraseña_env.addEventListener('click',()=>{
         const pJson = JSON.stringify(pArray);
 
         console.log(pJson);
-        alert("Contraseña cambiada correctamente.");
+            Swal.fire({
+                icon: 'success',
+                html: 'La contraseña se actualizo correctamente',
+              });
     }
 });
 /************************************************************Fin de codigo*************************************************************/
@@ -129,30 +157,48 @@ btn_direccion_aña.addEventListener('click',()=>{
     const colonia = document.getElementById("colonia");
     const municipio = document.getElementById("municipio");
     const estado = document.getElementById("estado");
+    var k = 0;
+    var entrada3 = [];
 
     if(!(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(calle.value))){
-        alert ("Por favor ingrese su calle correctamente.");
+        entrada3[k]='Calle';
+        k++;
         formValid=false;
+
     }
     if((/^\d\s$/.test(numero.value))){
-        alert ("Por favor ingrese su número int y/o exterior, este debe ser solo números.");
+        entrada3[k]='Numero';
+        k++;
         formValid=false;
+
     }
     if((/^\d$/.test(codigoPostal.value))||(/^\s*$/.test(codigoPostal.value))){
-        alert ("Por favor ingrese su codigo postal, este debe ser solo números.");
+        entrada3[k]='Codigo Postal';
+        k++;
         formValid=false;
+
     }
     if(/^\s*$/.test(colonia.value)){
-        alert ("Por favor ingrese su colonia.");
+        entrada3[k]='Colonia';
+        k++;
         formValid=false;
     }
     if(/^\s*$/.test(municipio.value)){
-        alert ("Por favor ingrese su municipio.");
+        entrada3[k]='Municipio';
+        k++;
         formValid=false;
     }
     if(estado.value=="-- Elige un estado --"){
-        alert ("Por favor ingrese su estado.");
+        entrada3[k]='Estado';
+        k++;
         formValid=false;
+    }   
+    if(formValid==false){
+        Swal.fire({
+          icon: 'warning',
+          title: 'Verifica los campos:',
+          text: entrada3.join(", "),
+        });
     }
 
     if(formValid==true){
@@ -189,7 +235,10 @@ btn_direccion_aña.addEventListener('click',()=>{
 		.then(response => console.log('Sucess: ', response));
 
 		//************************************************Fin Metodo************************************************************ */
-        alert("Direccion añadida correctamente.");
+        Swal.fire({
+            icon: 'success',
+            html: 'Direccion añadida correctamente',
+          });
     }
 });
 /************************************************************Fin de codigo*************************************************************/
@@ -204,26 +253,40 @@ btn_pago_env.addEventListener('click',()=>{
     const cvv = document.getElementById("cvv");
     const mesPago = document.getElementById("mesPago");
     const anioPago = document.getElementById("añoPago");
+    var l = 0;
+    var entrada4 = [];
 
     if(!(/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombreTitular.value))){
-        alert ("Por favor ingrese su nombre correctamente, este no debe contener numeros, simbolos o estar vacío.");
+        entrada4[l]='Nombre del titular';
+        l++;
         formValid=false;
     }
     if(!(/^\d{16}$/.test(numeroTarjeta.value))){
-        alert ("Por favor ingrese su numero de tarjeta correctamente, este debe contener 16 digitos.");
+        entrada4[l]='Numero de tarjeta';
+        l++;
         formValid=false;
     }
     if(!(/^\d{3}$/.test(cvv.value))){
-        alert ("Por favor ingrese su numero de seguridad al reverso de su tarjeta, este debe contener 3 digitos.");
+        entrada4[l]='CVV';
+        l++;
         formValid=false;
     }
     if(mesPago.value=="00"){
-        alert ("Por favor ingrese su mes de vencimiento.");
+        entrada4[l]='00';
+        l++;
         formValid=false;
     }
     if(anioPago.value=="0000"){
-        alert ("Por favor ingrese su año de vencimiento.");
+        entrada4[l]='0000';
+        l++;
         formValid=false;
+    }
+    if(formValid==false){
+        Swal.fire({
+          icon: 'warning',
+          title: 'Verifica los campos:',
+          text: entrada4.join(", "),
+        });
     }
 
 
@@ -257,7 +320,10 @@ btn_pago_env.addEventListener('click',()=>{
 
 		//************************************************Fin Metodo************************************************************ */
 
-        alert("Tarjeta añadida satisfactoriamente.");
+        Swal.fire({
+            icon: 'success',
+            html: 'Tarjeta añadida correctamente',
+          });
     }
 });
 /************************************************************Fin de codigo*************************************************************/
