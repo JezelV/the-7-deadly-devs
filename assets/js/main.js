@@ -4,17 +4,7 @@ const password1 = document.getElementById("password1");
 const btnSubmit1 = document.getElementById("btnSubmit1");
 const form1 = document.getElementById("formulario1");
 
-<<<<<<< HEAD
-btnSubmit1.addEventListener('click',(e)=>{//evento click
-	e.preventDefault();//prevenir el comportamiento por defecto del formulario
-	let formValid = true;//variable para validar el formulario
-	if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$/.test(correo1.value))){//validar correo
-        alert ('Por favor ingrese un correo valido.');//alerta de correo invalido
-        formValid=false;
-    }
-	if (!(/^.{4,12}$/.test(password1.value))){//validar password
-        alert ('Por favor ingrese su contraseña de 4 a 12 digitos.');//alerta de password invalido
-=======
+
 btnSubmit1.addEventListener('click',(e)=>{
 	e.preventDefault();
 	let formValid = true;
@@ -55,7 +45,6 @@ btnSubmit1.addEventListener('click',(e)=>{
 			  clearInterval(timerInterval)
 			}
 		  });
->>>>>>> 22da6060cbea47bdbd2a218e29d04c301b52a9b7
         formValid=false;
     }
 	if(formValid==true){
@@ -156,8 +145,7 @@ btnM.addEventListener('click', ()=>{
 		$('#staticBackdrop').modal('show');
 	}
 });
-<<<<<<< HEAD
-=======
+
 
 /******************************************************Fin de codigo************************************************************/ 
->>>>>>> 66676313cacb9360c2618bf60dda06a9cec01aa4
+
