@@ -80,7 +80,7 @@ let productos = [
     price: "$1,799",
 },
 {
-categoria:'Juegos y juguetes',
+  categoria:'Juegos y juguetes',
   name: "Juguete Excavadora Control Remoto",
   img: "https://http2.mlstatic.com/D_NQ_NP_701046-CBT48204551854_112021-O.webp",
   description: "El vehículo de construcción de control remoto puede avanzar o retroceder, girar a la izquierda o a la derecha, excavar, rotación de 360 grados",
@@ -230,7 +230,7 @@ categoria:'Juegos y juguetes',
 {
   categoria:'Oficinas',
   name: "Impresora A Color Multifunción Epson EcoTank L3250",
-  img: "https://http2.mlstatic.com/D_NQ_NP_650638-MLM50014075015_052022-O.webp",
+  img: "https://http2.mlstatic.com/D_NQ_NP_2X_871928-MLA48231925104_112021-V.webp",
   description: "Imprime archivos, escanea documentos y haz todas las fotocopias que necesites para tu oficina.",
   price: "$4,899",
 },
@@ -270,20 +270,24 @@ categoria:'Juegos y juguetes',
   price: "$699",
 }];
 
-let prodCategoria = productos.filter(prod => prod.categoria==localStorage.categoria);
+const prodCategoria = productos.filter(prod => prod.categoria==localStorage.categoria);
+
+let i = 0;
 
 prodCategoria.forEach(
-    function addItem(item){
+    function addItem(p){
+      i++;
+      console.log(i);
         const itemHTML = 
         '<div class="slick">\n' +
         '<div class="card">\n' +
-            '<div class="card-img"><img src = "'+ item.img +'" id = "imgOferta"></div>\n' + 
+            '<div class="card-img"><a id = "event'+i+'"><img src = "'+ p.img +'" id = "imgOferta"></a></div>\n' + 
             '<div class="card-info">\n' + 
-                '<p class="text-title">'+ item.name + '</p>\n' +
-                '<p class="text-body">' + item.description + '</p>\n' +
+                '<p class="text-title">'+ p.name + '</p>\n' +
+                '<p class="text-body">' + p.description + '</p>\n' +
             '</div>\n' +
             '<div class="card-footer">\n' +
-                '<span class="text-title">'+item.price+'</span>\n'+
+                '<span class="text-title">'+p.price+'</span>\n'+
             '</div>\n'+
         '</div>\n'+
     '</div>';
@@ -292,11 +296,30 @@ prodCategoria.forEach(
     itemsContainer2.innerHTML += itemHTML;
   });
 
-  prodCategoria.forEach(p=>{
-    p.addEventListener('click',()=>{
-      localStorage.img=p.img;
-      localStorage.name=p.name;
-      localStorage.description=p.description;
-      localStorage.price=p.price;
-    })
+  const event1 = document.getElementById("event1");
+  event1.addEventListener('click',()=>{
+    localStorage.name = prodCategoria[0].name;
+    localStorage.description = prodCategoria[0].description;
+    localStorage.img = prodCategoria[0].img;
+    localStorage.price = prodCategoria[0].price;
+    window.location.href="./shop-details.html";
+  });
+ 
+
+  const event2 = document.getElementById("event2");
+  event2.addEventListener('click',()=>{
+    localStorage.name = prodCategoria[1].name;
+    localStorage.description = prodCategoria[1].description;
+    localStorage.img = prodCategoria[1].img;
+    localStorage.price = prodCategoria[1].price;
+    window.location.href="./shop-details.html";
+  });
+
+  const event3 = document.getElementById("event3");
+  event3.addEventListener('click',()=>{
+    localStorage.name = prodCategoria[2].name;
+    localStorage.description = prodCategoria[2].description;
+    localStorage.img = prodCategoria[2].img;
+    localStorage.price = prodCategoria[2].price;
+    window.location.href="./shop-details.html";
   });
